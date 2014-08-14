@@ -47,7 +47,7 @@ LE PLANNING
 
 1. Le systeme de CAS pose probleme. Le CAS vers lequel pointait mon appli etait en maintenance. Changement de cible pour mon appel CAS.
 2. Correction du probleme des dates server. Ecriture d’une version thread-safe des parser de dates.
-3. Implementation de nouvelles feature dans le choix des données a afficher (intervalle de temps (journalier, mensuel), type de contrat (CCO, ASS_VIE, ...))
+3. Implementation de nouvelles feature dans le choix des données a afficher (intervalle de temps (journalier, mensuel), type de contrat (CCO, ASSVIE, ...))
 4. Ajout du graphique principal qui affiche le nombre de souscriptions, le nombre de ruptures et le taux de rupture
 5. Codage d’un widget de recherche mutualisé : Le meme widget devra etre présent sur toutes les pages.
 6. Probleme du au fait qu’un Widget GWT ne peut avoir qu’un seul parent. Il faut le decharger de chaque page a chaque changement de page.
@@ -59,3 +59,15 @@ LE PLANNING
 
 1. Corrections de bugs
 2. Debut d’ecriture du rapport de stage
+
+####Semaine 7+8
+
+1. Ajout d'une nouvelle feature : lorsque l'onclique sur une barre de la page taux de rupture, 
+	on "fait un zoom" jusqu'a visualiser le taux de rupture pour une journée par 1/4h
+		
+2. Changement des barres de la visualisation d'une journée par une courbe.
+2. 
+3. Ajout de la visualisation du percentile 90
+4. Apparement c'est toujours la fete avec le CAS, il faut change d'env souvent ^^
+5. Tentative d'ajout du choix des cd_err_ mais impossible de subsituer un '?' par un plusieurs object avec jdbc
+

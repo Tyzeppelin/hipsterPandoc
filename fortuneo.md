@@ -12,7 +12,7 @@ L’entreprise
 
 Fortuneo est un établissement banquaire francaisé en 2000 et qui propose des services de bourse en ligne.
 L’entreprise devient une filiale du group Crédit Mutuel Arkéa en 2006 et deveint une banque en ligne en 2009.
-C’est une banque en ligne a part entière, elle a de nombreux produits communs a bcp de banque: CCO, Ass_Vie, PEA, ...
+C’est une banque en ligne a part entière, elle a de nombreux produits communs a bcp de banque: CCO, AssVie, PEA, ...
 
 
 ###L’organisation
