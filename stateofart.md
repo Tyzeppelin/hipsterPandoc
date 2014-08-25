@@ -1,17 +1,13 @@
-\newpage
+Présentation du sujet
+=====================
 
+## Ce qui existait
 
-Le sujet de stage
-----------------
+Blablabla QS blablabla deja es sondes en place, lle permettent blablabl
 
-###Ce qui existe a l’heure actuelle
+> Le projet QS de Fortuneo a pour but de pouvoir mesurer de manière objective le niveau de qualité de service sur les aspects applicatifs, 
+> de manière exhaustive, et non plus se mettre en attente de remontés potentielles de nos prospects/clients lors de ces incidents
 
-A l’heure actuelle chez Fortuneo, le maitre mot est la Qualité de Service(pas convaincu). Etant donné que tout est fait sur internet,
-il faut avoir des outils informatique performant. Pour évaluer la qualité du service fourni à leurs client, il avait déjà été mis en place
-une application qui est une sonde qui simule un parcours utilisateur qui voudrait souscrire un produit particulier (cco).
-
-Le projet QS de Fortuneo a pour but de pouvoir mesurer de manière objective le niveau de qualité de service sur les aspects applicatifs, 
-de manière exhaustive, et non plus se mettre en attente de remontés potentielles de nos prospects/clients lors de ces incidents
 
 Le projet répond donc aux besoins suivants :
 
@@ -31,7 +27,7 @@ Pour ce faire, plusieurs outils/applications ont été développées :
 -   Ajout des événements dans les applications Fortuneo ;
 -   Consommation des événements : FortuneoQsConsumer.
 
-###La où j’entre en jeu
+## La où j’entre en jeu
 
 Le système de supervision de la QS fonctionne très bien et a permis de corriger un nombre important de problème au sein de la souscription.
 Cependant, le principal soucis du service actuel est que les résultat de l’analyse des sondes est stockés dans une base de donnée relationnelle,
@@ -40,6 +36,4 @@ des appels en base complexes pour aller recuperer les données qu’is souhaiten
 assez immportant, le travail des données sous excel n’est pas efficace
 
 Mon but est alors de réaliser une Interface Homme-Machine sous la forme d’une Application Web qui permettrait d’afficher differents indicateurs de la qualité
-de service sous la forme de tableaux et de graphiques dynamiques. 
-
-
+de service sous la forme de tableaux et de graphiques dynamiques.

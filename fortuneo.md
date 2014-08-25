@@ -1,29 +1,26 @@
-\newpage
+# FORTUNEO #
 
-FORTUNEO
-========
 
- 
-
-L’entreprise
-------------
-
-###Historique
+## Historique ##
 
 
 Fortuneo est un établissement banquaire francaisé en 2000 et qui propose des services de bourse en ligne.
-L’entreprise devient une filiale du group Crédit Mutuel Arkéa en 2006 et deveint une banque en ligne en 2009.
-C’est une banque en ligne a part entière, elle a de nombreux produits communs a bcp de banque: CCO, AssVie, PEA, ...
+L’entreprise devient une filiale du group Crédit Mutuel Arkéa en 2006 et deveint une véritable banque en 2009.
+C’est une banque en ligne a part entière, elle propose toute une gamme de produits comme par exemple le compte courant, 
+le compte à terme et le plan d'epargne en action.
 
 
-###L’organisation
-
-Plein de services, il y a notament les ervices commerciaux, dont font parti les conseiller, qui s’occupent de la relation client. L
-
-Moi je suis dans le domaine MOE (Maitrise d’ouvrage) qui fait parti du service informatique.
-La MOE est composé des employés qui créé et maintiennent les outils informatiques logiciels utilisé par les autres employés ou particuliers.
-(NB: c’est tres tres mal dit.)
-Parmis ces logiciels utilisé par les particuliers on peut noter la (magnifique) WebApp nommé FortuneoQsFront *(ou le projet K2000)*
-Ce sont eux qui s’occup aussi du developpement du site internet et de la gestion des données.
+\newpage
 
 
+## L’organisation ##
+
+Durant mon stage, j'ai travailé pour le domaine MOE\footnote{\label{MOE} Maitrise d'oeuvre} qui fait parti du service informatique.
+La MOE est composé des employés qui développent et maintiennent les outils informatiques logiciels 
+utilisé par les employés et les particuliers, comme par exemple le [site internet](http://www.fortuneo.fr "fortuneo.fr").
+
+
+La maitrise d'oeuvre est supervisé et réalise les projets imposés par la maitrise d'ouvrage (ou MOA). Le
+rôle de la maitrise d'ouvrage est d'identifier et de rassembler leurs besoins pour rédiger un cahier des charges.
+Ils établisent ensuite un calendrier de projet et fixe un budget pour réaliser le projet. Le projet est ensuite
+donné à la MOE, elle se charge ensuite de réaliser le projet dans le temps imparti.

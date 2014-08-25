@@ -1,3 +1,3 @@
-pandoc --latex-engine=pdflatex -V fontsize=12pt -V documentclass:paper -V papersize:a4paper -V classoption:openright fortuneo.md realisation.md planning.md -o "pdffortuneo.pdf"
+pandoc --latex-engine=xelatex -H preamble.tex -V fontsize=12pt -V documentclass:book -V papersize:a4paper -V classoption:openright couv.md fortuneo.md stateofart.md newreal.md conclusion.md resume.md -o "pdffortuneo.pdf"
 
 echo "done"
