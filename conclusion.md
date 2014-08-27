@@ -16,4 +16,5 @@ Ce que j'en retire
 ------------------
 
 J'ai pu me perfectionner en java, decouvrir le framework Web GWT, la prog evenementielle en Java.
-tu imagines ca toi. Non vraiment pas je ne sais aps quoi en penser.
+
+Le sql aussi, surtout oracle meme si toutes les syntaxes de sql sont plus ou moins les memes.

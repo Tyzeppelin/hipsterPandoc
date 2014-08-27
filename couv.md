@@ -1,4 +1,4 @@
-
+\frontmatter
 \begin{titlepage}
 
 \begin{center}
@@ -7,10 +7,6 @@
 
 \end{center}
 
-\thispagestyle{empty}
-
 \end{titlepage}
 
-\newpage
-
-\tableofcontents
+\thispagestyle{empty}

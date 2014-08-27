@@ -1,31 +1,30 @@
 Présentation du sujet
 =====================
 
-## Ce qui existait
+## Le projet de la QS
 
-La qualité de service c'est l'avenir.
+Courant 2013, Fortuneo a intié un projet nommé FortuneoQsConsumer qui avait pour but de :
 
-> Le projet QS de Fortuneo a pour but de pouvoir mesurer de manière objective le niveau de qualité de service sur les aspects applicatifs, 
-> de manière exhaustive, et non plus se mettre en attente de remontés potentielles de nos prospects/clients lors de ces incidents
+>  pouvoir mesurer de manière objective le niveau de qualité de service sur les aspects applicatifs, 
+>  de manière exhaustive, et non plus se mettre en attente de remontés potentielles de nos prospects/clients lors de ces incidents
 
-
-Le projet répond donc aux besoins suivants :
+Le projet a donc été developpé de manière à répondre aux besoins suivant:
 
 -   Superviser en temps réel la production de manière automatique afin de s’assurer que 
-    toute la chaîne de souscription est disponible de bout en bout ;
--   Remonter en temps réel à la production les indisponibilités des services supervisés ;
+    toute la chaîne de souscription est disponible de bout en bout
+-   Remonter en temps réel à la production les indisponibilités des services supervisés
 -   Alerter rapidement (temps réel) de manière automatique, et à partir d’un certain seuil, 
     l’assistance Fortuneo afin de  communiquer, au Service Clients et au Service Commercial, 
-    l’indisponibilité ou la sous exposition d’une souscription ;
--   Générer des rapports (quotidien, hebdomadaire, mensuel) sur les indisponibilités des services et sur le parcours utilisateur ;
+    l’indisponibilité ou la sous exposition d’une souscription
+-   Générer des rapports (quotidien, hebdomadaire, mensuel) sur les indisponibilités des services et sur le parcours utilisateur
 -   Remonter les informations des prospects lors d’une anomalie à destination du Service Commercial.
 
-Pour ce faire, plusieurs outils/applications ont été développées :
-
--   Sonde souscription client CCO et le batch de suppression des éléments créé par la souscription ;
--   Outil de génération d’erreur dans l’environnement de recette ;
--   Ajout des événements dans les applications Fortuneo ;
--   Consommation des événements : FortuneoQsConsumer.
+Pour ce faire, plusieurs outils/applications ont été développées. Notamment une sonde qui teste le parcours client régulierement,
+ce qui permet d'avoir des informations régulières sur la disponibilté de la chaine de souscription. Pour pouvoir
+référencer les différents événements du parcours d'un utilisateurs, il a falut aussi mettre en place des outils de générations 
+d'erreurs et des appels depuis les applications Fortuneo. Toutes les données sont déversés dans une table d'une base de donnée Oracle. 
+Pour exploiter les resultat, il a été mis en place un système de rapports (annexe A) qui permet d'obtenir le nombre d'attritions par 
+étapes de souscriptions. L'attrition est le rapport du nombre de personne entre deux étapes
 
 ## La où j’entre en jeu
 

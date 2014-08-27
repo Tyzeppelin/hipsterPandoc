@@ -5,9 +5,10 @@
 
 
 Fortuneo est un établissement banquaire francaisé en 2000 et qui propose des services de bourse en ligne.
-L’entreprise devient une filiale du group Crédit Mutuel Arkéa en 2006 et deveint une véritable banque en 2009.
-C’est une banque en ligne a part entière, elle propose toute une gamme de produits comme par exemple le compte courant, 
-le compte à terme et le plan d'epargne en action.
+A l'origine, Fortuneo ne proposait que de la gestion de portefuille d'action.
+L’entreprise devient une filiale du group Crédit Mutuel Arkéa en 2006 et devient une véritable banque en 2009.
+C’est une banque en ligne a part entière, elle propose toute une gamme de produits comme parles comptes courants, las 
+assurances vies, les comptes à termes et toujours la gestion de portefeuille boursier.
 
 
 \newpage

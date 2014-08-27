@@ -39,6 +39,7 @@ Le client fait ses requetes au travers du service. Le serveur route les requetes
 Systeme de gestion de base de données relationelles tres courant en entreprise. 
 Utilisé pour des gros volume de données. J'ai acces a une table qui contient entre autre ces infos (plan de la table) (parler un peu de 
 
+\newpage
 
 Etape 2 : Preparation
 ---------------------
@@ -55,21 +56,32 @@ en langage sql (avec des fonction. en plus), c'a n'a as été trop complexe. Ca 
 sql/oracle comme la fonction percentil qui permet de recupere le 90e centile d'un champ d'une requete. Cela permettra a mon programme d'economiser 
 le traitement de plus de 300 000 données dans le cas du calcul du percentil pour chaque jour d'un mois.
 
+\newpage
+
 Etape 3 : Developpement
 -----------------------
 
 ### Partie Serveur
 
-La partie serveur est composé de trois partie :
+La partie serveur, schematisé par la figure \ref{server} est composé de trois partie :
+
 1. Les servlets, qui sert a formatter la reponse à la requete grace à des appels à un ou plusieurs business.
 	J'ai choisi d'ecrire une servlet par page pour eviter d'avoir des classes trop grande.
 2. Les classes Business, qui servent à faire le lien entre les servlets et la DAO. Dans mon projet il s'agit surtout de mappers qui servent
 	à formatter les reponses des appels a la base de données en un format intelligible par le client
-3. Les classes DAO\footnote{\label{DAO} Device Access Service ou Object d'accès aux données.} qui sont la pour attaquer differents service, 
-	comme, dans mon projet, une base de données.
+3. Les classes DAO\footnote{\label{DAO} Device Access Service ou Object d'accès aux données.} qui sont les classes qui contiennt les accesseurs
+	permettant d'attaquer differents service, comme, dans mon projet, une base de données.
 	
 Découper la partie serveur en troi spackage permet de bien séparer les diferentes operations, d'avoir un programme structuré et donc d'ameliorer
 les phases de debug et de maintenance. Cela passe aussi par une rigueur dans la  gestion des exceptions et des logs. 
+
+\begin{figure}
+\begin {center}
+	\caption{\label{server} Schematisation de la partie serveur}
+	\includegraphics[scale=0.4]{fig/serveur.png}
+\end{center}
+\end{figure}
+
 
 ### Partie Client
 
@@ -92,11 +104,7 @@ d'erreurs au cours du temps, ainsi que pouvoir exporter le tableau recap des err
 
 Par la suite on a ajouté 
 
+Etape 4 : Déploiement
+---------------------
 
-Etape 4 : Les tests
--------------------
-
-### LOL : Tester c'est douter
-
-MOA G SUI TRO 1 OUFZOR DU COD É G PA BESO1 D TEST LOL XD
-*pan*
+Je vais probablement dégager cette partie.
