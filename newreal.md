@@ -49,6 +49,12 @@ Etape 2 : Preparation
 
 ### Les requetes SQL
 
+Un autre travail important qu'il a fallut effectuer en amont du développement a été de préparer les requetes qui allaient etre utilisés
+pour attaquer la base de données des evenements. La table etait stocké dans une base de données relationelle et les requetes sont ecritent
+en langage sql (avec des fonction. en plus), c'a n'a as été trop complexe. Ca m'a toutefois permis d'aprendre a maitriser des fonctions
+sql/oracle comme la fonction percentil qui permet de recupere le 90e centile d'un champ d'une requete. Cela permettra a mon programme d'economiser 
+le traitement de plus de 300 000 données dans le cas du calcul du percentil pour chaque jour d'un mois.
+
 Etape 3 : Developpement
 -----------------------
 

@@ -1,7 +1,7 @@
-\newpage
-
 LE PLANNING
 ===========
+
+_TODO_:Faire un truc un peu plus concis
 
 ###Etude
 

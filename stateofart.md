@@ -3,7 +3,7 @@ Présentation du sujet
 
 ## Ce qui existait
 
-Blablabla QS blablabla deja es sondes en place, lle permettent blablabl
+La qualité de service c'est l'avenir.
 
 > Le projet QS de Fortuneo a pour but de pouvoir mesurer de manière objective le niveau de qualité de service sur les aspects applicatifs, 
 > de manière exhaustive, et non plus se mettre en attente de remontés potentielles de nos prospects/clients lors de ces incidents
