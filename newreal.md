@@ -44,7 +44,7 @@ La maniere la plus commune d'utiliser Java pour developper des Applications Web 
 Apache/Tomcat qui est un serveur http qui gere les conteneurs de servlet (?).
 
 Pour développer une application qui sera déployé sur un serveur Apache/Tomcat, j'ai du utiliser le 
-framework\footnote{\label{framework} Framework : Ensemble cohérent de composants logiciels structurels, qui sert à créer les fondations ainsi que les grandes lignes d'un logiciel}
+framework\footnote{\label{framework} Framework : Ensemble cohérent de composants logiciels structurels, qui sert à créer les fondations ainsi que les grandes lignes d'un logiciel.}
 GWT (figure \ref{GWT} ), développé par Google. Ce framework demande de séparer le projet en trois parties, la partie serveur, la partie client 
 et une troisième partie partagée par le client et le serveur que l'on nommera "Shared". 
 Le plugin va donc traduire la partie client en JavaScript, HTML et CSS pour être interprété par un 
@@ -133,32 +133,40 @@ d'un menu à remplir avec mes nouvelles pages et de la charte graphique interne.
 en elles meme et les appels aux Servlet.
 
 La partie client se compose de deux grands blocs et d'un bus d'evt. Il y a les pages, représentés par des
-'*Workbenches*' qui sont des widgets et qui sont affichés dans la partie centrale du "*mainWidget*" qui est en fait l'implementation de la charte graphique. 
+'*Workbenches*' qui sont des widgets et qui sont affichés dans la partie centrale du '*mainWidget*' qui est en fait l'implementation de la charte graphique. 
 Le changement de workbenches se fait au clique dans le menu, il y a seulement la partie centrale (le Workbench) qui est mis a jour.
 
 Pour visualiser les 3 indicateurs demandé, il a été choisi de faire 6 pages. 
 
-La première page (Annexe \ref{volum}) est celle contenant le graphique de la volumétrie d'erreur. Il s'agit simplement d'un graphique avec en abscisse les dates et en ordonnée
-le nombre d'erreur. Il faut aussi ajouter la possibilité de filtrer les erreurs pour avoir des résultats plu sprécis.
+La première page (Annexe \ref{volum}) est celle contenant le graphique de la volumétrie d'erreur. Il s'agit simplement d'un graphique 
+avec en abscisse les dates et en ordonnée le nombre d'erreurs. L'utilisateur a aussi la possibilité de naviguer au sein du graphique. C'est à 
+dire, lorsque l'onvisualise la volumetrie par tranche d'un mois, le clique sur le mois permet d'avoir le graphe détaillé sur la journée. Et le clique sur 
+une journée amène à la page n°5 qui affiche tous les messages d'erreurs de la journée selectionnée.
+Il est aussi possible de filtrer les erreurs pour avoir des résultats plus précis.
 
-La seconde page (Annexe \ref{volumd}) est une version détaillé de la première. Les erreurs sont affichés dans un tableau qui les tries par date et 
-par type d'erreurs. La lecture du tableau n'étant pas très attractif, il m' été demandé de pouvoir exporter les résultats au format csv via un bouton.
+La seconde page (Annexe \ref{volumd}) est une version détaillé de la première. Les erreurs sont, cette fois ci, affichés dans un tableau qui les tries par date et 
+par type d'erreurs. La lecture du tableau n'étant pas très facile, il m' été demandé de pouvoir exporter les résultats au format csv via un bouton. Les données au
+format csv pouvant être ensuite traitées par un tableur.
 
-La troisième page (Annexe \ref{rupture}) représente le taux de rupture de souscription du site. Il s'agit du rapport entre le nombre de souscriptions (en bleu),
-et le nombre de ruptures (en rouge). Ce rapport est représenté par la ligne verte et la moyenne du taux de rupture est affiché en rose.
+La troisième page (Annexe \ref{rupture}) représente le taux de rupture de souscription du site. Il s'agit de la page la plus attendue car elle permet d'avoir 
+une vision d'ensemble de l'évolution de la qualité de service des tunnels de souscritpions. Comme pour la première page, ce graphique permet, au clic, de passer
+d'une visualisation par mois à une visualisation par jour et à une visualisation par quart d'heures.
+La taux de rupture (en vert) est le rapport entre le nombre de souscriptions (en bleu),et le nombre de ruptures (en rouge). La moyenne de ce taux est représent par
+une ligne rose.
 
-La quatrième page (Annexe \ref{temps}) représente le percentile 90 du temps de réponse utilisateurs. Il est représenté par une ligne bleu, et la moyenne de ce percentile
+La quatrième page (Annexe \ref{temps}) représente le percentile 90 du temps de réponse utilisateurs. Il s'agit de la valeur pour laquelle 90% des 
+utilisateurs ont un temps de chargement de la page inferieur à cette valeur. Il est représenté par une ligne bleu, la moyenne de ce percentile
 est représenté par la ligne rose.
 
-La cinquième page affiche sous la forme d'un tableau le récapitulatif des erreurs d'une journée. A la différence de la version detaillé de la volumétrie, 
-cette page affiche aussi le message d'erreur généré au moment de l'erreur. Cette page est pratique pour identifier précisement la classe qui a causé l'erreur
-et voir si cette erreur est récurrente ou pas.
+La cinquième page (Annexe \ref{messages}) affiche sous la forme d'un tableau le récapitulatif des erreurs d'une journée. 
+A la différence de la version detaillé de la volumétrie, cette page affiche aussi le message d'erreur généré au moment de l'erreur. 
+Cette page est pratique pour identifier précisement la classe qui a causé l'erreur et voir si cette erreur est récurrente ou pas.
 
-Il y a aussi une sixième page qui sert de rappel des différents code d'erreurs. Les erreurs sont stockés dans la base de données avec un code unique en 
+Il y a aussi une sixième (Annexe \ref{recap}) page qui sert de rappel des différents code d'erreurs. Les erreurs sont stockés dans la base de données avec un code unique en 
 fonction du service qui a causé l'erreur. Il est interessant de pouvoir avoir à disposition la signification de ces "*codes d'erreurs*".
 
 Au fur et a mesure du developement, on m'a proposé quelques idées d'amelioration et d'ajout, comme par exemple l'ajout d'un "moteur de recherche" 
 commun à toute les pages qui permet de factoriser le code et aussi permet à l'utilisateur de ne pas avoir a copier plusieurs fois les memes parametres.
-
-(des idées de trucs a rajouter?)
-
+Le moteur de recherche se compose de deux champs de dates pour définir les bornes de la recherche, un menu déroulant pour choisir le pas de visualisation (ex: Mensuel, Journalier, ...),
+et deux autres menu déroulants pour définir sur quels contrats faire la recherche. 
+Pour les pages 1 et 5, j'ai ajouté un autre menu déroulant pour pouvoir choisir précisement quels types d'erreurs afficher.

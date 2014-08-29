@@ -6,7 +6,7 @@ Les apports à l'entreprise
 
 ### Ce que j'ai fait et à quoi ça sert
 
-Grace a ma réalisation, l'entreprise Fortuneo possède désormais un webservice qui leur permet
+Grace a ma réalisation, l'entreprise Fortuneo possède désormais une application qui leur permet
 d'afficher les données relatives à la souscription des clients d'une manière plus intuitive que 
 les simples rapports qui étaient générés.
 
@@ -31,3 +31,5 @@ Néanmoins, je n'ai pas pu aller au bout de la phase de développement puisque ,
 nous avons décidé de ne pas écrire de tests unitaires. Ce choix a été fait par manque de temps. J'ai preféré finir le projet dans les
 temps plutot que d'ecrire des tests unitaires pour ce qui fonctionnait déjà. L'application fonctionne bien et produit des résultats 
 cohérents avec les exploitations manuelle des données. Elle n'a juste pas été testé de manière formelle avec des tests Junit par exemple.
+
+regard critique

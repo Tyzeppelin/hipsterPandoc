@@ -5,8 +5,8 @@ Présentation du sujet
 
 Courant 2013, Fortuneo a intié un projet sur la qualité du service de la souscription en ligne. Le projet avait pour but de :
 
-> pouvoir mesurer de manière objective le niveau de qualité de service sur les aspects applicatifs, 
-> de manière exhaustive, et non plus se mettre en attente de remontés potentielles de nos prospects/clients lors de ces incidents
+> *pouvoir mesurer de manière objective le niveau de qualité de service sur les aspects applicatifs, 
+> de manière exhaustive, et non plus se mettre en attente de remontés potentielles de nos prospects/clients lors de ces incidents*
 
 Le projet a été réalisé de manière à répondre aux besoins suivant:
 
@@ -21,7 +21,7 @@ Le projet a été réalisé de manière à répondre aux besoins suivant:
 
 Pour ce faire, plusieurs outils et applications ont été développées. Notamment une sonde qui teste le parcours client régulierement,
 ce qui permet d'avoir des informations régulières sur la disponibilté de la chaine de souscription. Pour pouvoir
-référencer les différents événements du parcours d'un utilisateurs, il a falut aussi mettre en place des outils  qui répertorient 
+référencer les différents événements du parcours d'un utilisateurs, il a fallu aussi mettre en place des outils qui répertorient 
 l'integralité du parcours de l'utilisateur afin de savoir si son parcours s'est bien déroulé ou si une erreur est servenue et à quel moment.
 Toutes les données sont déversés dans une table d'une base de donnée Oracle. 
 Pour exploiter les resultat, il a été mis en place un système de rapports (annexe \ref{BO}) qui permet d'obtenir le nombre d'abandons entre deux 
