@@ -17,7 +17,7 @@
 
 \newpage
 
-# Page de la volumétrie sous la forme d'un graphique
+# Page du site internet
 
 \begin{figure}
 	\makebox[\textwidth]{%
@@ -26,9 +26,7 @@
     \caption{\label{volum} La page de la volumétrie sous la forme d'un graphique}
 \end{figure}
 
-\newpage
 
-# Page de la volumétrie sous la forme d'un tableau
 
 \begin{figure}
 	\makebox[\textwidth]{%
@@ -37,9 +35,7 @@
     \caption{\label{volumd} La page de la volumétrie sous la forme d'un tableau}
 \end{figure}
 
-\newpage
 
-# Page du taux de rupture
 
 \begin{figure}
 	\makebox[\textwidth]{%
@@ -48,9 +44,6 @@
     \caption{\label{rupture} La page du taux de rupture}
 \end{figure}
 
-\newpage
-
-# Page du temps de réponse utilisateur
 
 \begin{figure}
 	\makebox[\textwidth]{%
@@ -59,7 +52,6 @@
     \caption{\label{temps} La page du temps de réponse utilisateur}
 \end{figure}
 
-# Page des messages d'erreurs
 
 \begin{figure}
 	\makebox[\textwidth]{%
@@ -67,8 +59,6 @@
     }
     \caption{\label{messages} La page du temps de réponse utilisateur}
 \end{figure}
-
-# Page du récapitulatif des codes d'erreurs
 
 \begin{figure}
 	\makebox[\textwidth]{%

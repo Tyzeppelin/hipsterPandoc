@@ -7,9 +7,9 @@ Etape 1 : Le Cahier des Charges et les spécifications
 ### L'expression du besoin par la MOA
 
 La MOA voulait pouvoir avoir acces à trois grands indicateurs de la qualité de service:
-#. La volumetrie d'erreurs
-#. La taux de rupture de souscription
-#. Le percentile 90 du temps de réponse utilisateur
+1. La volumetrie d'erreurs
+1. La taux de rupture de souscription
+1. Le percentile 90 du temps de réponse utilisateur
 
 Tous ces indicateurs devant pouvoir être visualisé sur des périodes de temps variables. Par exemple, pouvoir voir
 l'évolution d'un indicateurs, sur un an avec un pas de un mois, sur un mois avec un pas d'une journée, et sur une journée
