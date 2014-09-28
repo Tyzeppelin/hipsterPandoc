@@ -6,25 +6,27 @@ Etape 1 : Le Cahier des Charges et les spécifications
 
 ### L'expression du besoin par la MOA
 
-La MOA voulait pouvoir avoir acces à trois grands indicateurs de la qualité de service:
+La MOA souhaitait avoir acces à trois grands indicateurs de la qualité de service:
+
 1. La volumetrie d'erreurs
 1. La taux de rupture de souscription
 1. Le percentile 90 du temps de réponse utilisateur
 
-Tous ces indicateurs devant pouvoir être visualisé sur des périodes de temps variables. Par exemple, pouvoir voir
-l'évolution d'un indicateurs, sur un an avec un pas de un mois, sur un mois avec un pas d'une journée, et sur une journée
-avec un pas de 15 minutes.
+Tous ces indicateurs devant pouvoir être visualisés sur des périodes de temps variables. Par exemple, pouvoir voir
+l'évolution d'un indicateurs sur un an avec un pas de un mois, sur un mois avec un pas d'une journée, et sur une journée
+avec un pas de 15 minutes. Il devait aussi y avoir une fonctionnalité pour réduire les résultats à un ou plusieurs contrats
+spécifiques pour augmenter la précision de l’analyse des indicateurs.
 
-Le premier indicateur, la volumétrie, correspond au volume d'erreurs sur une période de temps 
-donné. Il permet de cibler des pics d'indisponibilité et de cibler par la même occasion quel(s) 
-service(s) était indisponible, cela permet de gagner du temps dans l'exploitation des logs du service en question.
+Le premier indicateur: La volumétrie. Elle correspond au volume d'erreurs sur une période de temps 
+donné. Il permet de cibler des pics d'indisponibilité et de cibler par la même occasion quel
+service était indisponible, cela permet de gagner du temps dans l'exploitation des logs du service en question.
 
-Le second indicateur, le taux de rupture, est le rapport entre le nombre de personne qui ont atteinds la fin 
+Le second indicateur: Le taux de rupture. C’est le rapport entre le nombre de personnes qui ont atteind la fin 
 du tunnel de souscription et le nombre de personne qui ont eu une erreur bloquante (site qui ne reponds 
 pas, un service indisponible, ...). Cet indicateur est indépendant de l'abandon "conscient" de l'utilisateur. 
 
-Le troisième indicateur est le percentile 90 du temps de reponse utilisateur. 
-Il s'agit en fait de la valeur pour laquelle 90% des temps de réponse de l'echantillon d'utilisateurs est inferieur a cette valeur. 
+Le troisième indicateuri: Le percentile 90 du temps de reponse utilisateur. 
+Il s'agit de la valeur pour laquelle 90% des temps de réponse de l'echantillon d'utilisateurs est inferieur a cette valeur. 
 Cet indicateur permet de savoir le moment où le site est surchargé et si cette surcharge est 
 récurrente ou simplement sporadique.
 
@@ -39,16 +41,13 @@ récurrente ou simplement sporadique.
 
 #### Java 
 
-Le langage de programmation utilisé principalament par le groupe Arkea/Fortuneo est principalement le Java. 
-La maniere la plus commune d'utiliser Java pour developper des Applications Web c'est d'utiliser la technologie 
-Apache/Tomcat qui est un serveur http qui gere les conteneurs de servlet (?).
-
+Le langage de programmation utilisé par le groupe Arkea/Fortuneo pour développer ses application est principalement le Java. 
 Pour développer une application qui sera déployé sur un serveur Apache/Tomcat, j'ai du utiliser le 
 framework\footnote{\label{framework} Framework : Ensemble cohérent de composants logiciels structurels, qui sert à créer les fondations ainsi que les grandes lignes d'un logiciel.}
-GWT (figure \ref{GWT} ), développé par Google. Ce framework demande de séparer le projet en trois parties, la partie serveur, la partie client 
+GWT (Figure \ref{GWT} ), développé par Google. Ce framework demande de séparer le projet en trois parties, la partie serveur, la partie client 
 et une troisième partie partagée par le client et le serveur que l'on nommera "Shared". 
-Le plugin va donc traduire la partie client en JavaScript, HTML et CSS pour être interprété par un 
-navigateur web. Il va aussi compiler la partie serveur en java pour être executé par le serveur Tomcat, et il va compiler la 
+Le framework est livré avec un outil qui se charge de traduire la partie client en JavaScript, HTML et CSS pour être interprétée par un 
+navigateur web. Il va aussi compiler la partie serveur en java pour être executé par le serveur. Il va aussi compiler la 
 partie Shared à la fois en Javascript et en java pour pouvoir être interpreté par les deux entités Client et Serveur.
 
 
@@ -56,8 +55,8 @@ partie Shared à la fois en Javascript et en java pour pouvoir être interpreté
 #### Oracle
 
 La table qui contient les informations qui me permettront de calculer les différents indicateurs
-demandés par la MOA est stockée dans une bas de donnée relationelle géré par un moteur Oracle. Ce gestionnaire de base de données 
-est beaucoup utilisé dans les grandes entreprise notamment parce qu'il est très efficace pour traiter des données volumineuses.   
+demandés par la MOA est stockée dans une bas de donnée relationelle gérée par un moteur Oracle. Ce gestionnaire de base de données
+est beaucoup utilisé dans les grandes entreprises notamment parce qu'il est très efficace pour traiter des données volumineuses.
 Oracle Database est aussi interessant puisqu'il possède de nombreux outils pour s'interfacer du code, Java notamment.
 
 \newpage
@@ -67,22 +66,22 @@ Etape 2 : Préparation
 
 ### Archétypes
 
-La première difficulté de ce stage est venu du framework de développement. Pour cette application, j'ai du utiliser
-un framework du nom de Archétypes, qui est le framework GWT auquel on a greffé la charte graphique du groupe
-Crédit Mutuel Arkéa. Puisque la charte graphique est déjà integré, cela permet au developpeur de se concentrer 
-sur le reste du code et ne pas passer trop de temps a s'occuper du design.
+La première difficulté de ce stage est venue du framework de développement. Pour cette application, j'ai du utiliser
+un framework du nom de Archétypes, qui est le framework GWT auquel a été greffé la charte graphique du groupe
+Crédit Mutuel Arkéa. Puisque la charte graphique est déjà integré, le developpeur a plus de temps pour se concentrer 
+sur le reste du code et ne passse pas trop de temps a s'occuper du design.
 
 Néanmoins, il a été assez difficile de prendre complètement en main ce framework car il est fourni avec une 
-documentation très réduite, il faut aller chercher les noms des méthodes "à la main" dans le code déjà généré.
-C'est vraiment une étape assez longue mais qui montre l'intérêt de documenter le code.
+documentation très réduite, il faut aller chercher les noms et le fonctionnement des méthodes "à la main" dans le code déjà généré.
+Il s’agit d’une étape assez longue mais qui montre l'intérêt de documenter le code.
 
 ### Les requêtes SQL
 
 La deuxième partie du travail effectué en amont du développement a été de préparer les requêtes qui allaient etre utilisés
-pour attaquer la base de données. La table etait stocké dans une base de données relationelle et les requetes sont ecritent
+pour attaquer la base de données. La table est stocké dans une base de données relationelle et les requetes sont ecritent
 en langage sql. L'écriture des  a m'a toutefois permis d'aprendre a maitriser des fonctions
-sql/oracle comme la fonction *PERCENTILE_DISC* qui permet de recupere le n-ième centile d'un champ d'une requete. Ces fonctions sont
-très pratique car le traitement de plusieurs centaines de miliers de lignes est plus efficace sur le serveur au moment de la 
+sql/oracle comme la fonction *PERCENTILE_DISC* qui permet de recuperer le n-ième centile d'un champ d'une requete. Ces fonctions sont
+très pratiques car le traitement de plusieurs centaines de miliers de lignes est plus efficace sur le serveur au moment de la 
 requête plutot que dans l'application. 
 
 \newpage
@@ -94,15 +93,16 @@ Etape 3 : Développement
 
 La partie serveur, schematisé par la figure \ref{server} est composé de trois partie :
 
-1. Les servlets, qui sert a formatter la reponse à la requete grace à des appels à un ou plusieurs business.
-	J'ai choisi d'ecrire une servlet par page pour eviter d'avoir des classes trop grande.
-2. Les classes Business, qui servent à faire le lien entre les servlets et la DAO. Dans mon projet il s'agit surtout de mappers qui servent
-	à formatter les reponses des appels a la base de données en un format intelligible par le client
-3. Les classes DAO\footnote{\label{DAO} Device Access Service ou Object d'accès aux données.} qui sont les classes qui contiennt les accesseurs
-	permettant d'attaquer differents service, comme, dans mon projet, une base de données.
-	
+1. Les servlets, qui servent a formatter la reponse à la requete grace à des appels à un ou plusieurs business.
+	J'ai choisi d'ecrire une servlet par page pour améliorer la lisibilité du code.
+2. Les classes Business, qui servent à faire le lien entre les servlets et les classes de DAO. Dans mon projet il s'agit surtout de mappers qui servent
+	à formatter les réponses des appels a la base de données en un format intelligible par le client.
+3. Les classes de DAO\footnote{\label{DAO} Device Access Service ou Objet d'Accès aux Données.} sont les classes qui contiennt les accesseurs
+	permettant d'attaquer differents services comme, dans mon projet, une base de données.
+
 Découper la partie serveur en trois packages permet de bien séparer les diferentes operations, d'avoir un programme structuré et donc d'ameliorer
-les phases de debug et de maintenance. Cela passe aussi par une rigueur dans la  gestion des exceptions et des logs. 
+les phases de debug et de maintenance. La gestion rigoureuse des exceptions et des logs côté serveur permet aussi d’améliorer les phases
+de debug.
 
 \begin{figure}
 \begin {center}
@@ -111,20 +111,22 @@ les phases de debug et de maintenance. Cela passe aussi par une rigueur dans la 
 \end{center}
 \end{figure}
 
-Le rôle des servlets est de recevoir la requete ainsi que les paramètres de la requête pour appeler
-la bonne classe Business et de renvoyer la réponse approprié au client. La Servlet reçoit la requête par 
-l'intermediaire d'une classe nommée \texttt{ServletMapping} qui fait le lien entre les url et les servlets associés.
+Le rôle des servlets est de recevoir la requête ainsi que les paramètres de celle-ci pour appeler
+la bonne classe Business et de renvoyer la réponse appropriée au client. La Servlet reçoit la requête par 
+l'intermediaire d'une classe nommée \texttt{ServletMapping} qui est un mapper qui fait le lien entre les url et les servlets associés.
 
-Les classes Business quand à elles, servent à formatter les résultat de leurs appels aux classes DAO pour 
+Les classes Business quand à elles, servent à formatter les appels aux classes DAO pour 
 qu'ils soient envoyés au Client par les Servlets. Dans mon cas il s'agissait pricipalement de transfomer des 
 resultat de requêtes SQL en une table de hachage compréhensible par le Client. Les retours des requêtes SQL sont sous
-la forme d'une liste Java qui contient des \texttt{Map}. Chaque \texttt{Map} contient une ligne du retour de la requete SQL, il
-faut dont extraire les information de cette map et les trier pour pouvoir les exploiter dans la partie client.
+la forme d'une liste Java qui contient des \texttt{Map}. Chaque \texttt{Map} contient une ligne du résultat de la requete SQL. Il
+faut donc extraire les information de cette \texttt{Map} et les trier pour pouvoir les exploiter dans la partie client.
 
-La dernière partie du Serveur sont les classes de DAO. Il s'agit des classes qui font les appels à la base de données.
-Les informations relatives à la connexion (adresse du serveur, identifiants, pool de connexions, ...) sont stockés dans un fichier de conf.
-Ce sont ces classes qui attaquent les differentes sources de données. Dans mon cas ces classes servent à effectuer les requêtes SQL 
-et à retourner le résultat de ces requêtes à la classe business qui l'apelle.
+La dernière partie du Serveur sont les classes de DAO. Il s'agit des classes qui font les appels à des services externes comme  par exeple
+un WebService externe ou une base de donnée. Dans mon cas ces classes servnet à effectuer les requêtes SQL
+et à retourner le résultat de ces requêtes à la classe business qui l’apelle.
+Les informations relatives à la connexion à la base de donnée (adresse du serveur, identifiants, pool de connexions, ...) 
+sont stockés dans un fichier de configuration au format XML. Au lancement du serveur, un pool de connexion est créé et est géré par un 
+driver Oracle qui utilise les connexions pour faire les appels à la base de donnée.
 
 ### Partie Client
 

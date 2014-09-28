@@ -4,7 +4,7 @@ Conclusion
 Les apports à l'entreprise
 --------------------------
 
-### Ce que j'ai fait et à quoi ça sert
+### Une application pour visualiser la qualité de service de la souscription à Fortuneo
 
 Grace a ma réalisation, l'entreprise Fortuneo possède désormais une application qui leur permet
 d'afficher les données relatives à la souscription des clients d'une manière plus intuitive que 
@@ -25,8 +25,8 @@ projet dans les temps plutot que d’écrire des tests unitaires. L’applicatio
 manuelles des données.
 
 
-Ce que j'en retire
-------------------
+Ce que m’a apporté ce stage
+---------------------------
 
 J'ai pu me perfectionner en java, découvrir la programmation Web en java au travers du framework GWT et découvrir la programmation i
 événementielle. J'ai toujours été interessé par le monde des réseaux et de la programmation. 
