@@ -3,10 +3,10 @@ Présentation du sujet
 
 ## Le projet de la QS
 
-Courant 2013, Fortuneo a intié un projet sur la qualité du service de leur souscription en ligne. Le projet avait pour but de :
+Courant 2013, Fortuneo a initié un projet sur la qualité du service de leur souscription en ligne. Le projet avait pour but de :
 
-> *pouvoir mesurer de manière objective le niveau de qualité de service sur les aspects applicatifs, 
-> de manière exhaustive, et non plus se mettre en attente de remontés potentielles de nos prospects/clients lors de ces incidents*
+> *”pouvoir mesurer de manière objective le niveau de qualité de service sur les aspects applicatifs, 
+> de manière exhaustive, et non plus se mettre en attente de remontées potentielles de nos prospects/clients lors de ces incidents”*
 
 Le projet a été réalisé de manière à répondre aux besoins suivant:
 
@@ -19,18 +19,19 @@ Le projet a été réalisé de manière à répondre aux besoins suivant:
 -   Générer des rapports (quotidien, hebdomadaire, mensuel) sur les indisponibilités des services et sur le parcours utilisateur
 -   Remonter les informations des prospects lors d’une anomalie à destination du Service Commercial.
 
-Pour ce faire, plusieurs outils et applications ont été développées. Notamment une sonde qui teste le parcours client régulierement,
+Pour ce faire, plusieurs outils et applications ont été développés. Notamment une sonde qui teste le parcours client régulierement;
 ce qui permet d'avoir des informations régulières sur la disponibilté de la chaine de souscription. Pour pouvoir
 référencer les différents événements du parcours d'un utilisateurs, il a fallu aussi mettre en place des outils qui répertorient 
-l'integralité du parcours de l'utilisateur afin de savoir si son parcours s'est bien déroulé ou si une erreur est servenue et à quel moment.
-Toutes les données sont déversés dans une table d'une base de donnée Oracle. 
-Pour exploiter les resultat, il a été mis en place un système de rapports (Annexe \ref{BO}) qui permet d'obtenir le nombre d'abandons entre deux 
-étapes de souscriptions. L'abandon est du, soit à un l'arrêt de la souscription par le prospect, soit à une erreur fonctionelle.
+l'integralité du parcours de l'utilisateur afin de savoir si son parcours s'est bien déroulé ou si une erreur est survenue et à quel moment.
 
-## La mission qui m’a été confié
+Toutes les données sont déversées dans une table d'une base de donnée Oracle. 
+Pour exploiter les resultats, il a été mis en place un système de rapports (Annexe \ref{BO}) qui permet d'obtenir le nombre d'abandons entre deux 
+étapes de souscriptions. L'abandon est dû, soit à un l'arrêt de la souscription par le prospect, soit à une erreur fonctionelle.
+
+## La mission qui m’a été confiée
 
 Le système de supervision de la QS fonctionne très bien et a permis de corriger plusieurs problèmes au sein du processus de souscription.
-Cependant, le principal soucis de la solution actuelle est l'accessibilité aux résultats. Les rapports qui étaient générés étaient trop peu lisible,
+Cependant, le principal soucis de la solution actuelle est l'accessibilité aux résultats. Les rapports qui étaient générés étaient trop peu lisibles,
 assez lourds et ne proposaient que de visualiser le taux d'attrition (ou d'abandon).
 Pour obtenir d'autres indicateurs, comme la répartition des erreurs au court du temps en fonction des types d'erreurs, 
 la MOA devait faire une requête SQL puis un traitement du résultat dans un tableur (comme par exemple Microsoft Excel). 

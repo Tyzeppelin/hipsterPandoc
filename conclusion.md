@@ -6,7 +6,7 @@ Les apports à l'entreprise
 
 ### Une application pour visualiser la qualité de service de la souscription à Fortuneo
 
-Grace a ma réalisation, l'entreprise Fortuneo possède désormais une application qui leur permet
+Grâce à ma réalisation, l'entreprise Fortuneo possède désormais une application qui leur permet
 d'afficher les données relatives à la souscription des clients d'une manière plus intuitive que 
 les simples rapports qui étaient générés. Ainsi qu’un moteur de recherche qui leur permet de moduler
 l’affichage des indicateurs.
@@ -21,7 +21,7 @@ les résultats.
 
 Il reste aussi une partie importante de la phase de développement que sont les tests unitaires. D’un commun accord avec mon maitre de stage,
 nous avons décidé de ne pas écrire de tests formels. Ce choix a été fait par manque de temps. Nous avons préféré finir le développement du
-projet dans les temps plutot que d’écrire des tests unitaires. L’application néanmoins fournit des résultats cohérents avec els exploitations
+projet dans les temps plutôt que d’écrire des tests unitaires. L’application néanmoins fournit des résultats cohérents avec les exploitations
 manuelles des données.
 
 
@@ -30,7 +30,7 @@ Ce que m’a apporté ce stage
 
 J'ai pu me perfectionner en java, découvrir la programmation Web en java au travers du framework GWT et découvrir la programmation i
 événementielle. J'ai toujours été interessé par le monde des réseaux et de la programmation. 
-Rédiger du code java pour faire une application Web a vramient été une expérience interessante et enrichissante.
+Rédiger du code java pour faire une application Web a vramient été une expérience intéressante et enrichissante.
 
 Ce stage m'a permis d'apprendre comment fonctionne la gestion de projet dans une grande entreprise,
 de la réception du Cahier des Charges, en passant par l'édition des spécifications, jusqu'à la livraison en environement de recette.

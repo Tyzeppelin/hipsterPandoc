@@ -17,7 +17,7 @@
 
 \newpage
 
-# Page du site internet
+# Pages du site internet
 
 \begin{figure}
 	\makebox[\textwidth]{%
