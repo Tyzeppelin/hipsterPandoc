@@ -12,7 +12,7 @@ les simples rapports qui étaient générés. Ainsi qu’un moteur de recherche 
 l’affichage des indicateurs.
 
 
-### Ce qui’il reste a faire et ce qui a été commencé
+### Ce qui’il reste à faire et ce qui a été commencé
 
 Le projet de la QS a beaucoup évolué durant ma période de stage. Au début il s'agissait de monitorer la souscription aux différents produits
 de Fortuneo. Par la suite il a été envisagé d'étendre le processus d'analyse des erreurs à d'autres parties du site internet. Il y reste donc 
@@ -28,13 +28,13 @@ manuelles des données.
 Ce que m’a apporté ce stage
 ---------------------------
 
-J'ai pu me perfectionner en java, découvrir la programmation Web en java au travers du framework GWT et découvrir la programmation i
-événementielle. J'ai toujours été interessé par le monde des réseaux et de la programmation. 
-Rédiger du code java pour faire une application Web a vramient été une expérience intéressante et enrichissante.
+J'ai pu me perfectionner en java, découvrir la programmation Web en java au travers du framework GWT et découvrir la programmation 
+événementielle. Rédiger du code java pour faire une application Web a vramient été une expérience intéressante et enrichissante. 
+Cette expérience m’a aussi permis de me rendre compte que développer des applications web en Java n’est pas la voie dans laquelle 
+je souhaite m’engager pour l’instant. Je vais maintenant chercher les différences entre le développement logiciel  et le développement 
+web, pour les comparer et choisir celui qui me plaît le mieux. Le sujet d’études pratiques, l’amélioration de l’éditeur LaTex latexila,
+va certainement déjà m’aider dans mon choix de parcours professionnel.
 
 Ce stage m'a permis d'apprendre comment fonctionne la gestion de projet dans une grande entreprise,
-de la réception du Cahier des Charges, en passant par l'édition des spécifications, jusqu'à la livraison en environement de recette.
+de la réception du cahier des charges, en passant par l'édition des spécifications, jusqu'à la livraison en environement de recette.
 
-
-
-regard critique
