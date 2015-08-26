@@ -6,9 +6,9 @@ Presentation
 INRIA
 -----
 INRIA <=> institut National de Recherche en Informatique et en automatique
-a Rennes, très lié avec l'IRISA
+a Rennes, très lié avec l'IRISA (Insitut de Recherche en Informatique et Systèmes Aléatoires)
 
-centre de recherche qui fait de la science en info/math
+centre de recherche qui fait de la science en info/math/automatique
 
 financé par des privés/colectivités/institutions/....
 
@@ -29,16 +29,13 @@ En gros ils font du GL
     - variabilité des logiciels
     - adaptation logicielle
     - diversification logicielle
-    (beaucoup trop de "logicielle" dans ces phrases)
-
-
-
+    (beaucoup trop de "logiciel" dans ces phrases)
 
 
 Melange
 -------
 
-Travaillé ave Thomas Degueule et Arnaud Blouin sur le lagage Melange
+Travaillé ave Thomas Degueule et Arnaud Blouin sur le langage Melange
 
 "Langage-based Model-oriented programming language"
 i.e. Langage de programmation qui manipule des modèles et qui les types.(du verbe typer)

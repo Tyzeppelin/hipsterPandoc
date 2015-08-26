@@ -1,3 +1,4 @@
+\newpage
 Les langages
 ============
 
@@ -22,8 +23,8 @@ En gros voila ce qu'il faut pour faire un langage.
 Un exemple de langage: 
  LE YAKA (cours de compilo de 3INFO)
 
- On a définit une grammaire (l'AS) ecrite selon la syntaxe du metalangage EBNF,
- En ce qui concerne la syntaxe concrete, on a choisi (imposé) la forme textuelle.
+ On a définit une grammaire (l'AS) ecrite selon la syntaxe du metalangage EBNF (et ransformé en ast java grace a javacc),
+ En ce qui concerne la syntaxe concrete, on a choisi (imposé) la forme textuelle, l'editeur eclipse (mwe...).
  et le compilateur (semantique) a été généré par javacc a partir de la grammaire.
 
 
@@ -36,6 +37,9 @@ L'apport de Melange a la science
 (on ne va parler que de model-based programming languages par la suite)
 
 En gros une fois qu'on a des jolis modeles ben on est bien content.
+
+Melange genere des editeurs pour ces models et des plugins eclipse dediés avec plein de trucs comme une outline, un completion provider, ...
+
 Ce qu'on peut se dire apr la suite c'est que l'on peut merge plusieurs modeles pour reutiliser des fonctionnalités sans avoir a les recoder
 pratique.
 en réalité c'est un poil plus technique et c'est bien expliqué ici [inserer biblio ici]

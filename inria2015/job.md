@@ -1,3 +1,4 @@
+\newpage
 Réalisation
 ===========
 
@@ -14,6 +15,8 @@ notamment
  - eclipse RCP (apprendre comment se servir des api RCP d'eclipse)
  - log4j (I suppose)
  - junit (pas vrfaiment de "l'apprentissag" mais plutot une jolie experience)
+ - maven (avec lse tp de 5A de ablouin)
+ - jenkins (comme maven)
 
 Usage de l'experience acquise a lire de la doc qui n'existe pas
 ---------------------------------------------------------------
@@ -53,7 +56,7 @@ BTW pour avoir pu faire la completion sur les objets slicés il a fallut que je 
 C'est quand meme marrant de se dire que ya 2 mois je ne connaissais rien aux metamodels et que pendant le stage on m'a laisser modifier
 le metamodel du sujet de these de thomas. Apres j'ai fait gaffe et jamais sans demander son accord. But still.
 
-Ensuite j'ai fait qqs bugfix. Notamment avec la generation de leuts metamodels examples. Rien de bien mechants, juste une variable mal set-é
+Ensuite j'ai fait qqs bugfix. Notamment avec la generation de leurs metamodels examples. Rien de bien mechants, juste une variable mal set-é
 
 
 Apres il y a eu le passage du menu. Alors la j'en ai chié. Ajouter un sousemnu static avec 3 boutons predefinies et ayant des comportement
