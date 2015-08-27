@@ -1,11 +1,11 @@
 \newpage
 
-Presentation
+Présentation
 ============
 
 INRIA
 -----
-INRIA <=> institut National de Recherche en Informatique et en automatique
+L'INRIA, ou Institut National de Recherche en Informatique et en Automatique
 a Rennes, très lié avec l'IRISA (Insitut de Recherche en Informatique et Systèmes Aléatoires)
 
 centre de recherche qui fait de la science en info/math/automatique
@@ -20,9 +20,10 @@ Fait parti de l'equipe Diverse
 Diverse
 -------
 
-Diverse stands for Diversity-centric Software Engineering
+j'ai travaillé dans le group de recherche Diverse qui est un acronyme de Diversity-centric Software Engineering
 
-En gros ils font du GL 
+Il s'agit d'un des seul groupe de recherche de rennes qui travaille sur le genie et la diversite logiciel.
+Groupe composé en moyenne de 40 personne avec n permanents, m thesard et une armee de stagiaire
 
 4 grands mots-clés :
     - ingénierie des langages
@@ -35,7 +36,9 @@ En gros ils font du GL
 Melange
 -------
 
-Travaillé ave Thomas Degueule et Arnaud Blouin sur le langage Melange
+Travaillé sur le langage Melange, le projet de these de Thomas Degueule. Sur ce projet contribue aussi fabien coulon (inge de recherche)
+
+Melange est un language [melange-lang.org]
 
 "Langage-based Model-oriented programming language"
 i.e. Langage de programmation qui manipule des modèles et qui les types.(du verbe typer)

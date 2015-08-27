@@ -2,6 +2,8 @@
 Les langages
 ============
 
+[Cours de Mr Cousineau]{http://www.pps.univ-paris-diderot.fr/~cousinea/Cours/Licence/Cours.pdf}
+
 Mais pourquoi je m'embarque la dedans.... Probablement pour faire plus de contenu
 
 BREF.
@@ -14,7 +16,7 @@ Un langage en informatique peut etre vu comme composé de 3 parties:
  - Une syntaxe concrete
  - Une semantique
 
-La syntaxe abstraite c'est, basiquement la grammaire (ou le metamodele, ca depends du mode de representation)
+La syntaxe abstraite correspond au règles qui définissent la grammaire (ou le metamodele, ca depends du mode de representation)
 La syntaxe concrete c'est le representation de l'AS (c'est l'editeur (?): texte, diagramme, un mix, ...)
 Et la semantique c'est le sens du code. En gros comment tu interprete ce qui est ecris (generalement c'est un compilo ou un interpreteur)
 
