@@ -8,6 +8,8 @@ Mais pourquoi je m'embarque la dedans.... Probablement pour faire plus de conten
 
 BREF.
 
+EN fait non. Ca va disparaitre. Juste l'apport de Melange a la science a la limite.
+
 WTF IZ DIZ
 ----------
 
