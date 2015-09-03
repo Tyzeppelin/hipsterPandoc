@@ -2,19 +2,16 @@
 
 Les bases
 =========
+
 (renommer)
 
 
 Melange
 -------
 
-Travaillé sur le langage Melange, le projet de these de Thomas Degueule. Sur ce projet contribue aussi fabien coulon (inge de recherche)
-
-Melange est un language [melange-lang.org] de programmation qui manipule des languages et permet de faire
-des operations dessus pour produire d'autre langugaes.
-
-il est de type : "Langage-based Model-oriented programming language"
-i.e. Langage de programmation qui manipule des modèles et qui les types.(du verbe typer)
+J'ai travaillé sur le langage Melange, le projet de thèse de Thomas Degueule.
+Melange est un language [melange-lang.org] de programmation de type : "Langage-based Model-oriented programming language"; 
+c'est à dire qui manipule des languages et permet de faire des operations dessus pour produire d'autre langugaes.
 
 Le typage de langage permet de faire pleind e trucs avec leurs modeles
 comme par exemple les decouper (en extraire une partie coherente) pour ensuite coller le 

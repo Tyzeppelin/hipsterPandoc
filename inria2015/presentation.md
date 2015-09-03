@@ -5,14 +5,17 @@ Présentation
 
 INRIA
 -----
+
 L'INRIA, ou Institut National de Recherche en Informatique et en Automatique
-a Rennes, très lié avec l'IRISA (Insitut de Recherche en Informatique et Systèmes Aléatoires)
+a Rennes, très lié avec l'IRISA (Insitut de Recherche en Informatique et Systèmes Aléatoires) est un
+centre de recherche en informatique et automatique.
 
-centre de recherche qui fait de la science en info/math/automatique
+Plus de [n] chercheurs dispersé dans des centres sur toute la france (et a l'etranger?) 
+regroupés en groueps de recherches. Chaque groupe de recherche travaille sur un domaine precis comme par
+exemple l'equipe "Hybrid" qui travaille sur la realité virtuelle et les interaction 3D.
 
-financé par des privés/colectivités/institutions/....
-
-Regroupé en groupe/projet avec chacun son but (ex: Hybrid(interaction 3D/belin))
+Chaque equipe de recherche est composé d'un directeur de recherche, de chercheurs permanents, de post-doc,
+d'inge de recherches, de thesards et de stagiaires.
 
 Fait parti de l'equipe Diverse 
 
@@ -20,7 +23,7 @@ Fait parti de l'equipe Diverse
 Diverse
 -------
 
-j'ai travaillé dans le group de recherche Diverse qui est un acronyme de Diversity-centric Software Engineering
+Diversity-centric Software Engineering
 
 Il s'agit d'un des seul groupe de recherche de rennes qui travaille sur le genie et la diversite logiciel.
 Groupe composé en moyenne de 40 personne avec n permanents, m thesard et une armee de stagiaire
