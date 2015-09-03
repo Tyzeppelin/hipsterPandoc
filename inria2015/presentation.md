@@ -1,5 +1,4 @@
 \newpage
-
 Présentation
 ============
 
@@ -17,16 +16,13 @@ exemple l'equipe "Hybrid" qui travaille sur la realité virtuelle et les interac
 Chaque equipe de recherche est composé d'un directeur de recherche, de chercheurs permanents, de post-doc,
 d'inge de recherches, de thesards et de stagiaires.
 
-Fait parti de l'equipe Diverse 
-
-
 Diverse
 -------
 
 Diversity-centric Software Engineering
 
 Il s'agit d'un des seul groupe de recherche de rennes qui travaille sur le genie et la diversite logiciel.
-Groupe composé en moyenne de 40 personne avec n permanents, m thesard et une armee de stagiaire
+Groupe composé en moyenne de 40 personne avec [n] permanents, [m] thesard et une armee de stagiaire.
 
 4 grands mots-clés :
     - ingénierie des langages

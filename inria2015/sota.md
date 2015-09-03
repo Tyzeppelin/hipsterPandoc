@@ -1,5 +1,4 @@
 \newpage
-
 Les bases
 =========
 
@@ -14,12 +13,13 @@ Melange est un language [melange-lang.org] de programmation de type : "Langage-b
 c'est à dire qui manipule des languages et permet de faire des operations dessus pour produire d'autre langugaes.
 
 Le typage de langage permet de faire pleind e trucs avec leurs modeles
-comme par exemple les decouper (en extraire une partie coherente) pour ensuite coller le 
+comme par exemple les decouper (en extraire une partie coherente) pour ensuite coller le
 slice sur un autre model. Il y a aussi une notion d'heritage (et du coup de sous-typage)
 
 (essayer de citer deux trois papier la dessus pour faire credible)
 
-Melange basé sur la platforme eclipse RCP et repose sur les plugins xtext/xtend, ecore/emf, k3, ...
+Melange est basé sur la platforme “client riche” d’Eclipse connue sous le nom de Eclipse
+Mes plugins xtext pour la grammaire, emf pour les modèles et métamodèles, .
 
 Beaucoup de features comme la generation d'editeurs de metamodels a la volée, la generation des-dits mm
 en plus des plugins eclipse de base comme l'outline, la completion auto, la consommation de memoire infinie, ...
@@ -36,7 +36,6 @@ Néanmoins ce n'est pas un EDI a part entiere. RCP ne fournit aps de client rich
 il fournit uniquement une suite de framework qui permet de developper des 'client riche'.
 En gros c'est un SDK specifique a Eclipse.
 (merci wipikedia)
-
 
 Plein de features a implementer (menu, hyperlink, outline, console (sorry 'bout that), ...)
 2 manieres de faire, soit en contribuant a un "extension point" soit en "bindant" et redefinissant les
