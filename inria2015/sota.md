@@ -1,24 +1,17 @@
-\newpage
-Les bases
-=========
-
-(renommer)
-
+L'environnement de travail
+==========================
 
 Melange
 -------
 
 J'ai travaillé sur le langage Melange, le projet de thèse de Thomas Degueule.
-Melange est un language [melange-lang.org] de programmation de type : "Langage-based Model-oriented programming language"; 
-c'est à dire qui manipule des languages et permet de faire des operations dessus pour produire d'autre langugaes.
+[Melange](http://melange-lang.org/) est un language de programmation de type :
+"Langage-based Model-oriented programming language"; c'est à dire qu'il manipule
+des langages sous forme de métamodèles dans le but de créer un nouveau langage spécifique
+composé d'un ou plusieurs fragments de langages.
 
-Le typage de langage permet de faire pleind e trucs avec leurs modeles
-comme par exemple les decouper (en extraire une partie coherente) pour ensuite coller le
-slice sur un autre model. Il y a aussi une notion d'heritage (et du coup de sous-typage)
-
-(essayer de citer deux trois papier la dessus pour faire credible)
-
-Melange est basé sur la platforme “client riche” d’Eclipse connue sous le nom de Eclipse
+Melange est basé sur la platforme “client riche” d’Eclipse connue sous le nom de Eclipse RCP,
+cela permet notamment de profiter de l'ensemble des fonctionnalités
 Mes plugins xtext pour la grammaire, emf pour les modèles et métamodèles, .
 
 Beaucoup de features comme la generation d'editeurs de metamodels a la volée, la generation des-dits mm

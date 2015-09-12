@@ -1,33 +1,26 @@
-\newpage
-Présentation
+Présentation (ou trivia nul, au choix)
 ============
 
 INRIA
 -----
 
-L'INRIA, ou Institut National de Recherche en Informatique et en Automatique
-a Rennes, très lié avec l'IRISA (Insitut de Recherche en Informatique et Systèmes Aléatoires) est un
-centre de recherche en informatique et automatique.
-
-Plus de [n] chercheurs dispersé dans des centres sur toute la france (et a l'etranger?) 
-regroupés en groueps de recherches. Chaque groupe de recherche travaille sur un domaine precis comme par
-exemple l'equipe "Hybrid" qui travaille sur la realité virtuelle et les interaction 3D.
-
-Chaque equipe de recherche est composé d'un directeur de recherche, de chercheurs permanents, de post-doc,
-d'inge de recherches, de thesards et de stagiaires.
+L'INRIA, ou Institut National de Recherche en Informatique et en Automatique, est un centre de
+recherche français composé de plus de 2700 chercheurs répartis dans des centres partout en France.
+Le site de Rennes est très lié avec l'IRISA (Insitut de Recherche en Informatique et Systèmes Aléatoires)
+et abrite près de 400 scientifiques répartis dans une douzaine d'"équipe-projet". Chaque équipe travaille
+sur un domaine précis, comme par exemple l'équipe Hybrid qui travaille sur le réalité virtuelle et les
+interactions 3D.
 
 Diverse
 -------
 
-Diversity-centric Software Engineering
+Durant mon stage, j'ai fait partie de l'équipe Diverse, composé d'une quarantaine de personnes, dont
+8 chercheurs permanents et dirigé par Mr Benoit Baudry. Diverse est un acronyme pour "Diversity-centric
+Software Engineering". Les axes de recherche de l'équipe sont l'ingénierie des langages et
+la variabilité, l'adaptation et la diversification des logiciels.
 
-Il s'agit d'un des seul groupe de recherche de rennes qui travaille sur le genie et la diversite logiciel.
-Groupe composé en moyenne de 40 personne avec [n] permanents, [m] thesard et une armee de stagiaire.
-
-4 grands mots-clés :
-    - ingénierie des langages
-    - variabilité des logiciels
-    - adaptation logicielle
-    - diversification logicielle
-    (beaucoup trop de "logiciel" dans ces phrases)
+Ces recherches ont amenés au dévelopement de plusieurs logiciels notament Kevoree, une platforme de
+dévelopement logiciel distribués, Kermeta, un langage de manipulation de metamodèles, et Melange
+un outil de manipulation de DSL\footnote{Langage dont les specifications sont conçues pour un
+domaine d'application précis} sur lequel j'ai travaillé.
 

@@ -1,5 +1,3 @@
-\newpage
-
 Conclusion
 ==========
 
@@ -31,3 +29,4 @@ What I’ve done (Linkin Park):
   - almost done my job
   - I think I won’t work with Log4j anymore. Annoying when you try to do “advanced” things.
   - This wonderful report (meta)
+
