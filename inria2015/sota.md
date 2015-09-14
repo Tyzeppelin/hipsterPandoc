@@ -34,6 +34,8 @@ Plein de features a implementer (menu, hyperlink, outline, console (sorry 'bout 
 2 manieres de faire, soit en contribuant a un "extension point" soit en "bindant" et redefinissant les
 provider/classes (j'arrive pas trop a bien ecrire ca)
 
+vogella
+
 
 ###EMF / ECORE
 
