@@ -10,8 +10,9 @@ J'ai travaillé sur le langage Melange, le projet de thèse de Thomas Degueule.
 des langages sous forme de métamodèles dans le but de créer un nouveau langage spécifique
 composé d'un ou plusieurs fragments de langages.
 
-Melange est basé sur la platforme “client riche” d’Eclipse connue sous le nom de Eclipse RCP,
-cela permet notamment de profiter de l'ensemble des fonctionnalités
+Melange est basé sur la platforme “client riche” d’Eclipse connue sous le nom de Eclipse RCP, cela
+permet .
+Cela permet d’utiliser les nmobreux plugins d’Eclipse déjà existant
 Mes plugins xtext pour la grammaire, emf pour les modèles et métamodèles, .
 
 Beaucoup de features comme la generation d'editeurs de metamodels a la volée, la generation des-dits mm
@@ -24,43 +25,35 @@ Eclipse
 
 ###RCP - Rich Client Platform
 
-Il s'agit de la plateforme de développement de plugins eclipse.
-Néanmoins ce n'est pas un EDI a part entiere. RCP ne fournit aps de client riche de developpement (lol whatajoke)
+Il s'agit de la plateforme de développement de plugins Eclipse.
+Néanmoins ce n'est pas un EDI a part entiere. RCP ne fournit pas de client riche de developpement,
 il fournit uniquement une suite de framework qui permet de developper des 'client riche'.
-En gros c'est un SDK specifique a Eclipse.
-(merci wipikedia)
+Pour faire simple, Eclipse RCP est un sdk pour développement de plugins.
 
-Plein de features a implementer (menu, hyperlink, outline, console (sorry 'bout that), ...)
-2 manieres de faire, soit en contribuant a un "extension point" soit en "bindant" et redefinissant les
-provider/classes (j'arrive pas trop a bien ecrire ca)
-
-vogella
-
+Le kit de développement propose tout un panel de “point d’extension” sur lesquels le développeur
+vient contribuer. Ce design en point d’extension permet notamment de minimiser la quantité de code à produire
+dans le cadre du développement de plugins Eclipse, étant donné que bon nombre de ces extensions ont déjà un
+comportement défini par défaut. Une bonne manièred’apprendre le foncitonnement de la plateforme client riche
+est de suivre les tutoriels de Lars Vogel disponible sur le site internet
+[http://www.vogella.com/tutorials/](http://www.vogella.com/tutorials/)
 
 ###EMF / ECORE
 
-EMF, ou Eclipse Modelling Framework, est un framework de modelisation et de geenration de modeles
-Permet de creer un model, de lui associer un fichier de generation (nommé avec l'extension .gemodel)
-et de generer un compilateur pour le model, un editeur, un ast et des tests.
-
-Ecore quand a lui definit les concepts manipulables par EMF (ECLass, ETypedElement, EString, ...)
+EMF, ou Eclipse Modeling Framework, est un framework de modélisation et de génération de modèles.
+Il permet notamment de générer, à partir du modèle, un éditeur associé au modèle, une série de tests
+ainsi que beaucoup de petits plugins Eclipse comme un système d’hyperlien vers les définitions des objets
+manipulés, une gestion d’erreur et un déboggeur.
 
 Langages
 --------
 
 ###XTEXT
 
-language d'ecriture de grammaire. Permet de creer un language et ses ast pour la grammaire donnée.
-Si combiner avec un metamodel EMF, permet de generer le model du language et un editeur integré a eclipse.
-
-Tres pratique et permet de s'abstraire de totue la partie "dev d'un editeur" qui peut eter tres longue.
+Xtext est un framework de développement de langages de programmation. A partir d’une grammaire sous la forme
+EBNF, xtext génère un compilateur pour ce langage ainsi que les fonctionnalités de bases de l’éditeur eclipse
+associé à ce langage, c’est à dire de la coloration syntaxique, de l’auto-complétion et une gestion des erreurs
+de syntaxe.
 
 ###XTEND
 
-Xtend est un language d'expression de java. Tout programme ecris en xtend sera traduit en java.
-Il est ters pratique car il a une syntaxe beaucoup plus souple que java, permet d'effectuer des
-opertaions assez complexes de facon rapide. Avant java8 il integrait des lambdas-expressions.
-Et la syntaxe de ces lambdas expression est vraiment plus sympa qu'en java.
-
-
-
+Xtend est un langage de programmation qui, une fois compilé en java, tourne sur la _java virtual machine_. 

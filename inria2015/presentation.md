@@ -1,4 +1,4 @@
-Présentation (ou trivia nul, au choix)
+Présentation
 ============
 
 INRIA
