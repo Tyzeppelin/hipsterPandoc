@@ -4,8 +4,6 @@ Réalisation
 Outline
 -------
 
-_(Screenshot d’outline)_
-
 Une des premiere fonctionnalité d’Eclipse sur laquelle j’ai travaillé été l’outline (fig 1.2).
 Il s’agit d’un panneau qui permet, dans notre cas,  l’affichage de l’arbre syntaxique (du model?) de nos languages
 
@@ -64,27 +62,19 @@ de développement.
 Scope
 -----
 
-Chose ters pratique proposé de base par xtext/emf est la geenration d’editeurs pour le metamodel specifique. EMF fournit egalement un systeme de completion
-basé sur les scopes XText. en gros le foncionnement standard de la completion est: si l’element de la grammaire dans laquelle je suis rendu est un mot-clé, je 
-propose tous les mots clés dispo. Si c’est un nom qualifié je propose tous les elements du type souhaité actuellemtn accessible dans le scope du fichier.
-Ce fonctionnement est tres pratique dans la plupart des cas. 
-Mais il propose trop d’information.
-Mon but a été alors de reduire les choix de completion.
+Comme expliqué précedement, la modification de la grammaire melange a permis d’améliorer les possibilités d’auto-complétion et c’est donc
+la suite logique dans l’ajout de fonctionnalités à melange.
 
-Pour ce faire il faut contribuer a l’extension point ScopeProvider (je crois je verifierai). 
-Cela revient a enrigistrer notre extension de scope dans le fichier plugin.xml du projet et de surclasser le scopeprovider xtext.
+La complétion avec Xtext ressemble assez à l’Outline, il faut faire du polymorphisme sur la méthode ```getScope(EObject object, EReference ref)```
+en sous-typant la classe ```AbstractDeclarativeScopeProvider```. Le mécanisme de proposition de complétion est asez simple.
+L’appel au ```CompletionProvider```, dans le cadre de mon implémentation, est un appel à un dispatcher qui appelera la bonne
+fonction ```getScope(...)``` avec comme EObject, la règle de grammaire dans laquelle se trouve l’utilisateur, et en EReference
+sur quel élément terminal précisement.
 
-J’ai opté pour un dispatcher qui dispatch sur les types d’elements de la grammaire.
-Ensuite on filtre l’endroit dans lequel on est (mal dit) grace à des referenceID généré par xtext.
-Il faut ensuite, soit recuprer le scope de base, en filtrer les resultats pour ne garder que ceux souhaité et renvoyer un nouveau scope.
-Soit recuperer directement les objets que l’on souhaite voir proposé et construire a la main note scope Provider.
-Le choix se fait surtout sur ce que le scope “voit”. Dans certains cas, l’information que l’on cherche est perdu dansles extension point eclipse.
-il faut donc construire notre provider nous meme. Ex: “exemlpe qui va bien”
-
-Il y a des fois, comme pour l’heritage, ou xtext connait tous les choix disponibles dans le scope et ou il ne fait que fournir trop d’informtaion.
-Pour l’heritage, xtext va nous fournir tous les languages qui sont disponibles dans le scope du ficher. Nous par contre nous ne voulons pas tout.
-Nous voulons tous les langages disponibles sauf nous meme. Il s’agit donc de recuperer le scope standard et de lui retirer le languages dans 
-lequel nous sommes.
+Par exemple, pour la règle merge expliqué précedement, on va proposé de merge tous les
+objets de type ```Language``` présent dans le scope du fichier melange. Pour d’autres fonctionnalités, nous ne voulons
+pas proposer n’importe quel élément du scope. Par exemple, dans le cadre de l’héritage, nous ne voulons pas proposer de
+sous-typer notre langage par lui-même, il faut donc restreindre le nombre de choix de coplétion possible.
 
 Menu (W9)
 ----
