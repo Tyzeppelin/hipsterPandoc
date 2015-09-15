@@ -56,4 +56,7 @@ de syntaxe.
 
 ###XTEND
 
-Xtend est un langage de programmation qui, une fois compilé en java, tourne sur la _java virtual machine_. 
+Xtend est un langage de programmation qui, une fois compilé en java, tourne sur la _java virtual machine_. Le 
+principal interêt est l’éclaircissement de la syntaxe de java. Par exemple les expression lambdas, dont la syntaxe
+est assez repoussantes en Java, devient très lisible et utilisable avec xtend. Pour faire simple, xtend est simplement
+du sucre syntaxique pour java. Ce qui rends le développement d’applications java plus aisé et moins verbeux.
