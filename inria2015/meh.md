@@ -79,10 +79,29 @@ sous-typer notre langage par lui-même, il faut donc restreindre le nombre de ch
 Menu (W9)
 ----
 
-This is gonna be tough to explain.
+La dernière fonctionnalité sur laquelle j'ai travaillé durant ce stage à été une contribution au menu popup. Plus précisement le travail
+a consisté à faire apparaitre un sous-menu dans le menu déroulant lorsque l'utilisateur effectue un clique droit sur un fichier d'un langage
+défini dans un fichier melange.
 
-On, efin thomas :p, voulais pouvoir ouvrir un fichier d’un language avec tous les editeurs de ses languages sous types. Et ca eclipse veut pas.
-Mais alors pas du tout.
-Du coup j’ai fait le menu qui est capable d’afficher tous les editeurs dispo (petit screen du menu) mais il y a toujours un probleme a l’ouverture.
+Lorsque l'on fait un clique droit sur un de nos fichiers de langage, un sous-menu doit apparaitre et proposer d'ouvrir ce fichier avec l'editeur
+de tous les langages dont il hérite. Ca a été la partie la plus compliqué de ce stage puisque Eclipse de permet pas nativement d'ouvrir un fichier
+avec nimporte quel éditeur.
 
+Il faut tout d'abord ajouter une contribution au ```popupMenu``` pour créer un menu qui contiendra un nombre de commandes variables,
+ce nombre dépendera du nombre de langages dont hérite notre langage courant. On accède au nombre de langages avec les editeurs desquels on
+veut ouvrir notre langage courant grace à un registre d'extension melange, mis à jour à la compilation du fichier melnge, qui s'occupe de
+répertorier les sous-types d'un langage présent dans le registre. Ensuite on créé une commande pour chaque langage. On associe à chaque
+commande une Map de parametre avec comme clés(EXACTTYPE, SUBTYPE, EDITORID) avec EXACTTYPE le type du langage courant, SUBTYPE le type d'un langage
+sous-type du courant et EDITORID l'id de l'editeur du langage sous-type. 
 
+Ensuite j'ai developpé le Handler qui s'occupe de gérer les actions au clique sur une commande. Dans un premier temps, mon idée a été d'utiliser
+l'id de l'editeur souhaité et de l'utiliser pour ouvrir un fichier d'un langage A avec un editeur pour un langage B. Malheuresement, ce n'est pas
+aussi simple, Eclipse utilise un système d'"Adapters" pour ouvrir un fichier avec un éditeur. Cette classe lui permet de faire le lien entre les
+concepts du langage et la façon de les représenter. Des adapters sont créés par melange à la compilation et font les liens entre les concepts
+d'un langage et des langages sous-types. Mais ces classes sont complétement hors de portée, elle sont créées à la compilation du plugin et mon
+Handler fait partie d'un plugin.
+
+Pour remédier à tous ces problèmes, il a été décidé d'utiliser les URI melange de la forme ```melange:/resource/"chemin_du_fichier à ouvrir"?mt="SOUS_TYPE"```
+qui sert à ouvrir un fichier d'un langage selon un modèle donné en paramètre. Cette URI est traité par une classe spéciale est censé ouvrir une resource
+selon un modèle compatible passé en paramètre. Malheuresement cette feature n'était pas entièrement terminé pendant mon stage et je n'ai pas eu les connaissances
+suffisantes à propos du fonctionnement de melange pour pouvoir corriger tous les bugs.
