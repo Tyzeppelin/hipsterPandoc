@@ -20,7 +20,7 @@ Software Engineering". Les axes de recherche de l'équipe sont l'ingénierie des
 la variabilité, l'adaptation et la diversification des logiciels.
 
 Ces recherches ont amenés au dévelopement de plusieurs logiciels notament Kevoree, une platforme de
-dévelopement logiciel distribués, Kermeta, un langage de manipulation de metamodèles, et Melange
+dévelopement logiciel distribuée, Kermeta, un langage de manipulation de métamodèles, et Melange
 un outil de manipulation de DSL\footnote{Langage dont les specifications sont conçues pour un
 domaine d'application précis} sur lequel j'ai travaillé.
 
