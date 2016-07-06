@@ -9,5 +9,7 @@ report:
 clean:
 	rm $(pdf)
 
-all:
-	report
+open: report
+	evince $(pdf)
+
+all: report
