@@ -1,1 +1,1 @@
-report of my internship at IMCCE on fatoring univariate polynomials in finite field
+report of my internship at IMCCE on factoring univariate polynomials in finite field
