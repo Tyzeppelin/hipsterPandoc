@@ -20,3 +20,22 @@ for k>1 until $c_k$=1:
     $d_{k+1}:= d_k/f_k - c_{k+1}'$
 
 ```
+
+
+Gibberish
+---------
+
+```
+f in $\mathbb{Z}$
+$\downarrow$
+squarefree facto of f in $\mathbb{Z]}$
+$\downarrow$
+f mod p -> f dans $\mathbb{Z}_p$
+$\downarrow$
+factorisation dans $\mathbb{Z}_p$
+$\downarrow$
+remonté dans $\mathbb{Z}$
+$\downarrow$
+recombinaison des facteurs
+$\downarrow$
+```
