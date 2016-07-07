@@ -2,6 +2,8 @@
 header-includes:
     - \usepackage{amsmath}
     - \usepackage{amsfonts}
+    - \usepackage{listings}
+    - \lstset{mathescape}
 bibliography: biblio.bib
 ---
 
@@ -23,17 +25,44 @@ La factorisation de polynômes univariés dans $\mathbb{F}_q [x]$ se décrit gé
     Output: ${f_1, ..., f_k}$ set of irreducible factors of f in $\mathbb{F}_q [x]$
 
 
-
-
 ## Square-Free Factorization
 
 Le principe est d'obtenir un polynôme square-free, cad qu'il ne possède pas de racines multiples.
 
 La façon la plus répandue d'obtenir un polynôme squarefree est d'utiliser l'algorithme de Yun
-décrit dans [@yun1976square] et plus récemment dans [@von2001factoring].
+décrit dans [@yun1976square] et plus récemment dans [@von2001factoring] (de manière récursive)
+ou dans [@kaltofen1982factorization] (de manière itérative).
 
 Il s'agit de calculer recursivement les $\gcd(f, f')$ avec ...
 
+
+```{.numberLines}
+Input: monic polynomial $f \in \mathbb{F}_q [x]$
+Output: monic squarefree polynomial
+k:= 1
+sf:= 1
+
+if f'=0 then
+  f:= f$^{1/p}$
+  return SFF(f)
+else
+  c:= gcd(f, f')
+  w:= f/c
+
+  while w != 1 do
+    y:= gcd(c, w)
+    z:= w/y
+    R:= R.$z^k$
+    w:= y
+    c:= c/y
+    k++
+
+  if c=1 then
+    return R
+  else
+    return R.SFF$(c^{1/p})^p$
+
+```
 
 ## Distinct-Free Factorization
 

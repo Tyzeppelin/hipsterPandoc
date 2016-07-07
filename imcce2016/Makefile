@@ -1,9 +1,14 @@
 files = steps.md references.md
-
 pdf = report.pdf
 
+params = -s --listing --filter pandoc-citeproc
+
+
 report:
-	pandoc -s --filter pandoc-citeproc $(files) -o report.pdf
+	pandoc $(params) $(files) -o $(pdf)
+
+tex:
+	pandoc $(params) $(files) -o report.tex
 
 .PHONY: clean
 clean:
