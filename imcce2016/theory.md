@@ -1,5 +1,6 @@
 ---
 header-includes:
+    - \usepackage[francais]{babel}
     - \usepackage{amsmath}
     - \usepackage{amsfonts}
     - \usepackage{listings}
