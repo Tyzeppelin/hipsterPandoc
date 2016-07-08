@@ -1,15 +1,16 @@
-files = theory.md squarefree.md  references.md
+files = title.md fonctionnement.md squarefree.md theory.md  references.md
 pdf = report.pdf
 tex = report.tex
 
-params = -s --listing --filter pandoc-citeproc
+engine = --latex-engine=xelatex
+params = -s --listing --bibliography=biblio.bib --filter pandoc-citeproc
 
-
+.PHONY: report
 report:
-	pandoc $(params) $(files) -o $(pdf)
+	pandoc $(engine) $(params) $(files) -o $(pdf)
 
 tex:
-	pandoc $(params) $(files) -o $(tex)
+	pandoc $(engine) $(params) $(files) -o $(tex)
 
 .PHONY: clean
 clean:

@@ -1,12 +1,3 @@
----
-header-includes:
-    - \usepackage[francais]{babel}
-    - \usepackage{amsmath}
-    - \usepackage{amsfonts}
-    - \usepackage{listings}
-    - \lstset{mathescape}
-bibliography: biblio.bib
----
 
 # Factorisation des polynômes univariés dans \boldmath$\mathbb{F}_q [x]$
 
@@ -67,12 +58,41 @@ else
 
 ## Distinct-Free Factorization
 
-Lorem Ipsum
+[see @von2001factoring]
+
+```{caption="DFF"}
+
+Input: f monic squarefree polynomial in $\mathbb{Z}_q$
+
+i:=1; S:={}; h = f;
+
+while deg(h) >= 2*i do
+    g:= $gcd(h, x^{q^i} - x \mod h)$
+    if g != 1 then
+        S:= S $\cup$ {(g, i)}
+    h:= h/g
+    i++
+end
+if h != 1 then
+    s:= s $\cup$ {h, deg(h)}
+return S
+
+```
+
 
 ## Equal-Free Factorization
 
-Lorem Ipsum
+```{caption="EFF"}
+Input :f monic squarefree of degree n=rdwith r>2= irreductible facotrs
+each of degree d
+$\epsilon$ a confidence parameter
 
+Factors:={f}; k:=1; t:= $2*ceil{log(n^2/\epsilon)}$
+
+
+@von2001factoring
+
+```
 
 ### Gibberish
 
