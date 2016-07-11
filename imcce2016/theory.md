@@ -89,10 +89,26 @@ $\epsilon$ a confidence parameter
 
 Factors:={f}; k:=1; t:= $2*ceil{log(n^2/\epsilon)}$
 
+while k \leq t do:
+  Choose h \in \mathbb{F}_q [x] with deg(h) < n at random
+  g:=gcd(h,f)
+  if g=1 then
+    g:=(h^{(q^d-1)/2}-1 \mod f)
+  endif
+  for each u \in Factors with deg(u) > h do
+    if gcd(g,u) != 1  and gcd(g,u) != u then
+      Factors:= Factors\backslash \{u\} \bigcup \{gcd(g,u), u/gcd(g,u)\}
+    endif
+  if Size(Factors) = r then
+    return Factors
+endwhile
+return Fail
+
+```
 
 @von2001factoring
 
-```
+
 
 ### Gibberish
 
