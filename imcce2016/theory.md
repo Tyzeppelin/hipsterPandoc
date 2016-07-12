@@ -82,8 +82,8 @@ return S
 
 ## Equal-Free Factorization
 
-```{caption="EFF"}
-Input :f monic squarefree of degree n=rdwith r>2= irreductible facotrs
+```{caption="EFF @von2001factoring"}
+Input :f monic squarefree of degree n=rdwith r>2= irreductible factors
 each of degree d
 $\epsilon$ a confidence parameter
 
@@ -106,7 +106,32 @@ return Fail
 
 ```
 
-@von2001factoring
+``` {caption="EFF @geddes1992algorithms"}
+
+# procedure is named EFF(f, d, p)
+
+Input: f a polynomial in $\mathbb{F}_p$ made up of factors all of degree d
+
+if deg(f) $\leq$ n then return {f}
+
+// degree of each factor
+m = deg(f)/n
+factors = {f}
+
+while len(factors) < m do :
+    v = RandomPoly(degree=2n-1)
+    if p = 2 then:
+        v = v + $v^2 + ... + v^{2^{nm-1}}$
+    else :
+        v = $v^{(q^{n}-1)/2}$-1
+
+    g = gcd(f, v)
+    if g $\neq$ 1 && g $\neq$ f then
+        factors = EFF(g, d, p) $\bigcup$ EFF(f/g, n, p)
+
+return factors
+
+```
 
 
 
