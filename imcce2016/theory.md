@@ -28,7 +28,7 @@ ou dans [@kaltofen1982factorization] (de manière itérative).
 Il s'agit de calculer recursivement les $\gcd(f, f')$ avec ...
 
 
-```{.numberLines}
+```{.numberLines caption="Source inconnue"}
 Input: monic polynomial $f \in \mathbb{F}_q [x]$
 Output: monic squarefree polynomial
 k:= 1
@@ -53,6 +53,35 @@ else
     return R
   else
     return R.SFF$(c^{1/p})^p$
+
+```
+
+```{caption="Gebbes"}
+
+Input: f a monic polynomial in $\mathbb{F}_q[x]$ with q = $p^m$ and m =1
+
+i = 1
+out = 1
+b = f'
+
+if b == 0 then
+    f = $f^{1/p}$
+    out = $SFF(f)^p$
+else
+    c = gcd(f, b)
+    w = f/c
+    while w != 1 do
+        y = gcd(w, c)
+        z = w/y
+        out = out*$z^i$
+        i++
+        w = y
+        c = c/y
+    if c != 1 then
+        c = $c\{1/p}$
+        out = out*$SFF(c)^p$
+return out
+
 
 ```
 
