@@ -1,0 +1,20 @@
+
+1. Presentation IMCCE
+  - Enjeu
+  - TRIP
+
+2. factorisation de polynomes
+  - Dans Z
+  - Dans Fp
+
+3. Implementation
+  - d'abord dans Fp
+  - puis dans Z (remontée de Hensel)
+
+4. Améliorations
+  - Knapsack LLL
+  - ...
+
+5. Conclusion
+  - IMCCE
+  - Personelle
