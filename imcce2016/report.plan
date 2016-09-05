@@ -1,13 +1,13 @@
 
-1. Presentation IMCCE
-  - Enjeu
+1. Presentation IMCCE					intro.md
+  - Enjeux
   - TRIP
 
-2. factorisation de polynomes
+2. factorisation de polynomes			basics.md
   - Dans Z
   - Dans Fp
 
-3. Implementation
+3. Implementation						
   - d'abord dans Fp
   - puis dans Z (remontée de Hensel)
 
