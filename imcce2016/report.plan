@@ -4,8 +4,8 @@
   - TRIP
 
 2. factorisation des polynomes          basics.md
-  - Dans Fp
-  - Dans Z
+  - Dans Fp                             modular.md
+  - Dans Z                              hensel.md
 
 3. Implementation et résultats          implem.md
   - dans Fp

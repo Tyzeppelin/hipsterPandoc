@@ -1,7 +1,9 @@
+# Algorithmes de factorisation
+
 La factorisation des polyômes est un problème complexe dont la complexité varie surtout selon le nombres d'indeterminés du plynôme et le domaine des coefficients.
-	
+    
 Nous allons nous interesser uniquement aux polynômes uinvariés, cad à une seule indeterminée, dont les coefficients se trouvent dans le corps des entiers, noté Z.
-	
+    
 La factorisation dans R consiste a trouver les racines du polynomes et il existe plusieurs algorithmes différents pour y arriver (Newton, ... [rajouter des references]),
 dans C l factorisatino est "plus simple" vu que l'on connait "à l'avance" le nombre de facteurs vu que le degré du polynome est égal au nombre de ses facteurs.
 
@@ -22,17 +24,17 @@ combinaison de facteurs pour un "petit" nomre de facteurs. Il fait appel a des t
 
 Nous avons donc:
 
- ---------------	 ---------------
-|				|	|				|
-|   Big prime	|	|  prime power	|
-|				|	|				|
- ---------------	 ---------------
-				  X
- ---------------	 ---------------
-|				|	|				|
-|   combination	|	|  lattice		|
-|				|	|				|
- ---------------	 ---------------
+ ---------------     ---------------
+|               |    |              |
+|  Big prime    |    | prime power  |
+|               |    |              |
+ ---------------     ---------------
+                  X
+ ---------------     ---------------
+|               |    |              |
+|  combination  |    |  lattice     |
+|               |    |              |
+ ---------------     ---------------
  
 Nous avons décidé, dans un premier temps, de travailler avec les méthodes "prime power" pour la factorisation dans un corps (p-adique) finis (Galois) puisque cette méthode
 nous permet de ne pas travailler avec des polynomes trop important et aussi parceque c'est la plus rapide et qu'elle est "plus simple" à implementer. Basiquement
@@ -40,12 +42,12 @@ Berlekamp(matrice, ...)  VS Zassenhaus (random, ...). Pour la remonté dans Z[x]
 TRIP et une structure de donnée faite à la va-vite c'est pas cool.
 
 Donc pour résumer nous allons avoir un algo qui ressemble à ça :
-(@Modern Computer Algebra, Algo de Von Zur Gathen et al. 15.6)
+(Modern Computer Algebra, Algo de Von Zur Gathen et al. 15.6)
 
 - On rends le polynome squarefree
 
 - calcul des différentes bornes, constantes nécessaires,
-	(notamment B, p, l)
+    (notamment B, p, l)
 
 - factorisation dans Zp
 
@@ -63,4 +65,5 @@ Donc pour résumer nous allons avoir un algo qui ressemble à ça :
 %Ensuite on applique Hensel sur chaque sou-arbre pour élever les facteurs dans Zp^l avec l sufisement grand (basiquemet p^l ~ borne de mignotte)
 %Et pour finir on test la combinaison de tous les facteurs dans Zp^l. Lorsque le produit des normes ||combinaison||_1 * ||reste des facteurs||_1
 %est inferieur a Mignotte.
+
 

@@ -1,0 +1,6 @@
+## factorisation in Z[x]
+
+.
+
+
+
