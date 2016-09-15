@@ -1,0 +1,26 @@
+\begin{algorithm}
+  \caption{Algorithme de factorisation en produits de facteurs
+        irr\'eductibles de même degr\'e }
+  \begin{algorithmic}[1]
+    \Require{f un polynôme f(x) unitaire et sans racines multiples dans $\mathbb{F}_p[x]$ avec p un nombre premier}
+    \Ensure{f de la forme}
+    \Statex
+    \Function{distinct\_degree\_factorization}{$f$}
+      \State $i \gets 1$
+      \State $S \gets \{\}$
+      \State $h(x) \gets f(x)$
+      \While{$deg(h(x)) \geq 2*i$}
+        \State $g \gets gcd(h(x), x^{p^i} - x \mod h(x))$
+        \If{$g(x) \neq 1$}
+          \State $S \gets S \cup \{g(x), i\}$
+        \EndIf
+        \State $h(x) \gets h(x)/g(x)$
+        \State $i \gets i+1$
+      \EndWhile
+      \If{$h(x) \neq 1$}
+        \State $S \gets S \cup \{h(x), deg(h)\}$
+      \EndIf
+      \State \Return{$S$}
+    \EndFunction
+  \end{algorithmic}
+\end{algorithm}

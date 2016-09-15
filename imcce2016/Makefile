@@ -3,7 +3,7 @@ pdf = report.pdf
 tex = report.tex
 
 engine = --latex-engine=pdflatex
-params = -s --listing --bibliography=biblio.bib --toc -N --filter pandoc-citeproc
+params = -s --template=template.tex --variable documentclass=report --listing --bibliography=biblio.bib --toc -N --filter pandoc-citeproc
 
 .PHONY: report
 report:
@@ -20,5 +20,8 @@ clean:
 
 open: report
 	evince $(pdf)
+
+template:
+	pandoc -D latex > template.tex
 
 all: report

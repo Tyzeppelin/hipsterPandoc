@@ -1,23 +1,31 @@
 \begin{algorithm}
-  \caption{DELAMERDE    }
+  \caption{Algorithme de Yun - Factorisation des facteurs de multiplicit\'e > 1}
   \begin{algorithmic}[1]
     \Require{f un polynôme unitaire dans $\mathbb{F}_p[x]$ et p un nombre premier}
     \Ensure{f de la forme $somme de 1 a n {f_i}^l$}
     \Statex
-    \Function{squarefreefactorization}{$f$}
-      \State $i\gets 1$
-      \State $out\gets 1$
-      \State $h(x)\gets f'(x)$
+    \Function{squarefree\_factorization}{$f$}
+      \State $i \gets 1$
+      \State $out \gets 1$
+      \State $h(x) \gets f'(x)$
       \If{$h == 0$}
-        \State $f(x)\gets f(x)^{1/p}$
-        \State $out\gets squarefree_factorization(f(x))^p$
+        \State $f(x) \gets f(x)^{1/p}$
+        \State $out \gets squarefree\_factorization(f(x))^p$
       \Else
-        \State $c(x)\gets gcd(f(x), h(x))$
-        \State $w(x)\gets f(x)/c(x)$
+        \State $c(x) \gets gcd(f(x), h(x))$
+        \State $w(x) \gets f(x)/c(x)$
         \While{$w(x) \neq 1$}
-          \State $y(x)\gets gcd(w(x), c(x))$
-          \State $z\gets w/y$
+          \State $y(x) \gets gcd(w(x), c(x))$
+          \State $z \gets w/y$
+          \State $out \gets out*z(x)^i$
+          \State $i \gets i+1$
+          \State $w(x) \gets y(x)$
+          \State $c(x) \gets c(x)/y(x)$
         \EndWhile
+        \If{$c(x) \neq 1$}
+          \State $c(x) \gets c(x)^{1/p}$
+          \State $out \gets out*(squarefree\_factorization(a(x)))^p $
+        \EndIf
       \EndIf
       \State \Return{$out$}
     \EndFunction
