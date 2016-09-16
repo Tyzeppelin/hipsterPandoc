@@ -1,0 +1,48 @@
+\begin{figure}
+    \centering
+    \small
+    \begin{tikzpicture}[
+        ->,
+        >=stealth',
+        shorten >=1pt,
+        auto, node distance=2cm, scale=0.05
+                        ]
+
+    \tikzset{pb/.style={draw,thick,text width=2.5cm,align=center},}
+    \tikzset{sol/.style={draw,thick,text width=2.5cm,align=center},}
+    \tikzset{proc/.style={text width=2.5cm,align=center},}
+
+
+
+      \node[pb] (pb_orig) {Problème dans $\mathbb{Z}[x]$};
+    \node (placeholder1) [right of=pb_orig] {} ;
+      \node (placeholder2) [right of=placeholder1] {} ;
+      \node (placeholder3) [right of=placeholder2] {} ;
+      \node (placeholder4) [right of=placeholder3] {} ;
+
+          \node[pb] (pb_reduc1) [below of=placeholder1] {Problème dans $\mathbb{F}_p[x]$} ;
+      \node (pb_reducdot) [below of=pb_reduc1] {$\cdots$};
+      \node[pb] (pb_reduck) [below of=pb_reducdot]  {Problème dans $\mathbb{F}_p[x]$};
+      \node[sol] (sol_reduc1) [below of=placeholder4] {Solution dans $\mathbb{F}_p[x]$};
+      \node (sol_reducdot) [below of=sol_reduc1] {$\cdots$};
+      \node[sol] (sol_reduck) [below of=sol_reducdot]  {Solution dans $\mathbb{F}_p[x]$};
+      \node[sol] (sol_orig) [right of=placeholder4] {Solution dans $\mathbb{Z}[x]$};
+
+
+        \path
+
+
+        (pb_reduc1) edge node[proc] {Résolution dans $\mathbb{F}_p[x]$} node[proc, below]{via \textsf{P}} (sol_reduc1)
+        (pb_reduck) edge node[proc] {Résolution dans $\mathbb{F}_p[x]$} node[proc, below]{via \textsf{P}} (sol_reduck)
+        ;
+
+     \draw[->]  (pb_orig.south) |- (pb_reduc1.west);
+   \draw[->]  (pb_orig.south) |- (pb_reduck.west);
+   \draw[->]  (sol_reduc1.east) -| (sol_orig.south);
+   \draw[->]  (sol_reduck.east) -| (sol_orig.south);
+
+    \end{tikzpicture}
+
+    \caption{L'algorithme \textsf{M}, vue schématique}
+    \label{fig:AlgM}
+\end{figure}
