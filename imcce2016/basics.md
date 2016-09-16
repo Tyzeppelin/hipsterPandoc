@@ -30,18 +30,9 @@ Il fait appel a des théories mathématiques plus récentes et plus complexes et
 
 Nous avons donc:
 
- ---------------     --------------
-|               |   |              |
-|  Big prime    |   | prime power  |
-|               |   |              |
- ---------------     -------------
-                  X
- ---------------     --------------
-|               |   |              |
-|  combination  |   |  lattice     |
-|               |   |              |
- ---------------     --------------
- 
+\input{res/ho.tex}
+
+
 Nous avons décidé, dans un premier temps, de travailler avec les méthodes "prime power" pour la factorisation dans
 un corps (p-adique) finis (Galois) puisque cette méthode nous permet de ne pas travailler avec des polynomes trop important
 et aussi parceque c'est la plus rapide et qu'elle est "plus simple" à implementer. Basiquement Berlekamp(matrice, ...)

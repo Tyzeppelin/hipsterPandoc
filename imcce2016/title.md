@@ -12,6 +12,7 @@ header-includes:
     - \usepackage{titlesec}
     - \usepackage{listings}
     - \usepackage{graphicx}
+    - \usepackage{tikz}
     - \usepackage{fullpage}
     - \usepackage{concrete}
     - \usepackage{algorithm}
@@ -27,6 +28,7 @@ header-includes:
     - \newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
     - \titleformat{\chapter}{\normalfont\LARGE\bfseries}{\thechapter.}{1em}{}
     - \renewcommand{\bfdefault}{sbc}
+    - \usetikzlibrary{arrows}
 bibliography: biblio.bib
 ---
 
