@@ -5,6 +5,7 @@ author: François Boschet
 school: INSA Rennes
 dpt: Département Informatique
 date: Juillet - Septembre 2016
+classoption: fleqn
 header-includes:
     - \usepackage[francais]{babel}
     - \usepackage[T1]{fontenc}
@@ -15,8 +16,11 @@ header-includes:
     - \usepackage{concrete}
     - \usepackage{algorithm}
     - \usepackage[noend]{algpseudocode}
+    - \usepackage[nodisplayskipstretch]{setspace}
+    - \setstretch{1}
     - \lstset{mathescape}
     - \makeatletter
+    - \setlength{\mathindent}{1cm}
     - \algrenewcommand\algorithmicrequire{\textbf{Entr\'ee:}}
     - \algrenewcommand\algorithmicensure{\textbf{Sortie:}}
     - \renewcommand{\ALG@name}{Algorithme}

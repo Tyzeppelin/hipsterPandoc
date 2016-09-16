@@ -13,7 +13,7 @@
       \State $m \gets deg(f(x))/n $
       \State $S \gets \{f(x)\}$
       \While{$SizeOf(S) < m$}
-        \State $v(x) \gets PolyAleatoire(degre \beq 2n-1)$
+        \State $v(x) \gets PolyAleatoire(degre \leq 2n-1)$
         \State $v(x) \gets v(x)^{(q^n-1)/2}-1$
         \State $g(x) \gets gcd(f(x), v(x))$
         \If{$g(x) \neq 1$ and $g(x) \neq f(x)$}
