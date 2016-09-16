@@ -1,4 +1,5 @@
 \begin{algorithm}
+  \label{alg:splitting}
   \caption{Algorithme de séparation des facteurs irr\'eductibles de multiplicité > 1}
   \begin{algorithmic}[1]
     \Require{f un polynôme f(x) unitaire et sans racines multiples dans $\mathbb{F}_p[x]$, avec p un nombre premier, 
@@ -12,7 +13,7 @@
       \State $m \gets deg(f(x))/n $
       \State $S \gets \{f(x)\}$
       \While{$SizeOf(S) < m$}
-        \State $v(x) \gets PolyAleatoire(degre=2n-1)$
+        \State $v(x) \gets PolyAleatoire(degre \beq 2n-1)$
         \State $v(x) \gets v(x)^{(q^n-1)/2}-1$
         \State $g(x) \gets gcd(f(x), v(x))$
         \If{$g(x) \neq 1$ and $g(x) \neq f(x)$}
