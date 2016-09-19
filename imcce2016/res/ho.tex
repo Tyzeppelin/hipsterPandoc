@@ -14,35 +14,36 @@
 
 
 
-      \node[pb] (pb_orig) {Problème dans $\mathbb{Z}[x]$};
-    \node (placeholder1) [right of=pb_orig] {} ;
-      \node (placeholder2) [right of=placeholder1] {} ;
-      \node (placeholder3) [right of=placeholder2] {} ;
-      \node (placeholder4) [right of=placeholder3] {} ;
+    \node[pb] (pb_orig) {F(x) dans $\mathbb{Z}[x]$};
 
-          \node[pb] (pb_reduc1) [below of=placeholder1] {Problème dans $\mathbb{F}_p[x]$} ;
-      \node (pb_reducdot) [below of=pb_reduc1] {$\cdots$};
-      \node[pb] (pb_reduck) [below of=pb_reducdot]  {Problème dans $\mathbb{F}_p[x]$};
-      \node[sol] (sol_reduc1) [below of=placeholder4] {Solution dans $\mathbb{F}_p[x]$};
-      \node (sol_reducdot) [below of=sol_reduc1] {$\cdots$};
-      \node[sol] (sol_reduck) [below of=sol_reducdot]  {Solution dans $\mathbb{F}_p[x]$};
-      \node[sol] (sol_orig) [right of=placeholder4] {Solution dans $\mathbb{Z}[x]$};
+        \node (placeholder0) [right of=pb_orig] {};
+    \node (placeholder1) [right of=placeholder0] {} ;
+    \node (placeholder1b)[right of=placeholder1] {};
+    \node (placeholder2) [below of=placeholder1b] {} ;
+    \node (placeholder3) [below of=pb_orig] {};
+        \node (placeholder4) [right of=placeholder3] {};
+
+
+    \node[pb] (pb_reduc1) [below of=placeholder3] {F(x) dans $\mathbb{F}_p[x]$} ;
+    \node[sol] (sol_reduck) [below of=placeholder2]  {Solution dans $\mathbb{F}_p[x]$};
+    \node[sol] (sol_hensel) [below of=placeholder1b] {Solution dans $\mathbb{F}_{p^l}[x]$};
+    \node[sol] (sol_orig) [right of=placeholder1] {Solution dans $\mathbb{Z}[x]$};
 
 
         \path
 
 
-        (pb_reduc1) edge node[proc] {Résolution dans $\mathbb{F}_p[x]$} node[proc, below]{via \textsf{P}} (sol_reduc1)
-        (pb_reduck) edge node[proc] {Résolution dans $\mathbb{F}_p[x]$} node[proc, below]{via \textsf{P}} (sol_reduck)
-        ;
+        (pb_reduc1) edge node[proc] {Factorisation dans $\mathbb{F}_p[x]$} (sol_reduck)
+        (sol_reduck) edge node[proc, right] {Remonté d'Hensel} (sol_hensel);
 
-     \draw[->]  (pb_orig.south) |- (pb_reduc1.west);
-   \draw[->]  (pb_orig.south) |- (pb_reduck.west);
-   \draw[->]  (sol_reduc1.east) -| (sol_orig.south);
-   \draw[->]  (sol_reduck.east) -| (sol_orig.south);
+
+    \draw[->]  (pb_orig.south) -- (pb_reduc1.north);
+    \draw[->]  (pb_reduc1.east) -- (sol_reduck.west);
+    \draw[->]  (sol_reduck.north) -- (sol_hensel.south);
+        \draw[->]  (sol_hensel.north) -- (sol_orig.south);
 
     \end{tikzpicture}
 
-    \caption{L'algorithme \textsf{M}, vue schématique}
+    \caption{L'algorithme de factorisation, vue schématique}
     \label{fig:AlgM}
 \end{figure}

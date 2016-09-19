@@ -1,4 +1,5 @@
-## modular factorization
+## Factorisation dans un corps fini
+\label{sec:modular}
 
 la factorisation des polynômes modulo un premier aka factorisation de polynomes dans un coprs fini (p-adiques en vrai mais osef un peu, mais pas vraiment, mais si...)
 est un problème relativement qui a commencé a être étudié par Gauss (je dois me gourer) et qui a été beaucoup amelioré après la moitié du XXe siècle avec le développement des ordinateurs,
@@ -30,8 +31,8 @@ si un polynoem possède des racines multiples, on remarque que pgcd(f, f') != 0
 ### Séparation des facteurs de différentes multiplicités
 
 Définition: 
-Soit f \in Z[x] un polyôme qui possède une factorisation unique dans le domaine Z. f(x) est dit sans racines multiples (trouver un synonyme)
-s'il ne possède pas de facteurs qui se répète, tel qu'il n'existe aucun h(x) avec deg(h(x)) \geq 1 tel que h(x)^2 ne divise pas f(x).
+Soit f $\in$ Z[x] un polyôme qui possède une factorisation unique dans le domaine Z. f(x) est dit sans racines multiples (trouver un synonyme)
+s'il ne possède pas de facteurs qui se répète, tel qu'il n'existe aucun $h(x)$ avec $deg(h(x)) \geq 1$ tel que $h(x)^2$ ne divise pas $f(x)$.
 
 La factorisation sans facteurs multiples de f(x) est 
 $$f(x)=\prod_{i=1}^k a_i(x)^i $$
@@ -88,14 +89,14 @@ $f = Prduit (i = 1 -> n) g_i avec deg(g_i) = d_i, 1 < d_i < deg(f)/2$
 Pour cela ous utilisons le théorème suivant \ref{the:dff} :
 
 Théorème:
-Le polynôme $p_r(x) = x^p^r - x$ est le produit de tous les polynômes unitaires de $\mathbb{F}_p[x]$ dont le degré
+Le polynôme $p_r(x) = x^{p^r} - x$ est le produit de tous les polynômes unitaires de $\mathbb{F}_p[x]$ dont le degré
 divise r.
 
 Ce théorème est démontré dans [lidl1997FiniteFields] et nous pouvons donc écrire l'algorithme \ref{alg:dff}
 
 \input{res/dff.tex}
 
-Cet algorithme est basé sur l'algorithme n de [@von2001Factoring]
+Cet algorithme est basé sur l'algorithme n de [@von2001factoring]
 
 Pour bien comprendre le fonctionnement des deux algorithmes algorithmes suivant, nous allons prendre un polynôme unitaire et sans racines
 multiples que nous allons factoriser à l'aide de cet algorithme de factorisation en produit de facteurs de même degré

@@ -1,0 +1,42 @@
+\begin{algorithm}
+  \label{alg:hensel}
+  \caption{algorithme de factorisation des polynômes dans $\mathbb{Z}[x]$ en utilisant le lemme d'Hensel}
+  \begin{algorithmic}[1]
+    \Require{f un polynôme squarefree dans $\mathbb{Z}[x]$ de degré $n\geq1$}
+    \Ensure{La liste des facteurs $\{f_1, \dots, f_k\}$ de f}
+    \Statex
+    \Function{factorisation}{$f$}
+      \If{$n=1$}
+        \State \Return{$f$}
+      \EndIf
+      \State $A \gets \|f(x)\|_{\infty}$,\qquad\qquad \quad \ \  $b \gets lc(f)$
+      \State $B \gets (n+A)^{1/2}2^nAb$,\qquad $C \gets (n+1)^{2n}A^{2n-1}$
+      \State $\gamma \gets \lceil 2\log(C)_2 \rceil$
+      \Statex
+      \Repeat
+        \State{$p \gets$ un entier aleatoire $\leq 2\gamma \ln{\gamma} $, $\bar{f} \gets f \mod p $}
+        \Until{p ne divise pas b et $gcd(\bar{f}, \bar{f}') = 1$ dans $\mathbb{F}_p[x]$}
+      \State $l \gets \lceil \log_p(2b+1) \rceil $
+      \State On calcule $h_1, \dots, h_r \in \mathbb{Z}[x]$ les facteurs irréductibles de f tels que $f \equiv bh_1\dots h_2 \mod p$
+            grace a la méthode décrite en \ref{sec:modular}
+      \Statex
+      \State $a \gets b^{-1} \mod p$
+      \State Utiliser l'algorithme annexe n pour calculer $f \equiv bg_1 \dots g_2 \mod p^l$ tel que $g_i \equiv h_i \mod p$
+      \Statex
+      \State $T \gets {1,\dots r}$, $s \gets 1$, $G \gets \emptyset$, $f^{\star} \gets f$
+      \While{$2s \leq size(T)$}
+        \ForAll {sous-ensembles $S \subseteq T$ de cardinalité $s \gets size(S)$}
+          \State $g^{\star} \equiv b\prod_{i\in S} g_i \mod p^l$
+          \State $h^{\star} \equiv b\prod_{i \in T/S} g_i \mod p^l$
+          \If {$\|g^{\star}\|_1\|h^{\star}\|_1 \leq B$}
+            \State $T \gets T/S$, $G \gets G \cup {pp(g^{\star})}$
+            \State $f^{\star} \gets pp(h)$, $b \gets lc(f^{\star})$
+            \State $GOTO\; 15$
+          \EndIf
+        \EndFor
+        \State $s \gets s+1$
+      \EndWhile
+      \State \Return $G \cup \{f^{\star}\}$
+    \EndFunction
+  \end{algorithmic}
+\end{algorithm}

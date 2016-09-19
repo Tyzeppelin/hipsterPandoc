@@ -1,5 +1,7 @@
 #Présentation
 
+## Institut de Mécanique Céleste et de Calclu des Épémérides
+
 L'institut de mécanique céleste et de calcul des éphémérides (IMCCE) est chargé de la production et la publication des éphémérides officielles,
 et mène des activités de recherche théoriques dans les domaines de la mécanique céleste, de la planétologie et
 des mathématiques \footnote{\url{https://www.imcce.fr/langues/fr/index.html}}.
@@ -9,10 +11,12 @@ qu'il est impossible de traiter sans ordinateur. Le logiciel TRIP développé pa
 vise précisément la manipulation efficace de ces séries, que nous assimilerons ici à des polynômes. (TRIP est un système
 de calcul formel interactif avec la possibilité d'écrire des scripts, à l'instar de Maple, avec lequel il est capable de communiquer.)
 
+## TRIP
+
 Trip a été développé originellement en FORTRAN et en C dans les année 1990 pour démontrer les théorie du comportement chaotique
 du système solaire [@laskar1994large] [@laskar2009existence]. Le logiciel a été progressivement transcrit en c++, notamment depuis
-2011 avec la norme c++11  et le nombrede nouvelles feature cools. Il est composé d'un grand nombre de modules différents [gros diagramme]
-qui gèrent chacun des notionsd'algebre différentes comme par exemple matrices, séries, séries de Lie, vecteurs et, ce qui va nous
+2011 avec la norme c++11  et le nombre de nouvelles feature cools. Il est composé d'un grand nombre de modules différents [gros diagramme]
+qui gèrent chacun des notions d'algebre différentes comme par exemple matrices, séries, séries de Lie, vecteurs et, ce qui va nous
 interesser dans ce rapport, les polynomes.
 
 Les polyômes à coefficients dans C, R, Z sont en général représenté en mémoire sous la forme de séries par défaut étant donné
@@ -29,4 +33,4 @@ Pour les plus grands entiers et les réels, trip utilise des librairies numeriqu
 C'est dans ce contexte complexe que j'entre en scene pour travailler sur l'implementation d'un algorithme de factorisation de polynomes
 à coefficients entiers.
 
-
+TRIP possède aussi un langage de script, décrit dans le manuel [@GL14]
