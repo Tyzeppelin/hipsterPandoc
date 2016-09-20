@@ -3,9 +3,10 @@
 \label{sec:hensel}
 
 
-Comme dit précedement, la factorisatino d'un polynôme dans $\mathbb{Z}[x]$ fait intervenir la factorisation dans un corps finis
-de caracteritique p, un premier. Le choix de p n'est pas arbitraire cependant, il faut choisir un p pour lequel l'homomorphisme
-de $\mathbb{Z}[x]$ dans $\mathbb{F}_p[x]$ soit possible (?bijectif?). C'est à dire que l'on ne perdre pas d'information.
+Comme dit précedement, la factorisation d'un polynôme dans $\mathbb{Z}[x]$ fait intervenir la factorisation dans un corps finis
+de caracteritique p, un premier. Le choix de p n'est pas arbitraire, cependant il faut choisir un p pour que p ne divise pas le
+coefficient dominant de f
+de $\mathbb{Z}[x]$ dans $\mathbb{F}_p[x]$. C'est à dire que l'on ne perdre pas d'information.
 
 Pour cela nous cherchons un p qui ne divise pas le coefficient principale (aka le coefficient de plus haut degré) de f et
 qui fait en sort que f soit (reste) sans facteurs multiples. Nous devons aussi nous arranger pour que p reste le plus petit possible
@@ -26,7 +27,7 @@ pour obtenir les véritables facteurs de f dans $\mathbb{Z}[x]$.
 
 \input{res/hensel.tex}
 
-Cet algorithme a été tiré de modern computer algebra (Von Zur Gathen et al.1997)
+Cet algorithme a été tiré de [Modern Computer Algebra @von2013modern, Algorithme 15.19, p.427-428],
 
 ###Exemple
 

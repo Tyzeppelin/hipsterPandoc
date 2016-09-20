@@ -18,6 +18,7 @@ header-includes:
     - \usepackage{algorithm}
     - \usepackage[noend]{algpseudocode}
     - \usepackage[nodisplayskipstretch]{setspace}
+    - \usepackage{amsthm}
     - \setstretch{1}
     - \lstset{mathescape}
     - \makeatletter
@@ -29,6 +30,8 @@ header-includes:
     - \titleformat{\chapter}{\normalfont\LARGE\bfseries}{\thechapter.}{1em}{}
     - \renewcommand{\bfdefault}{sbc}
     - \usetikzlibrary{arrows}
+    - \newtheorem{theorem}{Théorème}
+    - \newtheorem{definition}{Définition}
 bibliography: biblio.bib
 ---
 

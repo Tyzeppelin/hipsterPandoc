@@ -5,60 +5,34 @@ du polynôme et le domaine des coefficients. Il existe de nombreuses méthodes q
 à coefficients algébrique [***ref. needed***]. Dans le cadre de ce stage nous ne nous interesserons qu'à la factorisation des
 polynômes à coefficients entiers.
 
-La factorisation dans $\mathbb{Z}[x]$ n'est pas facile, il n'existe pas de méthode efficace pour factoriser un polynôme directement
-dans l'anneau $\mathbb[x]$. Il est beaucoup plus facile de factoriser un polynome dans un corps fini.
+Il n'existe pas de méthode efficace pour factoriser un polynôme directement dans l'anneau $\mathbb[x]$. Il est beaucoup plus
+facile de factoriser un polynome dans un corps fini. Les premières méthodes de factorisations de polynômes à coefficients entiers
+se sont d'ailleurs basé sur les propriétés des corps finis. Un résumé de l'histoire de la factorisation de polynôme a été présenté
+à l'ISSAC 2006 par Joachim von zur Gathen [@von2006polynomial], auteur du livre _Modern Computer Algebra_ [@von2013modern] et un
+des contributeur des méthodes actuelles de factorisation.
 
-On prends un polynome f dans Z[x] et un premier p dans $\mathbb{Z}$ de telle sorte qu'il ne divise pas f que f soit squarefree dans $\mathbb{F}_p[x]$.
-Ensuite on a deux méthodes différentes pour factoriser le polynome dans $\mathbb{F}_p[x]$, une methode ou on factorise dans un corps
-avec une tres grande caracteristique (autrement dit factoriser dasn Zp avec p > borne de Mignotte); la seconde méthode
-consiste a factoriser un polynome dans Zp avec p le plus petit possible et à "remonter" les facteurs dans $\mathbb{F}_{p^l}[x]$, avec l grand, grace au lemme d'Hensel \ref{sec:hensel}.
+## Principe de base
+
+Il existe principalement deux méthodes de factorisation de polynômes dans $\mathbb{Z}[x]$ et la seule différence entre les deux se
+situe pendant la dernière phase. L'algorithme complet de la méthode de factorisation est décrite dans \ref{alg:hensel} et
+plus généralement dans la partie \ref{sec:hensel}.
+
+La première partie de la méthode est la préparation du polynôme et le calcul des constantes nécessaire à la suite.
+On a notre polynome f dans $\mathbb{Z}[x]$ et on calcul le premier p dans $\mathbb{Z}$ tel que p ne divise pas le
+coefficient principal et que f ne possède pas de facteurs multiples dans $\mathbb{F}_p[x]$. Notons le polynômes
+à coefficients modulo p $f^{\star}$
+
+Ensuite nous devons calculer les facteurs irréductibles de $f^{\star}$. La méthode est décrite dans la partie \ref{sec:modular}.
 
 Une fois que l'on possède tous les facteurs de f* dans $\mathbb{F}_p[x]$ il faut trouver quelles combinaisons de ces facteurs
 forment les facteurs dans $\mathbb{Z}[x]$. Pour cela il y a aussi deux algorithmes différents. Un qui consiste a tester toutes
 les combinaisons de facteurs. Cette méthode possède un désaventage évident: la complexité de cet algorithme est
-exponentiel dans le pire des cas. (et il n'est pas loin d'etre exponentiel en moyenne) La seconde méthode, beaucoup plus récente,
-se base sur les travaux de réductions en lattice de LLL [needref]. Cet algorithme a une complexité polynomiale en théorie
+exponentiel dans le pire des cas. La seconde méthode, beaucoup plus récente,
+se base sur les travaux de réductions en lattice de LLL [@hart2011practical]. Cet algorithme a une complexité polynomiale en théorie
 meme si en pratique il reste moins efficcace que la combinaison de facteurs pour un "petit" nomre de facteurs.
-Il fait appel a des théories mathématiques plus récentes et plus complexes et ne sera pas étudié ici.
 
-Nous avons donc le diagramme d'homomorphisme suivant:
+Nous ouvons donc représenter la méthode de factorisation de la manière suivante:
 
 \input{res/ho.tex}
-
-
-Nous avons décidé, dans un premier temps, de travailler avec les méthodes "prime power" pour la factorisation dans
-un corps finis (Galois) puisque cette méthode nous permet de ne pas travailler avec des polynomes trop important
-et aussi parceque c'est la plus rapide. La différence principale entre les méthodes de Berlekap et Zassenhaus, est sur la représentation en memoire
-des polynomes. Berlekamp demande une manipulation de grosses matrices efficace, notamment l'inversion de matrices. Zassenhaus quand a lui
-utilise massivement les multiplications entre polynomes qui sont une opération tres couteuse mais heuresement avec beaucoup d'optimisatin possibles.
-L'allocation de mémoire étant une opération extremement couteuse elle aussi, je me suis orienté vers la méthode qui utiliserait le moins possible d'allocation
-de gros segment de mémoire. Et c'est Zassenhaus qui a gagné (je deteste la formulation). Basiquement Berlekamp(matrice, ...)
-VS Zassenhaus (random, ...). Pour la remonté dans Z[x] nous avons opté pour la méthode combinatoire, la manipulation
-de lattice n'étant pas prévu par TRIP et une structure de donnée faite à la va-vite c'est pas cool. (true that)
-
-Donc pour résumer nous allons avoir un algo qui ressemble à ça :
-(Modern Computer Algebra, Algo de Von Zur Gathen et al. 15.6)
-
-{- On rends le polynome squarefree }
-
-- calcul des différentes bornes, constantes nécessaires,
-    (notamment B, p, l)
-
-- factorisation dans Zp
-
-- remonté des facteurs en arbre dans Zp^l
-
-- combinaison des facteurs de Zp^l
-
-- profit
-
-%expliquer les diferents algo%
-
-%On a l'algo de Yun pour retirer les racines multiples, 
-%Ensuite factorisation dans Zp en suivant zassenhaus
-%suivis par euclide etendu qui permet de faire un arbre de facteurs ('fin pas vraiment mais bon (dans l'idée c'est comme ca (theoriquement))) 
-%Ensuite on applique Hensel sur chaque sou-arbre pour élever les facteurs dans Zp^l avec l sufisement grand (basiquemet p^l ~ borne de mignotte)
-%Et pour finir on test la combinaison de tous les facteurs dans Zp^l. Lorsque le produit des normes ||combinaison||_1 * ||reste des facteurs||_1
-%est inferieur a Mignotte.
 
 

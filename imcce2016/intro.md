@@ -13,7 +13,7 @@ vise précisément la manipulation efficace de ces séries, que nous assimileron
 ## TRIP
 
 TRIP est un système de calcul formel développé en FORTRAN et en C dans les années 1990 pour démontrer les théories du comportement chaotique
-du système solaire par Jacques Laskar [@laskar1994large] [@laskar2009existence]. En plus d'être un système de claulc interactif, TRIP offre
+du système solaire par Jacques Laskar [@laskar1994large] [@laskar2009existence]. En plus d'être un système de calcul interactif, TRIP offre
 la possibilité d'écrire des scripts. La syntaxe des scripts est la même que celle de l'interpreteur et est décrite dans le manuel d'utilisation
 [***see*** @GL14]. TRIP manipule un grand nombre d'objets mathématiques comme les entiers/flotants multiple précision, les séries,
 les vecteurs à n dimensions, les matrices, etc. Le grpahe d'héritage simplifié des objets manipulés dans TRIP est disponible
