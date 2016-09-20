@@ -1,19 +1,12 @@
 # Algorithmes de factorisation
 
-La factorisation des polyômes est un problème complexe dont la complexité varie surtout selon le nombres d'indeterminés
-du plynôme et le domaine des coefficients.
+La factorisation des polyômes est un problème complexe dont la solution varie surtout selon le nombres d'indeterminés
+du polynôme et le domaine des coefficients. Il existe de nombreuses méthodes qui permettnt d'approximer la factorisation de polynômes
+à coefficients algébrique [***ref. needed***]. Dans le cadre de ce stage nous ne nous interesserons qu'à la factorisation des
+polynômes à coefficients entiers.
 
-Nous allons nous interesser uniquement aux polynômes uinvariés, cad à une seule indeterminée, dont les coefficients
-se trouvent dans le corps des entiers, noté $\mathbb{Z}[x]$.
-
-La factorisation dans $\mathbb{R}[x]$ et $\mathbb{C}[x]$ consiste a trouver les racines du polynomes et il existe plusieurs algorithmes différents pour
-y arriver (Newton, ... [rajouter des references]), la factorisation dans $\mathbb[x]$ est "plus simple" vu que l'on connait
- le nombre de racines qui eset égal au degré du polynôme à factoriser.
-
-Nous allons, dans le cadre de mon stage, nous interesser à la factorisatoin de polynômes à coefficients dans le corps $\mathbb{Z}[x]$.
-
-La factorisation dans $\mathbb{Z}[x]$ n'est pas facile, il est beaucoup plus facile de factoriser un polynome dans un corps. Les algorithmes
-les plus efficaces ont le meme principe :
+La factorisation dans $\mathbb{Z}[x]$ n'est pas facile, il n'existe pas de méthode efficace pour factoriser un polynôme directement
+dans l'anneau $\mathbb[x]$. Il est beaucoup plus facile de factoriser un polynome dans un corps fini.
 
 On prends un polynome f dans Z[x] et un premier p dans $\mathbb{Z}$ de telle sorte qu'il ne divise pas f que f soit squarefree dans $\mathbb{F}_p[x]$.
 Ensuite on a deux méthodes différentes pour factoriser le polynome dans $\mathbb{F}_p[x]$, une methode ou on factorise dans un corps
