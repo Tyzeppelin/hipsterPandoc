@@ -1,4 +1,4 @@
-files = title.md intro.md basics.md modular.md hensel.md implem.md futur.md references.md
+files = title.md intro.md basics.md modular.md hensel.md implem.md futur.md appendix.md references.md
 pdf = report.pdf
 tex = report.tex
 other = *.aux *.log *.out *.toc
