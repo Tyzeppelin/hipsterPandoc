@@ -25,3 +25,6 @@ La gestion des nombres dépends de leur type et de leur taille. Pour les petits 
 Pour les plus grands entiers et les flottants, trip utilise des librairies numeriques multiple precision telles que GMP, MFC, MPFR, ...
 
 Mon travail va donc d'être de comprendre le fonctionnement de TRIP pour implémenter un algorithme de factorisation de polynômes.
+
+\ref{appendix:sun}
+
