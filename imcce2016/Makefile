@@ -4,7 +4,7 @@ tex = report.tex
 other = *.aux *.log *.out *.toc
 
 engine = --latex-engine=pdflatex
-params = -s --template=template.tex --variable documentclass=report --listing --bibliography=biblio.bib --toc -N --filter pandoc-citeproc
+params = -s --template=template.tex --variable documentclass=report --listing --bibliography=biblio.bib --csl=ieee.csl --toc -N --filter pandoc-citeproc
 
 .PHONY: report
 report:
