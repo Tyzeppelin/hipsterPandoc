@@ -2,14 +2,14 @@
 
 La factorisation des polyômes est un problème complexe dont la solution varie surtout selon le nombres d'indeterminés
 du polynôme et le domaine des coefficients. Il existe de nombreuses méthodes qui permettnt d'approximer la factorisation de polynômes
-à coefficients algébrique [***ref. needed***]. Dans le cadre de ce stage nous ne nous interesserons qu'à la factorisation des
-polynômes à coefficients entiers.
+à coefficients algébrique [***ref. needed***]. Dans le cadre de ce stage nous ne nous intéresserons qu'à la factorisation des
+polynômes univariés à coefficients entiers.
 
 Il n'existe pas de méthode efficace pour factoriser un polynôme directement dans l'anneau $\mathbb[x]$. Il est beaucoup plus
 facile de factoriser un polynome dans un corps fini. Les premières méthodes de factorisations de polynômes à coefficients entiers
 se sont d'ailleurs basé sur les propriétés des corps finis. Un résumé de l'histoire de la factorisation de polynôme a été présenté
 à l'ISSAC 2006 par Joachim von zur Gathen [@von2006polynomial], auteur du livre _Modern Computer Algebra_ [@von2013modern] et un
-des contributeur des méthodes actuelles de factorisation.
+des contributeurs des méthodes actuelles de factorisation.
 
 ## Principe de base
 
