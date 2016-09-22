@@ -14,8 +14,8 @@ des contributeurs des méthodes actuelles de factorisation.
 ## Principe de base
 
 Il existe principalement deux méthodes de factorisation de polynômes dans $\mathbb{Z}[x]$ et la seule différence entre les deux se
-situe pendant la dernière phase. L'algorithme complet de la méthode de factorisation est décrite dans \ref{alg:hensel} et
-plus généralement dans la partie \ref{sec:hensel}.
+situe pendant la dernière phase. L'algorithme complet de la méthode de factorisation est décrite dans la section \ref{sec:hensel} et
+plus généralement dans l'algorithme \ref{alg:hensel}.
 
 La première partie de la méthode est la préparation du polynôme et le calcul des constantes nécessaire à la suite.
 On a notre polynome f dans $\mathbb{Z}[x]$ et on calcul le premier p dans $\mathbb{Z}$ tel que p ne divise pas le
