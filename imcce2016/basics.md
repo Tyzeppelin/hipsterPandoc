@@ -18,7 +18,7 @@ situe pendant la dernière phase. L'algorithme complet de la méthode de factori
 plus généralement dans l'algorithme \ref{alg:hensel}.
 
 La première partie de la méthode est la préparation du polynôme et le calcul des constantes nécessaire à la suite.
-On a notre polynome f dans $\mathbb{Z}[x]$ et on calcul le premier p dans $\mathbb{Z}$ tel que p ne divise pas le
+On a notre polynome f dans $\mathbb{Z}[x]$ et on calcule le nombre premier p dans $\mathbb{Z}$ tel que p ne divise pas le
 coefficient principal et que f ne possède pas de facteurs multiples dans $\mathbb{F}_p[x]$. Notons le polynômes
 à coefficients modulo p $f^{\star}$
 
@@ -34,5 +34,3 @@ meme si en pratique il reste moins efficcace que la combinaison de facteurs pour
 Nous ouvons donc représenter la méthode de factorisation de la manière suivante:
 
 \input{res/ho.tex}
-
-

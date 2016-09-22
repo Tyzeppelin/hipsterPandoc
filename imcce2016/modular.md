@@ -1,17 +1,20 @@
 ## Factorisation dans un corps fini
 \label{sec:modular}
 
-la factorisation des polynômes modulo un premier aka factorisation de polynomes dans un coprs fini (p-adiques en vrai mais osef un peu, mais pas vraiment, mais si...)
-est un problème relativement qui a commencé a être étudié par Gauss (je dois me gourer) et qui a été beaucoup amelioré après la moitié du XXe siècle avec le développement des ordinateurs,
-et notamment des processeurs sparc au milieu des années 90. Les principales avancés dans la factorisation sont du à Berlekamp, Zassenhaus, Cantor, Von Zur Gathen, Shoup, Geddes(?).
+la factorisation des polynômes modulo un premier aka factorisation de polynomes dans un corps fini
+est un problème relativement qui a commencé a être étudié par Gauss (je dois me gourer) et qui a été beaucoup
+amelioré après la moitié du XXe siècle avec le développement des ordinateurs, et notamment des processeurs SPARC
+au milieu des années 90. Les principales avancés dans la factorisation sont du à Berlekamp, Zassenhaus, Cantor,
+Von Zur Gathen, Shoup, Geddes(?).
 
-Les principales méthodes de factorisation se séparent en 2 idées. La première, communement appelé algorithme de Berlekamp (avec la variante des grands premier) [voir article]
+Les principales méthodes de factorisation se séparent en 2 idées. La première, communement appelé algorithme de
+Berlekamp (avec la variante des grands premier) [voir article].
 La seconde méthode, celle que nous développerons est la méthode de Zassenhaus qui se base sur deux théorème:
 
 \begin{theorem}
 \label{th:xp}
 Le polynome $p(x) = x^{q^r} - x$ est le produit de tous les polynômes de _$\mathbb{F}_q[x]$ dont le degré divise q.
-}
+\end{theorem}
 
 \begin{proof}
 La preuve de ce théorème est disponible dans [Finite Fields, @lidl1997FiniteFields, Theorem 3.20, p.90]
