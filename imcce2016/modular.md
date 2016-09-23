@@ -9,16 +9,16 @@ Von Zur Gathen, Shoup, Geddes(?).
 
 Les principales méthodes de factorisation se séparent en 2 idées. La première, communement appelé algorithme de
 Berlekamp (avec la variante des grands premier) [voir article].
-La seconde méthode, celle que nous développerons est la méthode de Zassenhaus qui se base sur deux théorème:
+La seconde méthode, celle que nous développerons est la méthode de Zassenhaus qui se base sur les deux théorèmes suivants.
 
 \begin{theorem}
 \label{th:xp}
-Le polynome $p(x) = x^{q^r} - x$ est le produit de tous les polynômes de _$\mathbb{F}_q[x]$ dont le degré divise q.
+Le polynome $p(x) = x^{q^r} - x$ est le produit de tous les polynômes de $\mathbb{F}_q[x]$ dont le degré divise q.
+
 \end{theorem}
 
-\begin{proof}
-La preuve de ce théorème est disponible dans [Finite Fields, @lidl1997FiniteFields, Theorem 3.20, p.90]
-\end{proof}
+_Démonstration._ La preuve de ce théorème est disponible dans [Finite Fields, @lidl1997finite, Theorem 3.20, p.90]
+\hfill{\qedsymbol}
 
 \begin{theorem}
 \label{th:rand}
@@ -31,9 +31,8 @@ $$1 - {(q-1)/2q}^k - {(q+1)/2q}^k$$
 Cette probabilité vaut au minimum 4/9
 \end{theorem}
 
-\begin{proof}
-Cette preuve est disponible dans [Algorithms for Computer Algebra @geddes1992algorithms, Théorème 8.11, p.362]
-\end{proof}
+_Démonstration._ La preuve de ce théorème est disponible dans
+[Algorithms for Computer Algebra @geddes1992algorithms, Théorème 8.11, p.362] \hfill{\qedsymbol}
 
 Nous allons nous interesser à la méthode dite de Cantor-Zassenhaus [@cantor1981new]
 pour factoriser un polynome squarefree et dont le coefficient dominant est 1.
