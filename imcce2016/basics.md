@@ -5,17 +5,18 @@ du polynôme et le domaine des coefficients. Il existe de nombreuses méthodes q
 à coefficients algébrique [***ref. needed***]. Dans le cadre de ce stage nous ne nous intéresserons qu'à la factorisation des
 polynômes univariés à coefficients entiers.
 
-Il n'existe pas de méthode efficace pour factoriser un polynôme directement dans l'anneau $\mathbb[x]$. Il est beaucoup plus
+Il n'existe pas de méthode efficace pour factoriser un polynôme directement dans l'anneau $\mathbb{Z}[x]$. Il est beaucoup plus
 facile de factoriser un polynome dans un corps fini. Les premières méthodes de factorisations de polynômes à coefficients entiers
-se sont d'ailleurs basé sur les propriétés des corps finis. Un résumé de l'histoire de la factorisation de polynôme a été présenté
-à l'ISSAC 2006 par Joachim von zur Gathen [@von2006polynomial], auteur du livre _Modern Computer Algebra_ [@von2013modern] et un
-des contributeurs des méthodes actuelles de factorisation.
+se sont d'ailleurs basé sur les propriétés des corps finis. Le début de la formalisation de la factorisation de polynômes à coefficients
+entier a commencé avec Gauss et à connu les plus grandes avancés avec les travaux de Berlakamp [@berlakamp] et de Cantor et Zassenhaus [@cantor].
+Un résumé de l'histoire de la factorisation de polynôme a été présenté à l'ISSAC 2006 par Joachim von zur Gathen [@von2006polynomial],
+auteur du livre _Modern Computer Algebra_ [@von2013modern] et un des contributeurs des méthodes actuelles de factorisation.
 
 ## Principe de base
 
-Il existe principalement deux méthodes de factorisation de polynômes dans $\mathbb{Z}[x]$ et la seule différence entre les deux se
-situe pendant la dernière phase. L'algorithme complet de la méthode de factorisation est décrite dans la section \ref{sec:hensel} et
-plus généralement dans l'algorithme \ref{alg:hensel}.
+Il existe principalement deux méthodes de factorisation de polynômes dans $\mathbb{Z}[x]$ et les principales différences sont
+l'algorithme de factorisation modulaire et la troisième partie. L'algorithme de la méthode de factorisation est décrite dans la figure
+\ref{fig:ho} et plus précisement dans l'algorithme \ref{alg:hensel}.
 
 La première partie de la méthode est la préparation du polynôme et le calcul des constantes nécessaire à la suite.
 On a notre polynome f dans $\mathbb{Z}[x]$ et on calcule le nombre premier p dans $\mathbb{Z}$ tel que p ne divise pas le

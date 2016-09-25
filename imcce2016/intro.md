@@ -13,7 +13,7 @@ vise précisément la manipulation efficace de ces séries, que nous assimileron
 
 ## TRIP
 
-Suite à l'étude du comportement chaotique du système solaire par J. Laskar [@laskar1994large] , à l'aide de programmes spécialisés écrient en FORTRAN,
+Suite à l'étude du comportement chaotique du système solaire par J. Laskar [@laskar1994large] à l'aide de programmes spécialisés écrient en FORTRAN,
 un système de calcul formel plus génraliste a été développé en C et C++ nommé TRIP.
 En plus d'être un système de calcul interactif, TRIP offre la possibilité d'écrire des scripts. La syntaxe des scripts
 est la même que celle de l'interpreteur et est décrite dans le manuel d'utilisation
