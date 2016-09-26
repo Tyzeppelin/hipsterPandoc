@@ -38,7 +38,7 @@ Cette probabilité vaut au minimum 4/9
 _Démonstration._ La preuve de ce théorème est disponible dans
 [Algorithms for Computer Algebra @geddes1992algorithms, Théorème 8.11, p.362] \hfill{\qedsymbol}
 
-La représentation schématique de la factorisation de polynômes modulo p est disponible en figure \fig{mod}
+La représentation schématique de la factorisation de polynômes modulo p est disponible en figure \ref{mod}
 
 \input{res/mod.tex}
 

@@ -19,6 +19,7 @@ header-includes:
     - \usepackage[noend]{algpseudocode}
     - \usepackage[nodisplayskipstretch]{setspace}
     - \usepackage{amsthm}
+    - \usepackage{subcaption}
     - \setstretch{1}
     - \lstset{mathescape}
     - \makeatletter
@@ -27,6 +28,7 @@ header-includes:
     - \algrenewcommand\algorithmicensure{\textbf{Sortie:}}
     - \renewcommand{\ALG@name}{Algorithme}
     - \newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
+    - \titleformat{\chapter}{\normalfont\LARGE\bfseries}{\thechapter.}{1em}{}
     - \usetikzlibrary{arrows}
     - \newtheorem{theorem}{Théorème}
     - \newtheorem{definition}{Définition}

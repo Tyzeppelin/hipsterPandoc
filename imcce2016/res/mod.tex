@@ -6,34 +6,31 @@
         ->,
         >=stealth',
         shorten >=1pt,
-        auto, node distance=2cm, scale=0.05
-		]
-		
+        auto, node distance=2.7cm, scale=0.05
+        ]
+
     \tikzset{pb/.style={draw,thick,text width=2.5cm,align=center},}
     \tikzset{sol/.style={draw,thick,text width=2.5cm,align=center},}
-	\tikzset{proc/.style={text width=2.5cm,align=center},}
+    \tikzset{proc/.style={text width=2.5cm,align=center},}
 
-	\node[pb] (sff) {factorisation de f(x) en facteurs de multiplicités différentes};
+    \node[pb] (sff) {factorisation de $f(x)$ en facteurs de multiplicités différentes};
 
-    \node (placeholder0) [below of=pb_orig] {};
-    \node (placeholder1) [below of=placeholder0] {} ;
+    \node (placeholder0) [right of=pb_orig] {};
+    \node (placeholder1) [right of=placeholder0] {} ;
+    \node (placeholder2) [right of=placeholder1] {};
 
-    \node[pb] (ddf) [below of=placeholder0]  {factorisation des $f^{\star}(x)$ en facteurs irréductibles de même degré};
-    \node[pb] (edf) [below of=placeholder1] {Séparation des facteurs de h(x) de degré i};
-
+    \node[pb] (ddf) [right of=placeholder0]  {factorisation des $f^{\star}_i(x)$ en produit de facteurs irréductibles de même degré $j$};
+    \node[pb] (edf) [right of=placeholder2] {Séparation des facteurs irréductibles de $h_j(x)$ de degré $j$};
 
         \path
 
-
         (sff) edge node[proc] {$f(x) = \prod f^{\star}_i(x)$} (ddf)
-        (ddf) edge node[proc, right] {$f^{\star}(x) = \prod h_i(x)$} (edf);
+        (ddf) edge node[proc] {$f^{\star}_i(x) = \prod h_j(x)$} (edf);
 
+    \draw[->]  (sff.east) -- (ddf.west);
+    \draw[->]  (ddf.east) -- (edf.west);
 
-    \draw[->]  (sff.south) -- (ddf.north);
-    \draw[->]  (ddf.south) -- (edf.north);
-	
-		
-	\end{tikzpicture}
-	\caption{L'algorithme de factorisation dans $\mathbb{F}_p[x]$
-	, vue schématique}
+    \end{tikzpicture}
+    \caption{L'algorithme de factorisation dans $\mathbb{F}_p[x]$
+    , vue schématique}
 \end{figure}

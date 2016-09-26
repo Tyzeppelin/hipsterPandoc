@@ -152,11 +152,17 @@ $endfor$
 % REDEFINITION OF MAKETITLE
 \renewcommand*{\maketitle}{
 \begin{titlepage}
-    \includegraphics[height=50px]{res/logo_insa.png}
-    \hspace{0.35\textwidth}
-    \includegraphics[height=50px]{res/logo_imcce.png}
+    \begin{figure}[htbp]
+        \begin{subfigure}[c]{0.3\textwidth}
+            \includegraphics[scale=0.4]{res/logo_insa.png}
+        \end{subfigure}
+        \hfill
+        \begin{subfigure}[c]{0.3\textwidth}
+            \includegraphics[scale=0.4]{res/logo_imcce.png}
+        \end{subfigure}
+    \end{figure}
     \begin{center}
-        \vspace{5cm}
+        \vspace{3cm}
         {\LARGE\@title\unskip\strut\par} \vspace{2cm}
         {\Large\@author\unskip\strut\par} \vspace{1.5cm}
         {\@date\unskip\strut\par}
