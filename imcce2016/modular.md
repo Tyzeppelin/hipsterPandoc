@@ -78,9 +78,9 @@ $$c(x) = gcd(f(x), h(x)) = gcd(x^6 - x^5 - 2x^3 + 2x^2 - x - 2, x^5 - x^2 - x - 
 et
 $$w(x) = f(x) / c(x) = (x^6 - x^5 - 2x^3 + 2x^2 - x - 2)/(x^3 - 2x^2 + x - 2) = x^3 + x^2 + x + 1$$
 Etant donné que $w(x) = x^3 + x^2 + x + 1$, nous entrons dans la boucle while,
-On obtient $$y(x) = x^2 + 1\;\ et\;\ $$z(x) = x + 1$$.
+On obtient $$y(x) = x^2 + 1\;\ et\;\ z(x) = x + 1$$.
 On a donc z(x) le(s) facteur(s) de multiplicité 1. On stocke donc z(x) et le retire des facteurs à factoriser.
-$$out = out \cup \{(z(x), i)\} = \{(x + 1, 1)\} \;\;et\;\; w(x) = x^2 + 1\;\; et\;\; c(x) = x - 2$$
+$$out = out \cup \{(z(x), i)\} = \{(x + 1, 1)\} \;\;et\;\; w(x) = x^2 + 1\;\; et\;\; c(x) = x - 2 $$
 
 A l'itération suivante, $w(x) \neq 1$, 
 $y(x) = x - 2$ et $z(x) = x + 3$

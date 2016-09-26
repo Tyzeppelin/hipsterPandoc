@@ -6,6 +6,7 @@ school: INSA Rennes
 dpt: Département Informatique
 date: Juillet - Septembre 2016
 classoption: fleqn
+fontfamily: lmodern
 header-includes:
     - \usepackage[francais]{babel}
     - \usepackage[T1]{fontenc}
@@ -14,7 +15,6 @@ header-includes:
     - \usepackage{graphicx}
     - \usepackage{tikz}
     - \usepackage{fullpage}
-    - \usepackage{concrete}
     - \usepackage{algorithm}
     - \usepackage[noend]{algpseudocode}
     - \usepackage[nodisplayskipstretch]{setspace}
@@ -27,8 +27,6 @@ header-includes:
     - \algrenewcommand\algorithmicensure{\textbf{Sortie:}}
     - \renewcommand{\ALG@name}{Algorithme}
     - \newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
-    - \titleformat{\chapter}{\normalfont\LARGE\bfseries}{\thechapter.}{1em}{}
-    - \renewcommand{\bfdefault}{sbc}
     - \usetikzlibrary{arrows}
     - \newtheorem{theorem}{Théorème}
     - \newtheorem{definition}{Définition}
