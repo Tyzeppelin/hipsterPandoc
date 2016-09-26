@@ -1,19 +1,17 @@
-
 ## factorisation in Z[x]
 \label{sec:hensel}
 
-
-Comme dit précedement, la factorisation d'un polynôme dans $\mathbb{Z}[x]$ fait intervenir la factorisation dans un corps finis
-de caracteritique p, un premier. Le choix de p n'est pas arbitraire, cependant il faut choisir un p pour que p ne divise pas le
+Comme dit précedement, la factorisation d'un polynôme dans $\mathbb{Z}[x]$ fait intervenir la factorisation dans un corps fini
+de caracteristique p, un premier. Le choix de p n'est pas arbitraire, cependant il faut choisir un p pour que p ne divise pas le
 coefficient dominant de f
 de $\mathbb{Z}[x]$ dans $\mathbb{F}_p[x]$. C'est à dire que l'on ne perdre pas d'information.
 
-Pour cela nous cherchons un p qui ne divise pas le coefficient principale (aka le coefficient de plus haut degré) de f et
+Pour cela nous cherchons un p qui ne divise pas le coefficient principal (aka le coefficient de plus haut degré) de f et
 qui fait en sort que f soit (reste) sans facteurs multiples. Nous devons aussi nous arranger pour que p reste le plus petit possible
 étant donnée que la complexité des algorithmes de factorisation dans $\mathbb{F}_p[x]$ dépends de la complexité de la multiplication
-de polynçomes et que le noombre de multiplication dépends de p (nous allons élever des polynômes à des puissances de p).
+de polynçomes et que le nombre de multiplication dépends de p (nous allons élever des polynômes à des puissances de p).
 
-Nous allons calculer aussi une borne de Mignotte [ref mignotte], qui correspond au produit maximum des coefficients de f. (plus ou moins)
+Nous allons calculer aussi une borne de Mignotte [@mignotte1983some], qui correspond au produit maximum des coefficients de f. (plus ou moins)
 
 Ensuite nous pouvons utiliser la méthode de factorisation modulaire dans le corps $\mathbb{F}_p[x]$ et pouvoir obtenir une factorisation
 de f.
@@ -27,9 +25,8 @@ pour obtenir les véritables facteurs de f dans $\mathbb{Z}[x]$.
 
 \input{res/hensel.tex}
 
-Cet algorithme a été tiré de [Modern Computer Algebra @von2013modern, Algorithme 15.19, p.427-428],
+Cet algorithme a été tiré de Modern Computer Algebra [@von2013modern], Algorithme 15.19, p.427-428,
 
 ###Exemple
 
 TODO
-

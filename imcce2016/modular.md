@@ -158,7 +158,7 @@ Algorithms for Computer Algebra [@geddes1992algorithms], Algorithme 8.9, p.373
 
 #### Exemple
 
-Nous reprennons notre exemple de la partie précédente \ref{ex:dff} ou nous avions
+Nous reprenons notre exemple de la partie précédente \ref{ex:dff} où nous avions
 $f^{\star}(x) = h_1(x)*h_2(x)$ avec $h_1(x) = x^2-x-2$ produit de facteurs de degré n = 1
 et $h_2(x) = x^4+x^2+1$ produit de facteurs de degré n = 2.
 
@@ -178,7 +178,7 @@ On a donc séparer les facteurs irréductibles de $f_1(x) = (x+1)(x-2)$
 
 La méthode est la même pour $f_2(x) = x^4+x^2+1$,
 
-On prends un polynôme aléatoire de degré inférieur ou égal à 3, $v(x) = x^3 + 1$
+On prend un polynôme aléatoire de degré inférieur ou égal à 3, $v(x) = x^3 + 1$
 On a donc $v(x) = (x^3+1)^12-1 = x^36+2x^33+x^30+2x^21-x^18+2x^15+x^6+2x^3$
 $g(x) = gcd(f_2(x), v(x)) = x^2+x+1$
 On a donc $g(x)=x^2+x+1$ de degré 2 et $f_2(x)/g(x) = x^2-x+1$ de degré 2 aussi.

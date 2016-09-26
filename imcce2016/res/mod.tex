@@ -1,0 +1,40 @@
+\begin{figure}
+\label{fig:ho}
+    \centering
+    \small
+    \begin{tikzpicture}[
+        ->,
+        >=stealth',
+        shorten >=1pt,
+        auto, node distance=2cm, scale=0.05
+		]
+		
+    \tikzset{pb/.style={draw,thick,text width=2.5cm,align=center},}
+    \tikzset{sol/.style={draw,thick,text width=2.5cm,align=center},}
+	\tikzset{proc/.style={text width=2.5cm,align=center},}
+
+	\node[pb] (sff) {factorisation de f(x) en facteurs de multiplicités différentes};
+
+    \node (placeholder0) [below of=pb_orig] {};
+    \node (placeholder1) [below of=placeholder0] {} ;
+
+    \node[pb] (ddf) [below of=placeholder0]  {factorisation des $f^{\star}(x)$ en facteurs irréductibles de même degré};
+    \node[pb] (edf) [below of=placeholder1] {Séparation des facteurs de h(x) de degré i};
+
+
+        \path
+
+
+        (sff) edge node[proc] {$f(x) = \prod f^{\star}_i(x)$} (ddf)
+        (ddf) edge node[proc, right] {$f^{\star}(x) = \prod h_i(x)$} (edf);
+
+
+    \draw[->]  (sff.south) -- (ddf.north);
+    \draw[->]  (ddf.south) -- (edf.north);
+	
+		
+	\end{tikzpicture}
+	\caption{L'algorithme de factorisation dans $\mathbb{F}_p[x]$
+	, vue schématique}
+    \label{fig:AlgM}
+\end{figure}
