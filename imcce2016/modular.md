@@ -47,83 +47,85 @@ si un polynoem possède des racines multiples, on remarque que pgcd(f, f') != 0
 ### Séparation des facteurs de différentes multiplicités
 
 \begin{definition}
-Soit f $\in$ Z[x] un polyôme qui possède une factorisation unique dans le domaine Z. f(x) est dit sans racines multiples (trouver un synonyme)
-s'il ne possède pas de facteurs qui se répète, tel qu'il n'existe aucun $h(x)$ avec $deg(h(x)) \geq 1$ tel que $h(x)^2$ ne divise pas $f(x)$.
+\label{def:yun}
+Soit f $\in \mathbb{Z}[x]$ un polyôme qui possède une factorisation unique dans le domaine $\mathbb{Z}[x]$. $f^{\star}(x)$ est dit sans racines multiples
+s'il ne possède pas de facteurs qui se répète, se sorte qu'il n'existe aucun $h(x)$ avec $deg(h(x)) \geq 1$ tel que $h(x)^2$ ne divise pas $f^{\star}(x)$.
 La factorisation sans facteurs multiples de f(x) est
-$$f(x)=\prod_{i=1}^k a_i(x)^i $$
-ou chaque $a_i(x)$ est un polynôme sans facteurs multiples et
-$$gcd(a_i(x), a_j(x)) = 1 \; for \; i \neq j $$
+$$f(x)=\prod_{i=1}^k f^{\star}_i(x)^i $$
+ou chaque $f^{\star}_i(x)$ est un polynôme sans facteurs multiples et
+$$gcd(f^{\star}_i(x), f^{\star}_j(x)) = 1 \; for \; i \neq j $$
 \end{definition}
 
-Du coup on obtient la liste des polynomes squarefree et leur multiplicité et chaque polynome est squarefree et unitaire.
 
-Ensuite, pour chaque polynome squarefree/unitaire, nous utilisons la définition, en appliquant, pour tout i entre 1 et deg(f)/2
-
-On peut formaliser et on obtient l'algorithme suivant (ici nous reprenons le modele de [Algorithms for computer algebra, @geddes1992algorithms, Algorithm 8.3, p.345 ])
+En utilisant la définition \ref{def:yun} il est possible d'établir la liste de tous les facteurs $f^{\star}_i(x)$ unitaires et sans racines multiples
+d'un polynôme en appliquant des pgcd successifs, $f^{\star}_i(x)=gcd(f(x), f'(x))$. L'algorithme général de séparation des facteurs de différentes
+multiplicités a été décrit par D. Yun [@yun1976square], nous allons utilisé la version présente dans _Algorithms for computer algebra_[@geddes1992algorithms], Algorithm 8.3, p.345.
 
 \input{res/sff.tex}
 
 #### Exemple
 
-Prenons un polynôme $f(x) = x^6 - x^5 - 2x^3 + 2x^2 - x - 2 \in \mathbb{F}_5[x]$
-avec $i=1$, $out(x) = 1$ et $h(x) = f'(x) = x^5 - x^2 - x - 1$
+Prenons un polynôme $f(x) = x^6 - x^5 - 2x^3 + 2x^2 - x - 2 \in \mathbb{F}_5[x]$,
+ $i=1$, $out = {}$ et $h(x) = f'(x) = x^5 - x^2 - x - 1$
 
-On a $h(x) \neq 0$, donc on entre dans le else de la condition, on a
+On a $h(x) \neq 0$, donc on entre dans la branche else(ligne 8-20 ), on a
 $$c(x) = gcd(f(x), h(x)) = gcd(x^6 - x^5 - 2x^3 + 2x^2 - x - 2, x^5 - x^2 - x - 1) = x^3 - 2x^2 + x - 2$$
 et
 $$w(x) = f(x) / c(x) = (x^6 - x^5 - 2x^3 + 2x^2 - x - 2)/(x^3 - 2x^2 + x - 2) = x^3 + x^2 + x + 1$$
-Etant donné que $w(x) = x^3 + x^2 + x + 1$, nous entrons dans la boucle,
-On obtient $$y(x) = x^2 + 1$$ et $$z(x) = x + 1$$.
+Etant donné que $w(x) = x^3 + x^2 + x + 1$, nous entrons dans la boucle while,
+On obtient $$y(x) = x^2 + 1\;\ et\;\ $$z(x) = x + 1$$.
 On a donc z(x) le(s) facteur(s) de multiplicité 1. On stocke donc z(x) et le retire des facteurs à factoriser.
-$$out(x) = out(x)z(x)^i = (x + 1)^1 \;et\; w(x) = x^2 + 1$$ et $$c(x) = x - 2$$
+$$out = out \cup \{(z(x), i)\} = \{(x + 1, 1)\} \;\;et\;\; w(x) = x^2 + 1\;\; et\;\; c(x) = x - 2$$
 
-Au tour de boucle suivant , $w(x) \neq 1$
+A l'itération suivante, $w(x) \neq 1$, 
 $y(x) = x - 2$ et $z(x) = x + 3$
+
 On a donc,
-$out(x) = (x+1)^1*(x+2)^2$
-$w(x) = x - 2$ et $c(x) =1$
+$$out = \{(x+1, 1), (x+2, 2)\} \;\;et\;\; w(x) = x - 2$ et $c(x) =1$$
 
-Au troisième tour de boucle, $w(x) \neq 1$,
+A la troisième itération, $w(x) \neq 1$,
 $y(x) = 1$ et $z(x) = x - 2$
+
 On a donc
-$out(x) = (x+1)(x+2)^2(x+3)^3$
-$w(x) = 1$  et $c(x) = 1$
+$$out = \{(x+1, 1), (x+2, 2), (x+3, 3)\} \;\; et \;\; w(x) = 1$  et $c(x) = 1$$
 
-On a donc $w(x) = 1$, la boucle s'arrète donc ici. Et puisque $c(x) = 1$.
+$w(x) = 1$ et $c(x) = 1$, donc nous nous arrêtons ici.
 
-On retourne donc le polynôme f(x) factorisé en produit de facteurs de multiplicité propre,
-f(x) = out(x) = (x+1)(x+2)^2(x+3)^3$
+On retourne donc l'ensemble des facteurs de x de différentes multiplicités,
+out = \{(x+1, 1), (x+2, 2), (x+3, 3)\}$
 
 
 ### Séparation en produit de facteurs de même degré
 
-A l'issu de cet algortihme nous récupérons les n produits de facteurs g de f de degré d tels que 
+Le but de cette étape est de récupérer les produits de facteurs de $f^{star}(x)$ de même degré, c'est à dire
+les facteurs $h(x)_i$ tels que $f^{star}(x)$ soit le produit des $h(x)_i$ et que le degré de $h(x)_i$ soit
+égal à i.
 
-$f = Prduit (i = 1 -> n) g_i avec deg(g_i) = d_i, 1 < d_i < deg(f)/2$
+Pour cela ous utilisons le théorème \ref{th:xp} et des pgcd successifs $gcd(f^{star}(x), x^{p^i} \mod f^{star}(x))$ pour $ 1 < i < deg(f^{star}(x))/2 $
 
-Pour cela ous utilisons le théorème \ref{th:xp} :
+L'algorithme que nous allons utilisé a été découvert par D. Cantor et H. Zassenhaus [@cantor1981new] et nous avons travaillé avec la version
+de J. Von Zur Gathen de 2001 [@von2001factoring].
 
 \input{res/dff.tex}
 
-Cet algorithme est basé sur l'algorithme n de [@von2001factoring]
-
-Pour bien comprendre le fonctionnement des deux algorithmes algorithmes suivant, nous allons prendre un polynôme unitaire et sans racines
+Pour bien comprendre le fonctionnement des deux algorithmes suivant, nous allons prendre un polynôme unitaire et sans racines
 multiples que nous allons factoriser à l'aide de cet algorithme de factorisation en produit de facteurs de même degré
-et de l'algorithme  \ref{alg:eff} de séparation des facteurs.
+et de l'algorithme \ref{alg:eff} de séparation des facteurs qui sera décrit dans le chapitre \ref{chap:splitting}.
 
 #### Exemple
 \label{ex:dff}
 
-Nous allons factoriser le polynôme $f(x) = x^6-x^5-x^4-x^3-x^2-2$ définie dans $\mathbb{F}_5[x]$
+Nous allons factoriser le polynôme $f^{\star}(x) = x^6-x^5-x^4-x^3-x^2-2$ définie dans $\mathbb{F}_5[x]$
 
-Notons $i =1$, $S = \emptyset$ et $f*(x)=f(x)$
+Notons $i =1$, $S = \emptyset$ et $g^{\star}(x)=f^{\star}(x)$
 
-On note que $deg(f*(x)) = 6 \geq 2i = 2$, donc nous entrons dans la boucle.
+On note que $deg(g^{\star}) = 6 \geq 2i = 2$, donc nous entrons dans la boucle.
 On a
-$$g(x) = gcd(f*(x), x^{p^i} - x \mod f*(x)) = gcd(x^6-x^5-x^4-x^3-x^2-2, x^5-x \mod x^6-x^5-x^4-x^3-x^2-2)\\
+$$h(x) = gcd(g^{\star}(x), x^{p^i} - x \mod g^{\star}(x))
 = gcd(x^6-x^5-x^4-x^3-x^2-2, -x^4-x^3-2x-2) = x^2-x-2$$
-Puisque $g(x) \neq 1$, nous stockons g, produit de facteurs irréductibles de f de degré 1.
-$$S = S \cup {(g(x), i} = \{(x^2-x-2, 1)\}$$
+
+Puisque $h(x) \neq 1$, nous stockons $h(x)$, produit de facteurs irréductibles de f de degré 1.
+$$S = S \cup \{(h(x), i)\} = \{(x^2-x-2, 1)\}$$
 $f*(x)=f(x)*/g(x) = x^4+x^2+1$
 
 Au deuxième tour de boucle, $deg(f(x)) = 4$ et $2i = 4$. On retourne donc dans la boucle,
@@ -140,28 +142,28 @@ On obtient donc la séparation en facteurs irréductibles de même degré suivan
 ### Séparation des facteurs de même degrés
 \label{chap:splitting}
 
-Pour séparer les différents facteurs de même degrés, nous allons utiliser un algorithme dit de Las Vegas dans le sens
+Pour séparer les différents facteurs de même degré, nous allons utiliser un algorithme dit de Las Vegas dans le sens
 où il renvoie un résultat juste mais avec un temps variable, à la difference des algorithmes de Monte-Carlo qui donne un résultat assez proche mais dans
-un intervalle de temps constant. Un des meilleurs exemple d'algorithme de Las Vegas est la Quicksort à pivot aléatoire, dont le temps d'execution dépends
+un intervalle de temps constant. Un des meilleurs exemple d'algorithme de Las Vegas est le Quicksort à pivot aléatoire, dont le temps d'execution dépend
 du pivot et où le résultat est retourné est juste.
 
-La méthode théorique pour la séparation de facteur à été formalisé par Cantor et Zassenhaus [Cantor91On], elle consiste
-à tirer des polynômes aléatoires et à l'elever à une puissance définie. La probabilité de trouver un facteur en commun
-est calculé dans le théorème \ref{th:rand}.
+La méthode théorique pour la séparation de facteur à été formalisé par D. Cantor et H. Zassenhaus [Cantor91On], elle consiste
+à tirer un polynôme aléatoire $v(x)$ et à l'elever à une puissance définie, $(p^n-1)/2$. La probabilité moyene que le polynôme h(x) est un facteur
+commun avec $v(x)$ est proche de 1/2 \ref{th:rand}.
 
-On obtient l'algorithme de separationsdes facteurs de meme degrés, nous utiliserons la version de
-[Algorithms for Computer Algebra @geddes1992algorithms, Algorithme 8.9, p.373]
+Nous utiliserons la variation de K. Geddes décrite dans 
+Algorithms for Computer Algebra [@geddes1992algorithms], Algorithme 8.9, p.373
 
 \input{res/eff.tex}
 
 #### Exemple
 
 Nous reprennons notre exemple de la partie précédente \ref{ex:dff} ou nous avions
-$f(x) = f_1(x)*f_2(x)$ avec $f_1(x) = x^2-x-2$ produit de facteurs de degré n = 1
-et $f_2(x) = x^4+x^2+1$ produit de facteurs de degré n = 2.
+$f^{\star}(x) = h_1(x)*h_2(x)$ avec $h_1(x) = x^2-x-2$ produit de facteurs de degré n = 1
+et $h_2(x) = x^4+x^2+1$ produit de facteurs de degré n = 2.
 
-Nous allons commencer par séparer les facteurs de $f_1(x)$ qui sont de degré n = 1
-On pose $m = deg(f_1(x))/n = 2$ et $S = {f_1(x)}$.
+Nous allons commencer par séparer les facteurs de $h_1(x)$ qui sont de degré n = 1
+On pose $m = deg(h_1(x))/n = 2$ et $S = {h_1(x)}$.
 
 Puisque la taille de S est inférieure à m, on entre dans la boucle.
 On prends un polynome aléatoire de degré inférieur ou égal à 1, $v(x) = x$
