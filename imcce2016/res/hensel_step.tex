@@ -5,18 +5,18 @@
     \Require{$f$,$g$,$h$,$s$,$t$ des polynômes de $\mathbb{F}_p[x]$ tels que $f \equiv gh \mod p$ et $sg+th \equiv 1 \mod p$}
     \Ensure{$f_{\star}$,$g_{\star}$,$h_{\star}$,$s_{\star}$,$t_{\star}$ tels que $f_{\star} \equiv g_{\star}h_{\star} \mod p^2$ et $s_{\star}g_{\star}+t_{\star}h_{\star} \equiv 1 \mod p^2$}
     \Statex
-    \Function{Hensel_Step}
-	
-	\State $e \gets (f - gh) \mod m^2$
-	\State $q$, $r$ tels que $se \equiv qh + r \mod m^2$
-	\State $g_{\star} \gets (g+te+qg) \mod m^2
-	\State $h_{\star} \gets (h+r) \mod m^2
-	\State $b \gets (sg_{\star} + th_{\star} -) \mod m^2
-	\State $c$, $d$ tels que $sb \equiv ch_{\star} + d \mod m^2
-	\State $s_{\star}$ \gets (s-d) \mod m^2
-	\State $t_{\star}$ \gets (t-tb-cg_{\star}) \mod m^2
-	
-	\State \Return $g_{\star}$,$h_{\star}$,$s_{\star}$,$t_{\star}$
+      \Function{Hensel Step}{$f$}
+
+    \State   $e \gets (f - gh) \mod m^2$
+    \State $q$, $r$ tels que $se \equiv qh + r \mod m^2$
+    \State $g_{\star} \gets (g+te+qg) \mod m^2$
+    \State $h_{\star} \gets (h+r) \mod m^2$
+    \State $b \gets (sg_{\star} + th_{\star} -) \mod m^2$
+    \State $c$, $d$ tels que $sb \equiv ch_{\star} + d \mod m^2$
+    \State $s_{\star} \gets (s-d) \mod m^2$
+    \State $t_{\star} \gets (t-tb-cg_{\star}) \mod m^2$
+
+    \State \Return $g_{\star}$,$h_{\star}$,$s_{\star}$,$t_{\star}$
     \EndFunction
   \end{algorithmic}
 \end{algorithm}
