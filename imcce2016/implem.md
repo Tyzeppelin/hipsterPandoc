@@ -11,7 +11,7 @@ En plus de faire le tour des fonctionnalité de TRIP, cette implémentation aura
 différentes méthodes possibles. Par exemple, l'algorithme de recomposition basé sur les lattice aurait été trop
 compliqué et trop long à complétement implementer et tester.
 
-Le code trip des différentes fonctions de factorisation dans un corps fini est disponible en annexe \ref{appendix:code}
+Le code trip des différentes fonctions de factorisation dans un corps fini est disponible en annexe \ref{appendix:code}.
 
 
 ## C++

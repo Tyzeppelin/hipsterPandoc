@@ -14,5 +14,7 @@
 
 # Code TRIP de la factorisation dans un corps fini
 \label{appendix:code}
-.
 
+\lstinputlisting{sff.t}
+\lstinputlisting{dff.t}
+\lstinputlisting{eff.t}
