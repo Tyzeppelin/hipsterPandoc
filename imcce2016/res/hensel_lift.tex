@@ -1,12 +1,12 @@
 \begin{algorithm}
   \caption{Remonté d'un polynôme de $\mathbb{F}_p[x]$ dans $\mathbb{F}_{p^l}[x]$}
-  \label{alg:step}
+  \label{alg:lift}
   \begin{algorithmic}[1]
     \Require{f un polynôme dans $\mathbb{Z}[x]$, $a_0$ dans $\mathbb{Z}$ tel que $a_0*lc(f) \equiv 1 \mod m$ avec $m$ dans $\mathbb{Z}$,
                 $l$ un entier et $\tau$ l'arbre des facteurs de f modulo $m$ tels que décris en \ref{}}
-    \Ensure{l'inverse $a^{\star}$ de $lc(f) \mod m^l$, $\tau^{\star}$ l'arbre des facteurs de f modulo $m^l$
+      \Ensure{l'inverse $a^{\star}$ de $lc(f) \mod m^l$, $\tau^{\star}$ l'arbre des facteurs de f modulo $m^l$}
     \Statex
-      \Function{Hensel lifting}{$f$}
+      \Function{Hensel lifting}{}
     \State $d \gets \lceil \log_2 l \rceil$, $\tau_0 \gets \tau$
     \For {$j = 1, \dots, d$}
         \State Calculer $a_j$ tel que $a_j \equiv 2a_{j-1}-lc(f)a^2_{j-1} \mod m^{2j}$
@@ -14,10 +14,9 @@
         \State root of $\tau_j \gets a_if $
         \ForAll{noeuds $\nu$ de $\tau_j$, de la racine aux feuilles}
             \State $m \gets m^{2^{j-1}}$
-            \State On appel la fonction $Hensel_step$ avec $\nu \equiv g_{\nu}h_{\nu} \mod m^{2^{j-1}}$ et $s_{\nu}g_{\nu} + t_{\nu}h_{\nu} \equiv 1 \mod m^{2^{j-1}}$ 
-        \EndForAll
+            \State On appel l'algorithme \ref{alg:step} avec $\nu \equiv g_{\nu}h_{\nu} \mod m^{2^{j-1}}$ et $s_{\nu}g_{\nu} + t_{\nu}h_{\nu} \equiv 1 \mod m^{2^{j-1}}$ 
+        \EndFor
     \EndFor
-    
     \State \Return $a_d$ et $\tau_d$
     \EndFunction
   \end{algorithmic}

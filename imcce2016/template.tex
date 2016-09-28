@@ -70,6 +70,24 @@ $endif$
 $endif$
 $if(listings)$
 \usepackage{listings}
+
+\lstdefinelanguage[]{TRIP}%
+{morekeywords={end,Arcsin,Arctan,AsR,Bess,Bin,COMPLEX,CleanEllip,Cos,CosE,Cosv,Exp,Expiv,HERMITE,I,LINEAR,Log,MACRO,MAX,MIN,NUMDBL,NUMDBLINT,NUMFPMP,NUMQUAD,NUMQUADINT,NUMRAT,NUMRATMP,PI,POLH,POLP,POLV,POLY,QUADRATIC,REAL,RsA,RsACosv,RsAExpiv,RsASinv,SPLINE,Sin,SinE,Sinv,Tan,VAMP,_ALL,_affc,_affdist,_affhomog,_affvar,_cleaneps,_cleanflag,_cleanrateps,_comment,_cpu,_echo,_endian,_graph,_hist,_history,_homog_compact,_ior,_language,_link,_memhomog,_mode,_modenum,_modenum_prec,_naf_dtour,_naf_icplx,_naf_iprt,_naf_isec,_naf_iw,_naf_nulin,_naf_tol,_niveau,_path,_time,abs,accum,acos,affcanon,affmac,afftab,angmul,arg,asin,atan,atan2,bilan,canonvar,cfcoef_tabexp,chg_ordre,close,cls,coef_ang,coef_ext,coef_num,coef_tab,coef_tabexp,conj,convcf,cos,cosh,crevar,delete,deletevar,denom,deriv,det,dim,dimtovnumC,dimtovnumR,dimvar,do,ecriture,effmac,effmacros,efftrmon,efftronc,eigenvalues,eigenvectors,ell_to_xyz,else,erf,erfc,evalnum,exit,exp,expi,extern_display,extern_function,extern_lib,fac,fft,fi,for,fracvar,freqa,freqareson,gnuplot,grace,gsl13,gsl14,gsl15,gsl16,gsl17,hdal,help,histogram,homogene,hyp2f1,i,if,ifft,imag,imax,imin,include,inf,initcf,inithdal,inithomogene,int,integ,integnum,integnumfcn,integral,interpol,invcf,invcfcoef_tabexp,invcoef_tabexp,invhdal,invhomogene,invsereps,iternum,kill_link,lapPhi,lapcoef,lecture,load,loadF,log,log10,macro,make_link,maple,maple_get,maple_put,max,mem,min,mod,msg,naf,naftab,nint,numer,off,on,ord,paritehdal,pause,pi,plot,plotf,plotps,plotps_end,plotreset,print,private,prod,puismax,puismin,quit,random,read,readbin,real,replot,reset,resetcanon,resize,rest_env,resultant,return,reverse,reversevnum,sauve_fortran,sauve_ml,sauve_tex,save,saveF,save_env,select,sereps,sertrig,sign,simplify,sin,sinh,size,sort,sqrt,stat,statronc,step,stop,str,subst,substcf,substpow,substvar,sum,sup,tabvar,tan,tanh,then,time_l,time_s,time_t,to,transposevnum,usetrmon,usetronc,varconj,varhdal,varhomogene,vartrip,vnumC,vnumR,vnumtodim,while,write,writebin,writes,xyz_to_ell},%
+    sensitive,%
+    morecomment=[s]{/*}{*/},%
+    morestring=[b]",%
+    morestring=[b]',%
+   }[keywords,comments,strings,directives]%
+\lstset{language=TRIP}
+\lstset{commentstyle=\color{red}}
+\lstset{keywordstyle=\color{blue}}
+\lstset{basicstyle=\tiny,%
+        stringstyle=\bfseries,%
+        title=\lstname,%
+        frame=LTRB
+        }
+
+
 $endif$
 $if(lhs)$
 \lstnewenvironment{code}{\lstset{language=Haskell,basicstyle=\small\ttfamily}}{}
@@ -153,11 +171,11 @@ $endfor$
 \renewcommand*{\maketitle}{
 \begin{titlepage}
     \begin{figure}[htbp]
-        \begin{subfigure}[c]{0.3\textwidth}
+        \begin{subfigure}[c]{\textwidth}
             \includegraphics[scale=0.4]{res/logo_insa.png}
         \end{subfigure}
         \hfill
-        \begin{subfigure}[c]{0.3\textwidth}
+        \begin{subfigure}[c]{\textwidth}
             \includegraphics[scale=0.4]{res/logo_imcce.png}
         \end{subfigure}
     \end{figure}

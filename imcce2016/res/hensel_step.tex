@@ -2,21 +2,21 @@
   \caption{Remonté d'un polynôme de $\mathbb{F}_p[x]$ dans $\mathbb{F}_{p^2}[x]$}
   \label{alg:step}  
   \begin{algorithmic}[1]
-    \Require{$f$,$g$,$h$,$s$,$t$ des polynômes de $\mathbb{F}_p[x]$ tels que $f \equiv gh \mod p$ et $sg+th \equiv 1 \mod p$}
-    \Ensure{$f_{\star}$,$g_{\star}$,$h_{\star}$,$s_{\star}$,$t_{\star}$ tels que $f_{\star} \equiv g_{\star}h_{\star} \mod p^2$ et $s_{\star}g_{\star}+t_{\star}h_{\star} \equiv 1 \mod p^2$}
+    \Require{$\nu$,$g$,$h$,$s$,$t$ des polynômes de $\mathbb{F}_p[x]$ tels que $\nu \equiv gh \mod p$ et $sg+th \equiv 1 \mod p$}
+    \Ensure{$\nu^{\star}$,$g^{\star}$,$h^{\star}$,$s^{\star}$,$t^{\star}$ tels que $\nu^{\star} \equiv g^{\star}h^{\star} \mod p^2$ et $s^{\star}g^{\star}+t^{\star}h^{\star} \equiv 1 \mod p^2$}
     \Statex
-      \Function{Hensel Step}{$f$}
+      \Function{Hensel Step}{}
 
-    \State   $e \gets (f - gh) \mod m^2$
+    \State   $e \gets (\nu - gh) \mod m^2$
     \State $q$, $r$ tels que $se \equiv qh + r \mod m^2$
-    \State $g_{\star} \gets (g+te+qg) \mod m^2$
-    \State $h_{\star} \gets (h+r) \mod m^2$
-    \State $b \gets (sg_{\star} + th_{\star} -) \mod m^2$
-    \State $c$, $d$ tels que $sb \equiv ch_{\star} + d \mod m^2$
-    \State $s_{\star} \gets (s-d) \mod m^2$
-    \State $t_{\star} \gets (t-tb-cg_{\star}) \mod m^2$
+    \State $g^{\star} \gets (g+te+qg) \mod m^2$
+    \State $h^{\star} \gets (h+r) \mod m^2$
+    \State $b \gets (sg^{\star} + th^{\star} -) \mod m^2$
+    \State $c$, $d$ tels que $sb \equiv ch^{\star} + d \mod m^2$
+    \State $s^{\star} \gets (s-d) \mod m^2$
+    \State $t^{\star} \gets (t-tb-cg^{\star}) \mod m^2$
 
-    \State \Return $g_{\star}$,$h_{\star}$,$s_{\star}$,$t_{\star}$
+      \State \Return $\nu^{\star}$,$g^{\star}$,$h^{\star}$,$s^{\star}$,$t^{\star}$
     \EndFunction
   \end{algorithmic}
 \end{algorithm}
