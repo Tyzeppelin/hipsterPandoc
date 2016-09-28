@@ -24,6 +24,8 @@ Une fois que nous avons relever les facteurs dans un corps de caracterstique suf
 pour obtenir les véritables facteurs de f dans $\mathbb{Z}[x]$.
 
 \input{res/hensel.tex}
+\input{res/hensel_lift.tex}
+\input{res/hensel_step.tex}
 
 Cet algorithme a été tiré de Modern Computer Algebra [@von2013modern], Algorithme 15.19, p.427-428,
 
