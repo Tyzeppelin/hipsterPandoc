@@ -5,12 +5,6 @@ la factorisation des polynômes modulo un premier, autrement dit la factorisatio
 est un problème qui a été beaucoup
 amelioré après la moitié du XXe siècle avec le développement des ordinateurs, et notamment des processeurs SPARC
 au milieu des années 90. 
-=Les principales avancés dans la factorisation sont du à Berlekamp, Zassenhaus, Cantor,
-Von Zur Gathen, Shoup, Geddes(?).
-
-=Les principales méthodes de factorisation se séparent en 2 idées. La première, communement appelé algorithme de
-=Berlekamp (avec la variante des grands premier) [voir article].
-=La seconde méthode, celle que nous développerons est la méthode de Zassenhaus qui se base sur les deux théorèmes suivants.
 
 Dans le cadre de ce rapport nous n'allons étudier que l'algorithme de Cantor-Zassenhaus, qui se basent sur les deux
 théorèmes suivants:
@@ -41,10 +35,6 @@ _Démonstration._ La preuve de ce théorème est disponible dans
 La représentation schématique de la factorisation de polynômes modulo p est disponible en figure \ref{mod}
 
 \input{res/mod.tex}
-
-
-=Nous allons nous interesser à la méthode dite de Cantor-Zassenhaus [@cantor1981new]
-=pour factoriser un polynome squarefree et dont le coefficient dominant est 1.
 
 Pour obtenir un polynômes sans racines multiples et unitaire, on utilisera la méthode de Yun qui repose sur le principe que
 si un polynoem possède des racines multiples, on remarque que pgcd(f, f') != 0

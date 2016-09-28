@@ -2,15 +2,17 @@
 
 ## TRIP
 
-La première partie de l'implémentation aura été en langage TRIP [@GL14]. Cette implémentation aura eu l'intérêt de
-déterminer le nombres de fonctions nécessaires à l'implémentation. Par exemple la fonction d'élévation à
-une puissance n'était pas disponible pour les polynômes dans $\mathbb{F_p}[x]$.
+La première partie de l'implémentation aura été en langage TRIP [@GL14]. Le but de cette implémentation est, d'abord, de
+bien appréhender la théorie et de cibler les parties critiques des algorithmes. On peut se rendre compte que la majeure partie
+du temps d'éxecution est passée à multiplier des polynômes. Et que aucune fonction d'élévation à une puissance n'était implémenté
+pour les polynômes modulo p.
 
-En plus de faire le tour des fonctionnalité de TRIP, cette implémentation aura aussi permis de faire des choix sur les
-différentes implémentations possibles. Par exemple, l'algorithme de recomposition basé sur les lattice aurait été trop
+En plus de faire le tour des fonctionnalité de TRIP, cette implémentation aura aussi permis de finir de fare le tri des
+différentes méthodes possibles. Par exemple, l'algorithme de recomposition basé sur les lattice aurait été trop
 compliqué et trop long à complétement implementer et tester.
 
-%input le code trip en annexe (trouver un bon moyen de le rendre)
+Le code trip des différentes fonctions de factorisation dans un corps fini est disponible en annexe \ref{appendix:code}
+
 
 ## C++
 

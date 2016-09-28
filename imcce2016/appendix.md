@@ -12,7 +12,7 @@
 \end{figure}
 
 
-# Code TRIP
-
+# Code TRIP de la factorisation dans un corps fini
+\label{appendix:code}
 .
 
