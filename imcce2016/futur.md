@@ -2,7 +2,7 @@
 
 %
 
-Dans le bouquin "modern computer algebra" et dans les papier de Von Hoeij [@van2002factoring], il est mention d'une meilleure methode
+Dans le bouquin "modern computer algebra" et dans les papier de Von Hoeij [@van2002factoring], il est mention d'une meilleure méthode
 de combinaison des facteurs, la methode de reduciton par lattices.
 Mais malheuresement cet algorithme n'est pas facilement implementable en moins de 3 mois pour manipuler des lattices efficacement.
 Le gain de complexité est assez enomre et pourrait etre une des grosses amelioration de la factorisation dans Z.

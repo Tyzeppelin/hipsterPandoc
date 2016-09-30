@@ -152,11 +152,12 @@ $if(verbatim-in-note)$
 $endif$
 
 $if(title)$
-\title{ \HRule{0.5pt} \\ [0.5cm]
+\title{ 
+		\HRule{0.5pt} \\ [0.5cm]
         \LARGE \textbf{\uppercase{$title$}}
         \HRule{0.5pt} \\ [0.5cm]
         \vspace*{2\baselineskip}
-        \normalsize $if(subtitle)$\vspace{0.5em}{\large $subtitle$}$endif$}
+		}
 $endif$
 $if(author)$
 \author{$for(author)$$author$$sep$ \and $endfor$ \\\vspace{0.5em}{\large $school$} \\\vspace{0.5em}{\large $dpt$}}
@@ -170,25 +171,55 @@ $endfor$
 % REDEFINITION OF MAKETITLE
 \renewcommand*{\maketitle}{
 \begin{titlepage}
-    \begin{figure}[htbp]
-        \begin{subfigure}[c]{\textwidth}
-            \includegraphics[scale=0.4]{res/logo_insa.png}
-        \end{subfigure}
+	\begin{figure}[tbp]\centering
+            \includegraphics[align=c, height=50px]{res/logo_insa.png}	
         \hfill
-        \begin{subfigure}[c]{\textwidth}
-            \includegraphics[scale=0.4]{res/logo_imcce.png}
-        \end{subfigure}
+            \includegraphics[align=c, height=80px]{res/logo_imcce.png}
     \end{figure}
-    \begin{center}
-        \vspace{3cm}
-        {\LARGE\@title\unskip\strut\par} \vspace{2cm}
-        {\Large\@author\unskip\strut\par} \vspace{1.5cm}
-        {\@date\unskip\strut\par}
-    \end{center}
+    %\begin{center}
+    %    \vspace{3cm}
+    %    {\LARGE\@title\unskip\strut\par} \vspace{2cm}
+    %    {\Large\@author\unskip\strut\par} \vspace{1.5cm}
+	%	{Correspondant INSA: $corres$ \strut\par}
+	%	{\Large Diffusion du rapport autorisée \strut\par}
+	%	\vfill
+    %    {\@date\unskip\strut\par}
+    %\end{center}
+	
+	\begin{center}
+		\@date 
+		{\LARGE\@title\unskip\strut\par} \vspace{2cm}
+
+	\begin{minipage}[t]{0.3\textwidth}
+	\begin{flushleft} \large
+		\emph{Auteur :}\\
+		\@author 
+	\end{flushleft}
+	\end{minipage}
+	\begin{minipage}[t]{0.6\textwidth}
+	\begin{flushright} \large
+		\emph{Maître de stage :} \\
+		$supervisor$ \\
+		\vspace{1em}
+		\emph{Correspondant INSA :} \\
+		$corres$
+	\end{flushright}
+	\end{minipage}
+
+	\vfill
+
+	{\large Diffusion du rapport autorisée}
+
+	\end{center}
+	
 \end{titlepage}
 }
 
 \begin{document}
+
+%equiv \frontmatter
+\pagenumbering{roman}
+
 $if(title)$
 \maketitle
 $endif$
@@ -200,6 +231,9 @@ $endif$
 
 $for(include-before)$
 $include-before$
+
+%equiv \mainmatter
+\pagenumbering{arabic}
 
 $endfor$
 $if(toc)$

@@ -1,10 +1,12 @@
 ---
 title: Factorisation des polynômes univariés à coefficients entiers dans TRIP
-subtitle: Sous la supervision de Mickaël Gastineau
+supervisor: Mickaël Gastineau
+subtitle: Institut de Mécanique Céleste et de Calcul des Ephémérides, Observatoire de Paris
 author: François Boschet
 school: INSA Rennes
 dpt: Département Informatique
 date: Juillet - Septembre 2016
+corres: Marie Babel
 classoption: fleqn
 fontfamily: lmodern
 header-includes:
@@ -20,6 +22,7 @@ header-includes:
     - \usepackage[nodisplayskipstretch]{setspace}
     - \usepackage{amsthm}
     - \usepackage{subcaption}
+	- \usepackage{graphbox}
     - \setstretch{1}
     - \lstset{mathescape}
     - \makeatletter
@@ -29,9 +32,11 @@ header-includes:
     - \renewcommand{\ALG@name}{Algorithme}
     - \newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
     - \titleformat{\chapter}{\normalfont\LARGE\bfseries}{\thechapter.}{1em}{}
-    - \usetikzlibrary{arrows}
+    - \usetikzlibrary{shapes, arrows}
     - \newtheorem{theorem}{Théorème}
     - \newtheorem{definition}{Définition}
+include-before:
+    - \input{remerciements.tex}
 bibliography: biblio.bib
 ---
 

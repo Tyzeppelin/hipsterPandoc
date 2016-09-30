@@ -1,6 +1,6 @@
 # Algorithmes de factorisation
 
-La factorisation des polyômes est un problème complexe dont la solution varie surtout selon le nombres d'indeterminés
+La factorisation des polyômes est un problème complexe dont la solution varie surtout selon le nombre d'indeterminés
 du polynôme et le domaine des coefficients. Il existe de nombreuses méthodes qui permettnt d'approximer la factorisation de polynômes
 à coefficients algébrique [***ref. needed***]. Dans le cadre de ce stage nous ne nous intéresserons qu'à la factorisation des
 polynômes univariés à coefficients entiers.
@@ -20,18 +20,18 @@ l'algorithme de factorisation modulaire et la troisième partie. L'algorithme de
 
 La première partie de la méthode est la préparation du polynôme et le calcul des constantes nécessaire à la suite.
 On a notre polynome f dans $\mathbb{Z}[x]$ et on calcule le nombre premier p dans $\mathbb{Z}$ tel que p ne divise pas le
-coefficient principal et que f ne possède pas de facteurs multiples dans $\mathbb{F}_p[x]$. Notons le polynômes
+coefficient principal et que f ne possède pas de facteurs multiples dans $\mathbb{F}_p[x]$. Notons le polynôme
 à coefficients modulo p $f^{\star}$
 
 Ensuite nous devons calculer les facteurs irréductibles de $f^{\star}$. La méthode est décrite dans la partie \ref{sec:modular}.
 
 Une fois que l'on possède tous les facteurs de f* dans $\mathbb{F}_p[x]$ il faut trouver quelles combinaisons de ces facteurs
 forment les facteurs dans $\mathbb{Z}[x]$. Pour cela il y a aussi deux algorithmes différents. Un qui consiste a tester toutes
-les combinaisons de facteurs. Cette méthode possède un désaventage évident: la complexité de cet algorithme est
+les combinaisons de facteurs. Cette méthode possède un inconvénient évident: la complexité de cet algorithme est
 exponentiel dans le pire des cas. La seconde méthode, beaucoup plus récente,
 se base sur les travaux de réductions en lattice de LLL [@hart2011practical]. Cet algorithme a une complexité polynomiale en théorie
-meme si en pratique il reste moins efficcace que la combinaison de facteurs pour un "petit" nomre de facteurs.
+même si en pratique il reste moins efficcace que la combinaison de facteurs pour un "petit" nombre de facteurs.
 
-Nous ouvons donc représenter la méthode de factorisation de la manière suivante:
+La méthode de factorisation générale est schématisée dans la figure \ref{fig:ho}
 
 \input{res/ho.tex}

@@ -124,3 +124,17 @@ macro eff[f, d, p, var] {
     return factors ;
 } ;
 ```
+
+# Exemples d'arbres de facteurs
+
+\begin{figure}[hb]\centering
+	\label{fig:52}
+	\input{res/tree52.tex}
+	\caption{Arbre des facteurs de $x^4-1$ mod $5^2$}
+\end{figure}
+
+\begin{figure}[hb]\centering
+	\label{fig:53}
+	\input{res/tree53.tex}
+	\caption{Arbre des facteurs de $x^4-1$ mod $5^3$}
+\end{figure}

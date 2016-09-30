@@ -1,0 +1,17 @@
+digraph structs {
+node [shape=box];
+	struct1 [shape=box, label="$x^4+2605x^3+7810x^2+5209$" ];
+	struct2 [shape=box, label="$x^2-6120x+6949$"];
+	struct3 [shape=box, label="$x^2-6900x+7241$"];
+	struct1 -> struct2;
+	struct1 -> struct3;
+	struct4 [shape=box, label="$x-5136$"];
+	struct5 [shape=box, label="$x-984$"];
+	struct2 -> struct4;
+	struct2 -> struct5;
+	struct6 [shape=box, label="$x-72$"];
+	struct7 [shape=box, label="$x-6828"];
+	struct3 -> struct6;
+	struct3 -> struct7;
+	
+}
