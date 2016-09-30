@@ -20,9 +20,6 @@ macro sff [f, p, var] {
         c = __coef_gcd__(a, b) ;
         div(a, c, w, res) ;
 
-        c;w;
-
-
         while (w != 1) do {
             msg("iter -> %d\n", j) ;
             y = __coef_gcd__(w, c) ;

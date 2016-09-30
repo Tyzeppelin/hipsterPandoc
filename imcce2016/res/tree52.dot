@@ -1,16 +1,16 @@
 digraph structs {
 node [shape=box];
-	struct1 [shape=box, label="$x^4-1$" ];
-	struct2 [shape=box, label="$x^2-2x+7$"];
-	struct3 [shape=box, label="$x^2+8x+7$"];
+	struct1 [shape=box, label="x^4-1" ];
+	struct2 [shape=box, label="x^2-2x+7"];
+	struct3 [shape=box, label="x^2+8x+7"];
 	struct1 -> struct2;
 	struct1 -> struct3;
-	struct4 [shape=box, label="$x-1$"];
-	struct5 [shape=box, label="$x-2$"];
+	struct4 [shape=box, label="x-1"];
+	struct5 [shape=box, label="x-2"];
 	struct2 -> struct4;
 	struct2 -> struct5;
-	struct6 [shape=box, label="$x+2$"];
-	struct7 [shape=box, label="$x+1$"];
+	struct6 [shape=box, label="x+2"];
+	struct7 [shape=box, label="x+1"];
 	struct3 -> struct6;
 	struct3 -> struct7;
 	

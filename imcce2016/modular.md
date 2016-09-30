@@ -36,15 +36,15 @@ La représentation schématique de la factorisation de polynômes modulo p est d
 
 \input{res/mod.tex}
 
-Pour obtenir un polynômes sans racines multiples et unitaire, on utilisera la méthode de Yun qui repose sur le principe que
-si un polynoem possède des racines multiples, on remarque que pgcd(f, f') != 0
+Pour obtenir un polynôme sans racines multiples et unitaire, on utilisera la méthode de Yun qui repose sur le principe que
+si un polynôme possède des racines multiples, pgcd(f, f') != 1
 
 ### Séparation des facteurs de différentes multiplicités
 
 \begin{definition}
 \label{def:yun}
 Soit f $\in \mathbb{Z}[x]$ un polyôme qui possède une factorisation unique dans le domaine $\mathbb{Z}[x]$. $f^{\star}(x)$ est dit sans racines multiples
-s'il ne possède pas de facteurs qui se répète, se sorte qu'il n'existe aucun $h(x)$ avec $deg(h(x)) \geq 1$ tel que $h(x)^2$ ne divise pas $f^{\star}(x)$.
+s'il ne possède pas de facteurs qui se répète, de sorte qu'il n'existe aucun $h(x)$ avec $deg(h(x)) \geq 1$ tel que $h(x)^2$ ne divise pas $f^{\star}(x)$.
 La factorisation sans facteurs multiples de f(x) est
 $$f(x)=\prod_{i=1}^k f^{\star}_i(x)^i $$
 ou chaque $f^{\star}_i(x)$ est un polynôme sans facteurs multiples et
@@ -61,49 +61,50 @@ multiplicités a été décrit par D. Yun [@yun1976square], nous allons utilisé
 #### Exemple
 
 Prenons un polynôme $f(x) = x^6 - x^5 - 2x^3 + 2x^2 - x - 2 \in \mathbb{F}_5[x]$,
- $i=1$, $out = {}$ et $h(x) = f'(x) = x^5 - x^2 - x - 1$
+ $i=1$, $S = {}$ et $h(x) = f'(x) = x^5 - x^2 - x - 1$
 
 On a $h(x) \neq 0$, donc on entre dans la branche else(ligne 8-20 ), on a
 $$c(x) = gcd(f(x), h(x)) = gcd(x^6 - x^5 - 2x^3 + 2x^2 - x - 2, x^5 - x^2 - x - 1) = x^3 - 2x^2 + x - 2$$
 et
 $$w(x) = f(x) / c(x) = (x^6 - x^5 - 2x^3 + 2x^2 - x - 2)/(x^3 - 2x^2 + x - 2) = x^3 + x^2 + x + 1$$
 Etant donné que $w(x) = x^3 + x^2 + x + 1$, nous entrons dans la boucle while,
-On obtient $$y(x) = x^2 + 1\;\ et\;\ z(x) = x + 1$$.
-On a donc z(x) le(s) facteur(s) de multiplicité 1. On stocke donc z(x) et le retire des facteurs à factoriser.
-$$out = out \cup \{(z(x), i)\} = \{(x + 1, 1)\} \;\;et\;\; w(x) = x^2 + 1\;\; et\;\; c(x) = x - 2 $$
+On obtient $$y(x) = x^2 + 1\;\ et\;\ f^{\star}(x) = x + 1$$.
+On a donc $f^{\star}(x)$ le(s) facteur(s) de multiplicité 1. On stocke donc $f^{\star}(x)$ et le retire des facteurs à factoriser.
+$$S = S \cup \{(f^{\star}(x), i)\} = \{(x + 1, 1)\} \;\;et\;\; w(x) = x^2 + 1\;\; et\;\; c(x) = x - 2 $$
 
 A l'itération suivante, $w(x) \neq 1$, 
-$y(x) = x - 2$ et $z(x) = x + 3$
+$y(x) = x - 2$ et $f^{\star}(x) = x + 3$
 
 On a donc,
-$$out = \{(x+1, 1), (x+2, 2)\} \;\;et\;\; w(x) = x - 2$ et $c(x) =1$$
+$$S = \{(x+1, 1), (x+2, 2)\} \;\;et\;\; w(x) = x - 2$ et $c(x) =1$$
 
 A la troisième itération, $w(x) \neq 1$,
-$y(x) = 1$ et $z(x) = x - 2$
+$y(x) = 1$ et $f^{\star}(x) = x - 2$
 
 On a donc
-$$out = \{(x+1, 1), (x+2, 2), (x+3, 3)\} \;\; et \;\; w(x) = 1$  et $c(x) = 1$$
+$$S = \{(x+1, 1), (x+2, 2), (x+3, 3)\} \;\; et \;\; w(x) = 1$  et $c(x) = 1$$
 
 $w(x) = 1$ et $c(x) = 1$, donc nous nous arrêtons ici.
 
 On retourne donc l'ensemble des facteurs de x de différentes multiplicités,
-out = \{(x+1, 1), (x+2, 2), (x+3, 3)\}$
+S = \{(x+1, 1), (x+2, 2), (x+3, 3)\}$
 
 
 ### Séparation en produit de facteurs de même degré
 
-Le but de cette étape est de récupérer les produits de facteurs de $f^{star}(x)$ de même degré, c'est à dire
-les facteurs $h(x)_i$ tels que $f^{star}(x)$ soit le produit des $h(x)_i$ et que le degré de $h(x)_i$ soit
+Le but de cette étape est de récupérer les produits de facteurs de $f^{\star}(x)$ de même degré, c'est à dire
+les facteurs $h_i(x)$ tels que $f^{\star}(x)$ soit le produit des $h_i(x)$ et que le degré de $h_i(x)$ soit
 égal à i.
 
-Pour cela ous utilisons le théorème \ref{th:xp} et des pgcd successifs $gcd(f^{star}(x), x^{p^i} \mod f^{star}(x))$ pour $ 1 < i < deg(f^{star}(x))/2 $
+Pour cela nous utilisons le théorème \ref{th:xp} et des pgcd successifs $gcd(f^{\star}(x), x^{p^i} \mod f^{\star}(x))$ pour 
+$1 < i < deg(f^{\star}(x))/2$ 
 
 L'algorithme que nous allons utilisé a été découvert par D. Cantor et H. Zassenhaus [@cantor1981new] et nous avons travaillé avec la version
 de J. Von Zur Gathen de 2001 [@von2001factoring].
 
 \input{res/dff.tex}
 
-Pour bien comprendre le fonctionnement des deux algorithmes suivant, nous allons prendre un polynôme unitaire et sans racines
+Pour bien comprendre le fonctionnement des deux algorithmes suivants, nous allons prendre un polynôme unitaire et sans racines
 multiples que nous allons factoriser à l'aide de cet algorithme de factorisation en produit de facteurs de même degré
 et de l'algorithme \ref{alg:eff} de séparation des facteurs qui sera décrit dans le chapitre \ref{chap:splitting}.
 
@@ -143,8 +144,8 @@ un intervalle de temps constant. Un des meilleurs exemple d'algorithme de Las Ve
 du pivot et où le résultat est retourné est juste.
 
 La méthode théorique pour la séparation de facteur à été formalisé par D. Cantor et H. Zassenhaus [Cantor91On], elle consiste
-à tirer un polynôme aléatoire $v(x)$ et à l'elever à une puissance définie, $(p^n-1)/2$. La probabilité moyene que le polynôme h(x) est un facteur
-commun avec $v(x)$ est proche de 1/2 \ref{th:rand}.
+à tirer un polynôme aléatoire $v(x)$ et à l'elever à une puissance définie, $(p^n-1)/2$. La probabilité moyenne que le polynôme h(x) est un facteur
+commun avec $v(x)$ est donné par le théroème \ref{th:rand} comme étant proche de 1/2.
 
 Nous utiliserons la variation de K. Geddes décrite dans 
 Algorithms for Computer Algebra [@geddes1992algorithms], Algorithme 8.9, p.373

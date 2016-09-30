@@ -6,7 +6,7 @@ other = *.aux *.log *.out *.toc
 engine = --latex-engine=pdflatex
 params = -s --template=template.tex --variable documentclass=report --listing --bibliography=biblio.bib --csl=ieee.csl --toc -N --filter pandoc-citeproc
 
-dots = tree52.dot tree53.dot
+dots = tree51.dot tree52.dot tree53.dot tree56.dot
 dot_tex = res/tree*.tex
 
 .PHONY: report
@@ -21,7 +21,7 @@ debug: tex report
 
 .PHONY: dot
 dot: 
-	$(foreach tree, $(dots), dot -Txdot res/$(tree) | dot2tex -ftikz --figonly > res/$(basename $(tree)).tex;) 
+	$(foreach tree, $(dots), dot -Txdot res/$(tree) | dot2tex -ftikz -t math --figonly > res/$(basename $(tree)).tex;) 
 
 .PHONY: clean
 clean:

@@ -26,9 +26,9 @@ en prenant en compte des spécificités du c++, comme la gestion manuelle de la 
 La première partie que j'ai implementé a été la factorisation dans un corps fini puisque c'est un des élément clé de la
 factorisation globale. J'ai donc implémenté cette partie et nous avons pu comparer notre début d'implémentation aux
 différents autres logiciels/bibliothèques de calcul formel (par exemple maple et FLINT). On obtient ce graphe du ratio
-temps de TRIP sur temps de maple en fonction du degré du polynôme a factoriser, figure \ref{benchmaple}.
+temps de TRIP sur le temps de maple en fonction du degré du polynôme a factoriser, figure \ref{fig:benchmaple}.
 
-![Comparaison avec maple - début](res/benchmaple_old.pdf)
+![Comparaison avec maple - avant optimisation \label{fig:benchmaple}](res/benchmaple_old.pdf)
 
 En étudiant le temps que passe trip pour chaque instruction de la factorisation on peut se
 rendre compte que la plus grosse partie du temps de la factorisation est sur 2 instructions d'élévation
@@ -45,9 +45,9 @@ utilise la factorisation dynamique, autrement dit quand il choisit l'algorithme 
 et de la taille des coef.i
 
 
-![Comparaison avec maple - après](res/benchmaple_new.pdf)
+![Comparaison avec maple - après optimisation \label{fig:benchmaple2}](res/benchmaple_new.pdf)
 
-![Comparaison avec flint](res/benchflint.pdf)
+![Comparaison avec flint \label{fig:flint}](res/benchflint.pdf)
 
 ## Intégration continue
 

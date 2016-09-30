@@ -38,9 +38,6 @@ macro sff [f, p, var] {
         c = __coef_gcd__(a, b) ;
         div(a, c, w, res) ;
 
-        c;w;
-
-
         while (w != 1) do {
             y = __coef_gcd__(w, c) ;
             div(w, y, z, res) ;
@@ -128,13 +125,25 @@ macro eff[f, d, p, var] {
 # Exemples d'arbres de facteurs
 
 \begin{figure}[hb]\centering
+	\label{fig:51}
+	\input{res/tree51.tex}
+	\caption{Arbre des facteurs de $x^4-1 \mod 5$}
+\end{figure}
+
+\begin{figure}[hb]\centering
 	\label{fig:52}
 	\input{res/tree52.tex}
-	\caption{Arbre des facteurs de $x^4-1$ mod $5^2$}
+	\caption{Arbre des facteurs de $x^4-1 \mod 5^2$}
 \end{figure}
 
 \begin{figure}[hb]\centering
 	\label{fig:53}
 	\input{res/tree53.tex}
 	\caption{Arbre des facteurs de $x^4-1$ mod $5^3$}
+\end{figure}
+
+\begin{figure}[hb]\centering
+	\label{fig:56}
+	\input{res/tree56.tex}
+	\caption{Arbre des facteurs de $x^4-1 \mod 5^6$}
 \end{figure}
