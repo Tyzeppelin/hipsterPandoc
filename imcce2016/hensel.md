@@ -18,18 +18,39 @@ Ensuite nous pouvons utiliser la méthode de factorisation modulaire dans le cor
 de f.
 
 Ensuite il nous faut remonter les polynômes dans un corps de caracteristique $p^l$.
-Pour cela nous allons construire un arbre binaire des facteurs de f (voir exemple) et apliquer le lemme d'Hensel sur chacun des noeuds de l'arbre pour remonter
+Pour cela nous allons construire un arbre binaire des facteurs de f (voir figure \ref{fig:tree_gen}) et apliquer le lemme d'Hensel sur chacun des noeuds de l'arbre pour remonter
 les polynomes d'un corps de caracteristique q vers une caracteristique q^2.
+
+\begin{figure}[h]
+	\input{res/tree_gen}
+	\caption{Schémtisation d'un arbre de facteurs}
+	\label{figure:tree_gen}
+\end{figure}
 
 Une fois que nous avons relever les facteurs dans un corps de caracterstique suffisement grande, nous pouvons tester la recombinaison des facteurs
 pour obtenir les véritables facteurs de f dans $\mathbb{Z}[x]$.
 
 \input{res/hensel.tex}
+
 \input{res/hensel_lift.tex}
+
 \input{res/hensel_step.tex}
 
 Cet algorithme a été tiré de Modern Computer Algebra [@von2013modern], Algorithme 15.19, p.427-428,
 
 ###Exemple
+\label{ex:hensel}
 
-TODO
+
+Dans cet exemple, nous allons factoriser le polynôme $$f(x)=6x^4+5x^3+15x^2+5x+4 \in \mathbb{Z}[x]$$.
+On calcule $A=\|f(x)\|_{\infty}=15$, $b=lc(f)=6$, $B=5^{1/2}2^4*15*6=3219.94$ et $\gamma=\lceil 2\log_2(C)\rceil = \lceil 2\log_2(5^8*3219.94^7)\rceil = 201$
+
+On prends donc $p$ tels que $f(x)$ soit sans facteurs premiers, que $p$ ne divise pas $b$ et que $p$ soit le plus petit possible.
+On choisit $p=5$, on a donc $$f_5(x) = x^4-1$$ qui est sans facteurs multiples, $gcd(x^4-1, 4x^3) = 0$
+On calcule ensuite $l=\lceil log_p(2B+1)\rceil = \lceil log_5(6439.88) \rceil = 6$
+
+Grace à la méthode de factorisation de la section \ref{sec:modular}, nous obtenons $$f_5(x)=1.(x-1)(x+1)(x-2)(x+2)$$
+
+Nous pouvons donc écrire l'arbre des facteurs que l'on construit à partir des produits des facteurs modulo $p$, une partie des arbres de la remontée est
+
+%finir l'exemple.%

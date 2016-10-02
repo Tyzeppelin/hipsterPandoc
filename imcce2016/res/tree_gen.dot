@@ -1,0 +1,17 @@
+digraph structs {
+node [shape=box];
+	struct1 [shape=box, label="a.f_1(x).f_2(x).f_3(x).f_4(x)" ];
+	struct2 [shape=box, label="f_1(x).f_2(x)"];
+	struct3 [shape=box, label="f_3(x).f_4(x)"];
+	struct1 -> struct2;
+	struct1 -> struct3;
+	struct4 [shape=box, label="f_1(x)"];
+	struct5 [shape=box, label="f_2(x)"];
+	struct2 -> struct4;
+	struct2 -> struct5;
+	struct6 [shape=box, label="f_3(x)"];
+	struct7 [shape=box, label="f_4(x)"];
+	struct3 -> struct6;
+	struct3 -> struct7;
+	
+}

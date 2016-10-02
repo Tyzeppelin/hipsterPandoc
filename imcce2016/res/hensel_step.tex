@@ -7,14 +7,14 @@
     \Statex
       \Function{Hensel Step}{}
 
-    \State   $e \gets (\nu - gh) \mod m^2$
-    \State $q$, $r$ tels que $se \equiv qh + r \mod m^2$
-    \State $g^{\star} \gets (g+te+qg) \mod m^2$
-    \State $h^{\star} \gets (h+r) \mod m^2$
-    \State $b \gets (sg^{\star} + th^{\star} -) \mod m^2$
-    \State $c$, $d$ tels que $sb \equiv ch^{\star} + d \mod m^2$
-    \State $s^{\star} \gets (s-d) \mod m^2$
-    \State $t^{\star} \gets (t-tb-cg^{\star}) \mod m^2$
+    \State   $e \gets (\nu - gh) \mod p^2$
+    \State $q$, $r$ tels que $se \equiv qh + r \mod p^2$
+    \State $g^{\star} \gets (g+te+qg) \mod p^2$
+    \State $h^{\star} \gets (h+r) \mod p^2$
+    \State $b \gets (sg^{\star} + th^{\star} -) \mod p^2$
+    \State $c$, $d$ tels que $sb \equiv ch^{\star} + d \mod p^2$
+    \State $s^{\star} \gets (s-d) \mod p^2$
+    \State $t^{\star} \gets (t-tb-cg^{\star}) \mod p^2$
 
       \State \Return $\nu^{\star}$,$g^{\star}$,$h^{\star}$,$s^{\star}$,$t^{\star}$
     \EndFunction

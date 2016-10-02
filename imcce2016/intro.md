@@ -19,7 +19,7 @@ En plus d'être un système de calcul interactif, TRIP offre la possibilité d'�
 est la même que celle de l'interpreteur et est décrite dans le manuel d'utilisation
 [@GL14]. TRIP manipule un grand nombre d'objets mathématiques comme les entiers/flottants multiple précision, les séries,
 les vecteurs à n dimensions, les matrices, etc. Le graphe d'héritage simplifié des objets manipulés dans TRIP est disponible
-en annexe \ref{appendix:sun}. Dans ce rapport, nous allons n'étudier principalement que les classes liés aux polynômes à coefficients
+en annexe \ref{appendix:sun}, figure \ref{fig:sun}. Dans ce rapport, nous allons n'étudier principalement que les classes liés aux polynômes à coefficients
 entiers et aux polynômes à coefficients entier modulo une puissance d'un nombre premier.
 
 La gestion des nombres dépends de leur type et de leur taille. Pour les petits entiers, les types de base du c++

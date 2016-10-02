@@ -1,14 +1,15 @@
 \appendix{Annexes}
 
 # Hiérarchie simplifié des classes manipulées par TRIP
+\label{appendix:sun}
 
 \begin{figure}[!hb]
-    \label{appendix:sun}
     \centering
     \begin{tabular}{@{}c@{\hspace{.5cm}}c@{}}
         \includegraphics[width=.65\textwidth]{res/inherit.png}
     \end{tabular}
     \caption{Hiérarchie simplifiée des classes}
+    \label{fig:sun}
 \end{figure}
 
 
@@ -123,6 +124,7 @@ macro eff[f, d, p, var] {
 ```
 
 # Exemples d'arbres de facteurs
+\label{appendix:tree}
 
 \begin{figure}[hb]\centering
 	\label{fig:51}

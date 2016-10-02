@@ -6,7 +6,7 @@ other = *.aux *.log *.out *.toc
 engine = --latex-engine=pdflatex
 params = -s --template=template.tex --variable documentclass=report --listing --bibliography=biblio.bib --csl=ieee.csl --toc -N --filter pandoc-citeproc
 
-dots = tree51.dot tree52.dot tree53.dot tree56.dot
+dots = tree51.dot tree52.dot tree53.dot tree56.dot tree_gen.dot
 dot_tex = res/tree*.tex
 
 .PHONY: report

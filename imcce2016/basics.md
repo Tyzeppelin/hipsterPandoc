@@ -1,37 +1,39 @@
 # Algorithmes de factorisation
 
 La factorisation des polyômes est un problème complexe dont la solution varie surtout selon le nombre d'indeterminés
-du polynôme et le domaine des coefficients. Il existe de nombreuses méthodes qui permettnt d'approximer la factorisation de polynômes
-à coefficients algébrique [***ref. needed***]. Dans le cadre de ce stage nous ne nous intéresserons qu'à la factorisation des
+du polynôme et le domaine des coefficients. Il existe de nombreuses méthodes qui permettent d'approximer la factorisation de polynômes
+à coefficients algébrique quelconques [@landau1985factoring] [@cantor1991fast]. Dans le cadre de ce stage nous ne nous intéresserons qu'à la factorisation des
 polynômes univariés à coefficients entiers.
 
 Il n'existe pas de méthode efficace pour factoriser un polynôme directement dans l'anneau $\mathbb{Z}[x]$. Il est beaucoup plus
 facile de factoriser un polynome dans un corps fini. Les premières méthodes de factorisations de polynômes à coefficients entiers
 se sont d'ailleurs basé sur les propriétés des corps finis. Le début de la formalisation de la factorisation de polynômes à coefficients
-entier a commencé avec Gauss et à connu les plus grandes avancés avec les travaux de Berlakamp [@berlakamp] et de Cantor et Zassenhaus [@cantor].
+entier a commencé avec Gauss et à connu les plus grandes avancés avec les travaux de Berlakamp [@berlekamp1970factoring] et de Cantor et Zassenhaus [@cantor1981new].
 Un résumé de l'histoire de la factorisation de polynôme a été présenté à l'ISSAC 2006 par Joachim von zur Gathen [@von2006polynomial],
 auteur du livre _Modern Computer Algebra_ [@von2013modern] et un des contributeurs des méthodes actuelles de factorisation.
 
 ## Principe de base
 
 Il existe principalement deux méthodes de factorisation de polynômes dans $\mathbb{Z}[x]$ et les principales différences sont
-l'algorithme de factorisation modulaire et la troisième partie. L'algorithme de la méthode de factorisation est décrite dans la figure
-\ref{fig:ho} et plus précisement dans l'algorithme \ref{alg:hensel}.
+l'algorithme de factorisation modulaire et la dernière partie, la recomposition des facteurs. La méthode de
+factorisation est décrite de manière globale dans la figure \ref{fig:ho} et plus précisement dans l'algorithme \ref{alg:hensel}.
 
-La première partie de la méthode est la préparation du polynôme et le calcul des constantes nécessaire à la suite.
-On a notre polynome f dans $\mathbb{Z}[x]$ et on calcule le nombre premier p dans $\mathbb{Z}$ tel que p ne divise pas le
-coefficient principal et que f ne possède pas de facteurs multiples dans $\mathbb{F}_p[x]$. Notons le polynôme
-à coefficients modulo p $f^{\star}$
+La première partie de la méthode est le calcul de notre polynôme modulo un premier p pour obtenir notre polynôme définie
+dans le corps fini de caractéristique p, noté $\mathbb{F}_p[x]$. Notre p ne doit pas diviser le coefficient principale de notre polynôme
+et doit être de telle sorte que notre polynôme dans le coprs fini ne possède pas de racines multiples. On note le polynôme à coefficients
+dans $\mathbb{F}_p[x]$ $f^{\star}(x)$.
 
-Ensuite nous devons calculer les facteurs irréductibles de $f^{\star}$. La méthode est décrite dans la partie \ref{sec:modular}.
+Ensuite nous devons calculer les facteurs irréductibles de $f^{\star}$. La méthode est décrite dans la partie \ref{sec:modular}
+et c'est le point que nous allons développer le plus. (mal-dit)
 
-Une fois que l'on possède tous les facteurs de f* dans $\mathbb{F}_p[x]$ il faut trouver quelles combinaisons de ces facteurs
-forment les facteurs dans $\mathbb{Z}[x]$. Pour cela il y a aussi deux algorithmes différents. Un qui consiste a tester toutes
-les combinaisons de facteurs. Cette méthode possède un inconvénient évident: la complexité de cet algorithme est
+Une fois que l'on possède tous les facteurs de f* dans $\mathbb{F}_p[x]$, il faut "remonter" les coefficients des facteurs de $f^{\star}(x)$ 
+dans un corps de plus grande caractéristique de telle sorte que l'on puisse calculer un arrangement de ces facteurs qui forment les facteurs
+de $f(x)$ dans l'anneau des entiers $\mathbb{Z}[x]$. Pour déterminer cet arrangement, il existe deux algorithmes différents. La première consiste à tester toutes
+les combinaisons de facteurs possibles jusqu'à trouver la bonne. Cette méthode possède un inconvénient évident: la complexité de cet algorithme est
 exponentiel dans le pire des cas. La seconde méthode, beaucoup plus récente,
 se base sur les travaux de réductions en lattice de LLL [@hart2011practical]. Cet algorithme a une complexité polynomiale en théorie
 même si en pratique il reste moins efficcace que la combinaison de facteurs pour un "petit" nombre de facteurs.
 
-La méthode de factorisation générale est schématisée dans la figure \ref{fig:ho}
+La méthode de factorisation générale est schématisée dans la figure \ref{fig:ho}.
 
 \input{res/ho.tex}

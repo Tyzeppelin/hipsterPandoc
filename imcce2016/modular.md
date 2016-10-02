@@ -11,7 +11,7 @@ théorèmes suivants:
 
 \begin{theorem}
 \label{th:xp}
-Le polynome $p(x) = x^{q^r} - x$ est le produit de tous les polynômes de $\mathbb{F}_q[x]$ dont le degré divise q.
+Le polynome $p(x) = x^{p^r} - x$ est le produit de tous les polynômes de $\mathbb{F}_p[x]$ dont le degré divise r.
 
 \end{theorem}
 
@@ -21,10 +21,10 @@ _Démonstration._ La preuve de ce théorème est disponible dans [Finite Fields,
 \begin{theorem}
 \label{th:rand}
 Soit $a(x)\in \mathbb{F}_p[x]$ un polynome de degré n composé de d facteurs de degré r, 
-et $v(x)\in \mathbb{F}_p[x]$ un polynôme quelconque de degré inférieur à $2n+1$.
+et $v(x)\in \mathbb{F}_p[x]$ un polynôme quelconque de degré inférieur ou égal à $2n+1$.
 
-La probabilité que le pgcd de a(x) et $v(x)^{(q-1)/2} - 1$ soit différent de 1 est de
-$$1 - {(q-1)/2q}^k - {(q+1)/2q}^k$$
+La probabilité que le pgcd de a(x) et $v(x)^{(p-1)/2} - 1$ soit différent de 1 est de
+$$1 - {(p-1)/2p}^k - {(p+1)/2p}^k$$
 
 Cette probabilité vaut au minimum 4/9
 \end{theorem}
@@ -32,7 +32,7 @@ Cette probabilité vaut au minimum 4/9
 _Démonstration._ La preuve de ce théorème est disponible dans
 [Algorithms for Computer Algebra @geddes1992algorithms, Théorème 8.11, p.362] \hfill{\qedsymbol}
 
-La représentation schématique de la factorisation de polynômes modulo p est disponible en figure \ref{mod}
+La représentation schématique de la factorisation de polynômes modulo p est disponible en figure \ref{fig:mod}
 
 \input{res/mod.tex}
 
@@ -47,7 +47,7 @@ Soit f $\in \mathbb{Z}[x]$ un polyôme qui possède une factorisation unique dan
 s'il ne possède pas de facteurs qui se répète, de sorte qu'il n'existe aucun $h(x)$ avec $deg(h(x)) \geq 1$ tel que $h(x)^2$ ne divise pas $f^{\star}(x)$.
 La factorisation sans facteurs multiples de f(x) est
 $$f(x)=\prod_{i=1}^k f^{\star}_i(x)^i $$
-ou chaque $f^{\star}_i(x)$ est un polynôme sans facteurs multiples et
+ou chaque $f^{\star}_i(x)$ est un polynôme sans facteurs multiples,
 $$gcd(f^{\star}_i(x), f^{\star}_j(x)) = 1 \; for \; i \neq j $$
 \end{definition}
 

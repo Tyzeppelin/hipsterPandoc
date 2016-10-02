@@ -10,7 +10,7 @@
       \State $h(x) \gets f'(x)$
       \If{$h == 0$}
         \State $f(x) \gets f(x)^{1/p}$
-        \State $S \gets squarefree\_factorization(f(x))^p$
+        \State $S \gets \cup \{squarefree\_factorization(f(x)), p\}$
       \Else
         \State $c(x) \gets gcd(f(x), h(x))$
         \State $w(x) \gets f(x)/c(x)$
