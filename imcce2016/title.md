@@ -35,8 +35,11 @@ header-includes:
     - \usetikzlibrary{shapes, arrows}
     - \newtheorem{theorem}{Théorème}
     - \newtheorem{definition}{Définition}
+	- \newtheorem{lemma}{Lemme}
 include-before:
     - \input{remerciements.tex}
+include-after:
+	- \input{abstract.tex}
 bibliography: biblio.bib
 ---
 

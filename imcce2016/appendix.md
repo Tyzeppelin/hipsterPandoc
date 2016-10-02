@@ -1,6 +1,6 @@
 \appendix{Annexes}
 
-# Hiérarchie simplifié des classes manipulées par TRIP
+# Hiérarchie simplifiée des classes manipulées par TRIP
 \label{appendix:sun}
 
 \begin{figure}[!hb]

@@ -268,9 +268,12 @@ $endif$
 $if(biblatex)$
 \printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
 
+\end{document}
+\begin{document}
 $endif$
 $for(include-after)$
 $include-after$
 
 $endfor$
 \end{document}
+%\end{document}

@@ -1,12 +1,11 @@
 ## Factorisation dans un corps fini
 \label{sec:modular}
 
-la factorisation des polynômes modulo un premier, autrement dit la factorisation des polynômes dans un corps fini
-est un problème qui a été beaucoup
-amelioré après la moitié du XXe siècle avec le développement des ordinateurs, et notamment des processeurs SPARC
+La factorisation des polynômes modulo un premier, autrement dit la factorisation des polynômes dans un corps fini
+à beaucoup progressé après la moitié du XXe siècle avec le développement des ordinateurs, et notamment des processeurs SPARC
 au milieu des années 90. 
 
-Dans le cadre de ce rapport nous n'allons étudier que l'algorithme de Cantor-Zassenhaus, qui se basent sur les deux
+Dans le cadre de ce rapport, nous n'allons étudier que l'algorithme de Cantor-Zassenhaus, qui se base sur les deux
 théorèmes suivants:
 
 \begin{theorem}
@@ -36,15 +35,15 @@ La représentation schématique de la factorisation de polynômes modulo p est d
 
 \input{res/mod.tex}
 
-Pour obtenir un polynôme sans racines multiples et unitaire, on utilisera la méthode de Yun qui repose sur le principe que
-si un polynôme possède des racines multiples, pgcd(f, f') != 1
+Pour obtenir un polynôme sans racines multiples et unitaire, on utilisera la méthode de D. Yun qui repose sur le principe que
+si un polynôme possède des racines multiples, pgcd(f, f') != 1 [@yun1976square].
 
 ### Séparation des facteurs de différentes multiplicités
 
 \begin{definition}
 \label{def:yun}
 Soit f $\in \mathbb{Z}[x]$ un polyôme qui possède une factorisation unique dans le domaine $\mathbb{Z}[x]$. $f^{\star}(x)$ est dit sans racines multiples
-s'il ne possède pas de facteurs qui se répète, de sorte qu'il n'existe aucun $h(x)$ avec $deg(h(x)) \geq 1$ tel que $h(x)^2$ ne divise pas $f^{\star}(x)$.
+s'il ne possède pas de facteurs qui se répètent, de sorte qu'il n'existe aucun $h(x)$ avec $deg(h(x)) \geq 1$ tel que $h(x)^2$ ne divise pas $f^{\star}(x)$.
 La factorisation sans facteurs multiples de f(x) est
 $$f(x)=\prod_{i=1}^k f^{\star}_i(x)^i $$
 ou chaque $f^{\star}_i(x)$ est un polynôme sans facteurs multiples,
@@ -54,7 +53,7 @@ $$gcd(f^{\star}_i(x), f^{\star}_j(x)) = 1 \; for \; i \neq j $$
 
 En utilisant la définition \ref{def:yun} il est possible d'établir la liste de tous les facteurs $f^{\star}_i(x)$ unitaires et sans racines multiples
 d'un polynôme en appliquant des pgcd successifs, $f^{\star}_i(x)=gcd(f(x), f'(x))$. L'algorithme général de séparation des facteurs de différentes
-multiplicités a été décrit par D. Yun [@yun1976square], nous allons utilisé la version présente dans _Algorithms for computer algebra_[@geddes1992algorithms], Algorithm 8.3, p.345.
+multiplicités a été décrit par D. Yun [@yun1976square], nous allons utiliser la version présente dans _Algorithms for computer algebra_[@geddes1992algorithms], Algorithm 8.3, p.345.
 
 \input{res/sff.tex}
 
@@ -99,7 +98,7 @@ les facteurs $h_i(x)$ tels que $f^{\star}(x)$ soit le produit des $h_i(x)$ et qu
 Pour cela nous utilisons le théorème \ref{th:xp} et des pgcd successifs $gcd(f^{\star}(x), x^{p^i} \mod f^{\star}(x))$ pour 
 $1 < i < deg(f^{\star}(x))/2$ 
 
-L'algorithme que nous allons utilisé a été découvert par D. Cantor et H. Zassenhaus [@cantor1981new] et nous avons travaillé avec la version
+L'algorithme que nous allons utiliser a été découvert par D. Cantor et H. Zassenhaus [@cantor1981new] et nous avons travaillé avec la version
 de J. Von Zur Gathen de 2001 [@von2001factoring].
 
 \input{res/dff.tex}
@@ -143,8 +142,8 @@ où il renvoie un résultat juste mais avec un temps variable, à la difference 
 un intervalle de temps constant. Un des meilleurs exemple d'algorithme de Las Vegas est le Quicksort à pivot aléatoire, dont le temps d'execution dépend
 du pivot et où le résultat est retourné est juste.
 
-La méthode théorique pour la séparation de facteur à été formalisé par D. Cantor et H. Zassenhaus [Cantor91On], elle consiste
-à tirer un polynôme aléatoire $v(x)$ et à l'elever à une puissance définie, $(p^n-1)/2$. La probabilité moyenne que le polynôme h(x) est un facteur
+La méthode théorique pour la séparation de facteurs à été formalisée par D. Cantor et H. Zassenhaus [@cantor1991fast], elle consiste
+à tirer un polynôme aléatoire $v(x)$ et à l'elever à une puissance définie, $(p^n-1)/2$. La probabilité moyenne que le polynôme h(x) soit un facteur
 commun avec $v(x)$ est donné par le théroème \ref{th:rand} comme étant proche de 1/2.
 
 Nous utiliserons la variation de K. Geddes décrite dans 
@@ -162,7 +161,7 @@ Nous allons commencer par séparer les facteurs de $h_1(x)$ qui sont de degré n
 On pose $m = deg(h_1(x))/n = 2$ et $S = {h_1(x)}$.
 
 Puisque la taille de S est inférieure à m, on entre dans la boucle.
-On prends un polynome aléatoire de degré inférieur ou égal à 1, $v(x) = x$
+On prend un polynome aléatoire de degré inférieur ou égal à 1, $v(x) = x$
 On a $v(x) = v(x)^{(q^n-1)/2}-1 = x^2 - 1$
 $$g(x) = gcd(x^2-x-2, x^2-1) = x+1$$
 Puisque $g(x) \neq 1$ et $g(x) \neq f_1(x)$,
@@ -170,7 +169,7 @@ On a $$S = equal\_degree\_splitting(x+1, 1) \cup equal\_degree\_splitting(x-2, 1
 On notera que $deg(x+1) = 1$, ce qui veut dire que $x+1$ est un facteur irréductible de $f_1(x)$ de degré 1.
 Il en va de même pour $x+2$.
 
-On a donc séparer les facteurs irréductibles de $f_1(x) = (x+1)(x-2)$
+On a donc séparé les facteurs irréductibles de $f_1(x) = (x+1)(x-2)$
 
 La méthode est la même pour $f_2(x) = x^4+x^2+1$,
 
