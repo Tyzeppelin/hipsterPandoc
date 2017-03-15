@@ -1,14 +1,14 @@
 ---
 title: Analyse de l'incapacité de la bibliothèque à fournir des fichiers de styles latex propres
 subtitle: cave canem
-supervisor: Lara Fabian 
-company: Evil Corp
-author: Arnold Schwarzenegger
-school: IUT Tombouctou
-dpt: Cookies
-date: YYYY - YYYY+1
-defence: jour de la mort de Johnny
-corres: Jeremy Belpois
+supervisor: Yannick Noah 
+company: ENCOM
+author: Gaston Lagaffe
+school: Hogwarts
+dpt: Digitale
+date: YYYY+1 - YYYY+2
+defence: cinquième jour, aux premières lueurs
+corres: Donald Duck
 logoCompany: res/logoinsa.png
 classoption: fleqn
 fontfamily: lmodern

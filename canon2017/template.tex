@@ -202,8 +202,12 @@ $endfor$
 \renewcommand*{\maketitle}{
 	\begin{titlepage}
 
-		\setlength{\hoffset}{0cm}
-		\setlength{\headheight}{2\baselineskip}
+        \enlargethispage{5\baselineskip}
+
+		%\setlength{\hoffset}{0cm}
+        \setlength{\voffset}{0in}
+        %\setlength{\footskip}{-4in}
+		%%\setlength{\headheight}{2\baselineskip}
 		\setlength{\evensidemargin}{0cm}
 		\setlength{\oddsidemargin}{1.5cm}
 		\setlength{\textheight}{\paperheight}
@@ -217,7 +221,7 @@ $endfor$
 		%\vspace{-27.6cm}
 		%\hspace{12cm}
 			
-		\vspace{20cm}
+		%\vspace{20cm}
 		%\begin{minipage}{0.8\paperwidth}
 		\begin{flushright}
 			{\color{white}{\Large\bfseries PFE} \\}
@@ -243,25 +247,25 @@ $endfor$
 		%\end{minipage}
 		%\end{minipage}
 
-		\vspace{11cm}
+		\vspace{12cm}
 		%\begin{textblock}{18}(-3,0)
 		\hspace{1.5cm}
-		\begin{minipage}{12cm}
-		\noindent{\Huge\textsl{\@title}}
+		\begin{minipage}{13cm}
+		\noindent{\Huge{\spaceskip=\fontdimen2\font minus \fontdimen4\font {\@title}}}
 		\baselineskip=18pt
 		
 		\vspace{0.3cm} \textbf{Lieu du Projet de Fin d'\'Etudes} 
 	 
-	 	\vspace{-0.2cm} 
+	 	\vspace{-0.1cm} 
 	 	\company
 	 
 	  	\textbf{Tuteur du Projet de Fin d'\'Etudes}
 	  
-	   	\vspace{-0.2cm}\supervisor
+	   	\vspace{-0.1cm}\supervisor
 	  
 	  	\textbf{Correspondant pédagogique INSA Rennes}
 	  
-	   	\vspace{-0.2cm} \corres
+	   	\vspace{-0.1cm} \corres
 	  
 	   	\textbf{PFE soutenu le \defence}
 		\end{minipage}
