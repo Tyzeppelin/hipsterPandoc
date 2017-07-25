@@ -66,56 +66,56 @@
 \renewcommand*{\addressfont}{\normalsize\mdseries\slshape}
 
 % commands
-\renewcommand*{\makecvtitle}{%
-  % recompute lengths (in case we are switching from letter to resume, or vice versa)
-  \recomputecvlengths%
-  % ensure footer with personal information
-  \makecvfooter%
-  % optional picture
-  \newbox{\makecvtitlepicturebox}%
-  \savebox{\makecvtitlepicturebox}{%
-    \ifthenelse{\isundefined{\@photo}}%
-      {}%
-      {%
-       \setlength\fboxrule{\@photoframewidth}%
-       \ifdim\@photoframewidth=0pt%
-         \setlength{\fboxsep}{0pt}\fi%
-       {\color{color1}\framebox{\includegraphics[width=\@photowidth]{\@photo}}}}}%
-  \usebox{\makecvtitlepicturebox}%
-  % name
-  \@initializelength{\makecvtitlepicturewidth}%
-  \settowidth{\makecvtitlepicturewidth}{\usebox{\makecvtitlepicturebox}}%
-  \parbox[b]{\textwidth-\makecvtitlepicturewidth}{%
-    \raggedleft\namefont{\color{color2!50}\@firstname} {\color{color2}\@lastname}}\\[-.35em]% alternate design: \MakeLowercase and no space
-  {\color{color2!50}\rule{\textwidth}{.25ex}}%
-  % optional title
-  \ifthenelse{\equal{\@title}{}}{}{\\[1.25em]\null\hfill\titlestyle{\@title}}\\[2.5em]% \null is required as there is no box on the line after \\, so glue (and leaders) disappears; this is in contrast to after \par, where the next line starts with an indent box (even after \noindent).
-  % optional quote
-  \ifthenelse{\isundefined{\@quote}}%
-    {}%
-    {{\null\hfill\begin{minipage}{\quotewidth}\centering\quotestyle{\@quote}\end{minipage}\hfill\null\\[2.5em]}}%
-  \par}% to avoid weird spacing bug at the first section if no blank line is left after \maketitle
-
-\renewcommand*{\makecvfooter}{%
-  \setlength{\footerwidth}{0.8\textwidth}%
-  \fancypagestyle{plain}{%
-    \fancyfoot[c]{%
-      \parbox[b]{\footerwidth}{%
-        \centering%
-        \color{color2}\addressfont%
-        \ifthenelse{\isundefined{\@addressstreet}}{}{\addtofooter[]{\addresssymbol\@addressstreet}%
-          \ifthenelse{\equal{\@addresscity}{}}{}{\addtofooter[~--~]{\@addresscity}}% if \addresstreet is defined, \addresscity and \addresscountry will always be defined but could be empty
-          \ifthenelse{\equal{\@addresscountry}{}}{}{\addtofooter[~--~]{\@addresscountry}}%
-          \flushfooter\@firstfooterelementtrue\\}%
-        \collectionloop{phones}{% the key holds the phone type (=symbol command prefix), the item holds the number
-          \addtofooter{\csname\collectionloopkey phonesymbol\endcsname\collectionloopitem}}%
-        \ifthenelse{\isundefined{\@email}}{}{\addtofooter{\emailsymbol\emaillink{\@email}}}%
-        \ifthenelse{\isundefined{\@homepage}}{}{\addtofooter{\homepagesymbol\httplink{\@homepage}}}%
-        \ifthenelse{\isundefined{\@extrainfo}}{}{\addtofooter{\@extrainfo}}%
-        \ifthenelse{\lengthtest{\footerboxwidth=0pt}}{}{\flushfooter}% the lengthtest is required to avoid flushing an empty footer, which could cause a blank line due to the \\ after the address, if no other personal info is used
-        }}}%
-  \pagestyle{plain}}
-
+% \renewcommand*{\makecvtitle}{%
+%   % recompute lengths (in case we are switching from letter to resume, or vice versa)
+%   \recomputecvlengths%
+%   % ensure footer with personal information
+%   \makecvfooter%
+%   % optional picture
+%   \newbox{\makecvtitlepicturebox}%
+%   \savebox{\makecvtitlepicturebox}{%
+%     \ifthenelse{\isundefined{\@photo}}%
+%       {}%
+%       {%
+%        \setlength\fboxrule{\@photoframewidth}%
+%        \ifdim\@photoframewidth=0pt%
+%          \setlength{\fboxsep}{0pt}\fi%
+%        {\color{color1}\framebox{\includegraphics[width=\@photowidth]{\@photo}}}}}%
+%   \usebox{\makecvtitlepicturebox}%
+%   % name
+%   \@initializelength{\makecvtitlepicturewidth}%
+%   \settowidth{\makecvtitlepicturewidth}{\usebox{\makecvtitlepicturebox}}%
+%   \parbox[b]{\textwidth-\makecvtitlepicturewidth}{%
+%     \raggedleft\namefont{\color{color2!50}\@firstname} {\color{color2}\@lastname}}\\[-.35em]% alternate design: \MakeLowercase and no space
+%   {\color{color2!50}\rule{\textwidth}{.25ex}}%
+%   % optional title
+%   \ifthenelse{\equal{\@title}{}}{}{\\[1.25em]\null\hfill\titlestyle{\@title}}\\[2.5em]% \null is required as there is no box on the line after \\, so glue (and leaders) disappears; this is in contrast to after \par, where the next line starts with an indent box (even after \noindent).
+%   % optional quote
+%   \ifthenelse{\isundefined{\@quote}}%
+%     {}%
+%     {{\null\hfill\begin{minipage}{\quotewidth}\centering\quotestyle{\@quote}\end{minipage}\hfill\null\\[2.5em]}}%
+%   \par}% to avoid weird spacing bug at the first section if no blank line is left after \maketitle
+%
+% \renewcommand*{\makecvfooter}{%
+%   \setlength{\footerwidth}{0.8\textwidth}%
+%   \fancypagestyle{plain}{%
+%     \fancyfoot[c]{%
+%       \parbox[b]{\footerwidth}{%
+%         \centering%
+%         \color{color2}\addressfont%
+%         \ifthenelse{\isundefined{\@addressstreet}}{}{\addtofooter[]{\addresssymbol\@addressstreet}%
+%           \ifthenelse{\equal{\@addresscity}{}}{}{\addtofooter[~--~]{\@addresscity}}% if \addresstreet is defined, \addresscity and \addresscountry will always be defined but could be empty
+%           \ifthenelse{\equal{\@addresscountry}{}}{}{\addtofooter[~--~]{\@addresscountry}}%
+%           \flushfooter\@firstfooterelementtrue\\}%
+%         \collectionloop{phones}{% the key holds the phone type (=symbol command prefix), the item holds the number
+%           \addtofooter{\csname\collectionloopkey phonesymbol\endcsname\collectionloopitem}}%
+%         \ifthenelse{\isundefined{\@email}}{}{\addtofooter{\emailsymbol\emaillink{\@email}}}%
+%         \ifthenelse{\isundefined{\@homepage}}{}{\addtofooter{\homepagesymbol\httplink{\@homepage}}}%
+%         \ifthenelse{\isundefined{\@extrainfo}}{}{\addtofooter{\@extrainfo}}%
+%         \ifthenelse{\lengthtest{\footerboxwidth=0pt}}{}{\flushfooter}% the lengthtest is required to avoid flushing an empty footer, which could cause a blank line due to the \\ after the address, if no other personal info is used
+%         }}}%
+%   \pagestyle{plain}}
+%
 
 %-------------------------------------------------------------------------------
 %                letter style definition
