@@ -1,0 +1,145 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{casual}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.825]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{François}{Boschet}
+\title{Étudiant ingénieur diplomé}                               % optional, remove / comment the line if not wanted
+\address{3 Chemin Paul Signac}{35740 PACE}{France}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+33 6~24~96~40~75}                   % optional, remove / comment the line if not wanted
+\phone[fixed]{+33 2~99~60~20~79}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+%\email{boschet.francois@gmail.com}                               % optional, remove / comment the line if not wanted
+\email{francois@boschet.io}
+%\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{}                      % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\section{Education}
+\cventry{2011--2017}{Diplôme d'ingénieur}{INSA Rennes}{Rennes}{\textit{Informatique}}{}  % arguments 3 to 6 can be left empty
+\cventry{January - June 2016}{Semestre d'échange}{Letterkenny Institute of Technology}{Letterkenny, Irlande}{\textit{Informatique}}{}
+\cventry{2008--2011}{Baccalauréat}{Saint Martin}{Rennes}{\textit{S Spé Physiques}}{}
+
+
+
+%\cventry{2003--2008}{DNB}{Saint Gabriel}{Pacé}{\textit{ }}{Mention Bien}
+
+% \section{Master thesis}
+% \cvitem{title}{\emph{Title}}
+% \cvitem{supervisors}{Supervisors}
+% \cvitem{description}{Short thesis abstract}
+
+%Example --> \cventry{year--year}{Job title}{Employer}{City}{}{Description}
+
+\section{Experience}
+%\subsection{Professionnelle}
+
+\cventry{Février - Août 2017}{Étude de l'intérêt de l'usage des filtres classiques dans l classification deep learning}{Canon Research France}{Cesson-Sévigné}{}{
+    J'ai étudié l'utilisation de filtres de détection de contours dans tensorflow dans le cadre de la classificatino d'images.\newline{}}
+
+\cventry{Été 2016}{Implémentation d'un algorithe de factorisation de polynômes à coefficients entiers dans TRIP}{IMCCE}{Paris}{}{J'ai travaillé à l'implémentation dans TRIP,
+    un logiciel de calcul formel de l'observatoire de Paris, d'un algorithme de factorisation de polynômes à coefficients entiers basé sur la méthode de Cantor-Zassenhaus.  \newline{}}
+%\cventry{Été 2016}{Factorisation des polynômes univariés à coefficients entiers dans TRIP}{IMCCE}{Paris}{}{Travaillé sur
+%TRIP, un logiciel de calcul algébrique développé à l'IMCCE. \newline{}}
+
+\cventry{Été 2015}{Eclipse Platform and plug-ins}{INRIA}{Rennes}{}{ Worked with T.D on Melange,%Travaillé avec Thomas Degueule sur Melange, 
+%une plateforme de manipulation de DSLs et leurs métamodèles. \newline{}}
+a ecplispe platform that manipulate metamodels and DSLs. \newline{}}
+
+%\cventry{Été 2014}{Développeur Java}{Fortuneo}{Brest}{}{Réalisation d'une interface utilisateur dans le cadre du projet de la Qualité de Service.\newline{}}
+\cventry{Summer 2014}{Java Developper}{Fortuneo}{Brest}{}{Developped a webpage for visualizing Fortuneo website's quality of service.\newline{}}
+
+% Detailed achievements:%
+% \begin{itemize}%
+% \item Achievement 1;
+% \item Achievement 2, with sub-achievements:
+%   \begin{itemize}%
+%   \item Sub-achievement (a);
+%   \item Sub-achievement (b), with sub-sub-achievements (don't do this!);
+%     \begin{itemize}
+%     \item Sub-sub-achievement i;
+%     \item Sub-sub-achievement ii;
+%     \item Sub-sub-achievement iii;
+%     \end{itemize}
+%   \item Sub-achievement (c);
+%   \end{itemize}
+% \item Achievement 3.
+% \end{itemize}}
+
+\subsection*{}
+
+\cventry{Summer 2013}{Receptionist}{Crédit Mutuel de Bretagne}{Melesse}{}{}
+%\cventry{Été 2013}{Conseiller accueil}{Crédit Mutuel de Bretagne}{Melesse}{}{}
+
+\cventry{2014-2015}{Private teacher}{Mathematics, Physics and Chemistry}{}{}{}
+%\cventry{2014-2015}{Mathématiques et Sciences Physiques}{Professeur particulier}{}{}{}
+
+\section{Compétences}
+%\cvitemwithcomment{Français}{langue maternelle}{}
+%\cvitemwithcomment{Anglais}{C1}{}
+% \cvitemwithcomment{Language 3}{Skill level}{Comment}
+
+\cvdoubleitem{Languages}{Python, C++, CLisp, OCaml, Java, ...}{Languages}{French (native), Anglais (TOEIC :meh:)}
+\cvdoubleitem{OS}{Linux-based (Fedora, debian, ..)}{Vim / Emacs?}{Vim}
+
+%\section{Compétences informatiques}
+%\cvdoubleitem{Programmation}{C/C++, Java, Vala}{Langages de script}{Python, Ruby, Shell}
+%\cvdoubleitem{Versionnement}{Git, SVN}{IDE}{Eclipse, Code::BLocks, Vim}
+%\cvdoubleitem{OS}{Fedora, Debian, Windows}{Rapports}{LaTeX, Markdown, XML}
+%\cvdoubleitem{Bureautique}{Microsoft Office, Libre Office}{}{}
+
+\section{Hobbies}
+%\cvitem{Musique}{}
+\cvitem{Video Games}{Organisation d'une compétition de jeux vidéos entre plus de 400 joueurs, l'\href{http://www.insalan.fr}{Insalan}}
+\cvitem{Algorithmic}{I participate in coding contests and am solving problems on \href{https://projecteuler.net}{Project Euler}. My progress on Github, \url{https://github.com/Tyzeppelin/Project-Euler.git}}
+\cvitem{Solex}{Réparation et préparation d'un solex pour la course du Rock'N Solex}
+
+
+\section{Miscellaneous}
+\cvlistitem{Driving License}
+%\cvlistitem{Working on solving algorithm problems on \href{https://projecteuler.net}{Project Euler}. My progress on Github, \url{https://github.com/Tyzeppelin/Project-Euler.git}}
+%\cvlistitem{Résolution des problèmes d'algorthmique sur \href{https://projecteuler.net/}{projecteuler.net}. Mon avancement sur Github, \newline{} \url{https://github.com/Tyzeppelin/Project-Euler.git}}
+
+\end{document}
+
+%% end of file `template.tex'.
+
