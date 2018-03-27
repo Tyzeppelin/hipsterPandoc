@@ -19,20 +19,20 @@
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
-\usepackage[scale=0.825]{geometry}
+\usepackage[scale=0.85]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
 % personal data
 \name{François}{Boschet}
-\title{Junior Engineer}                               % optional, remove / comment the line if not wanted
+\title{Junior Computer Science Engineer}                               % optional, remove / comment the line if not wanted
 \address{3 Chemin Paul Signac}{35740 PACE}{France}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
 \phone[mobile]{+33 6~24~96~40~75}                   % optional, remove / comment the line if not wanted
-\phone[fixed]{+33 2~99~60~20~79}                    % optional, remove / comment the line if not wanted
+%\phone[fixed]{+33 2~99~60~20~79}                    % optional, remove / comment the line if not wanted
 %\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
 %\email{francois@boschet.io}                               % optional, remove / comment the line if not wanted
 \email{francois@boschet.io}
-%\homepage{www.johndoe.com}                         % optional, remove / comment the line if not wanted
+\homepage{github.com/Tyzeppelin}                         % optional, remove / comment the line if not wanted
 %\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
 %\photo[64pt][0.4pt]{}                      % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
 %\quote{Some quote}                                 % optional, remove / comment the line if not wanted
@@ -55,9 +55,9 @@
 \makecvtitle
 
 \section{Education}
-\cventry{2011--2017}{Engineer's Degree}{INSA Rennes}{Rennes}{\textit{Computer Science}}{}  % arguments 3 to 6 can be left empty
-\cventry{January - June 2016}{}{Letterkenny Institute of Technology}{Letterkenny}{\textit{Computer Science}}{}
-\cventry{2008--2011}{Baccalauréat}{Saint Martin}{Rennes}{\textit{S Spé Physiques}}{}
+\cventry{2011--2017}{Master's Degree}{Institut National des Sciences Appliquées Rennes}{Rennes}{\textit{Computer Science}}{}  % arguments 3 to 6 can be left empty
+\cventry{January -- June 2016}{Erasmus}{Letterkenny Institute of Technology}{Letterkenny}{\textit{Computer Science}}{}
+\cventry{2008--2011}{Baccalauréat}{Saint Martin}{Rennes}{}{}
 
 
 
@@ -68,25 +68,35 @@
 % \cvitem{supervisors}{Supervisors}
 % \cvitem{description}{Short thesis abstract}
 
+\section{Skills}
+%\cvitemwithcomment{Français}{langue maternelle}{}
+%\cvitemwithcomment{Anglais}{C1}{}
+% \cvitemwithcomment{Language 3}{Skill level}{Comment}
+
+\cvdoubleitem{Languages}{Python, C++, Java, Ocaml, Lisp, \ldots}{Calculus}{Numpy, Scipy, GMP}
+\cvdoubleitem{OS}{Linux-based (Fedora, debian, \ldots)}{ML}{Tensorflow, Keras, Grenade}
+\cvdoubleitem{Other}{Vim, Git, Pandoc, \ldots}{Languages}{French (native), English (TOEIC 965)}
+
+
 %Example --> \cventry{year--year}{Job title}{Employer}{City}{}{Description}
 
 \section{Experience}
 %\subsection{Professionnelle}
 
-\cventry{February - August 2017}{Study usage of classical feature extraction in deep learning image classification}{Canon Research France}{Cesson-Sévigné}{}{I've studied
-the pros and cons of using static filter/feature extraction in Deep Learning. \newline{}}
+\cventry{February - August 2017}{Study of the potential use of classical feature extraction in Deep Learning classification}{Canon Research France}{Cesson-Sévigné}{}{I've studied
+the pros and cons of using static filter/feature extraction in Deep Learning classification of images. \newline{}}
 
-\cventry{Summer 2016}{Implementation of polynomial factorization with integer coefficients in TRIP}{IMCCE}{Paris}{}{I worked on TRIP,
-a computer algebra system developped at IMCCE for astrophysicists. \newline{}}
+    \cventry{Summer 2016}{Implementation of a polynomial factorization algorithm in TRIP}{Institut de Mécanique Céleste et de Calcul des Éphémérides (IMCCE)}{Paris}{}{I implemented a polynomial factorization algorithm in TRIP,
+a computer algebra system developed by and for astro-physicists, using the Cantor-Zassenhaus method. \newline{}}
 %\cventry{Été 2016}{Factorisation des polynômes univariés à coefficients entiers dans TRIP}{IMCCE}{Paris}{}{Travaillé sur
 %TRIP, un logiciel de calcul algébrique développé à l'IMCCE. \newline{}}
 
-\cventry{Summer 2015}{Eclipse Platform and plug-ins}{INRIA}{Rennes}{}{ Worked with Thomas Degueule on Melange,%Travaillé avec Thomas Degueule sur Melange, 
+    \cventry{Summer 2015}{Eclipse Platform and plug-ins development}{Institut National de Recherche en Informatique et Automatique (INRIA)}{Rennes}{}{ I worked with Thomas Degueule on Melange,%Travaillé avec Thomas Degueule sur Melange, 
 %une plateforme de manipulation de DSLs et leurs métamodèles. \newline{}}
-an ecplispe plugin that manipulate metamodels and DSLs. \newline{}}
+an eclispe plugin that manipulate metamodels and DSLs.\newline{}}
 
 %\cventry{Été 2014}{Développeur Java}{Fortuneo}{Brest}{}{Réalisation d'une interface utilisateur dans le cadre du projet de la Qualité de Service.\newline{}}
-\cventry{Summer 2014}{Java Developper}{Fortuneo}{Brest}{}{Developped a webpage for visualizing Fortuneo website's quality of service.\newline{}}
+\cventry{Summer 2014}{Java Developper}{Fortuneo}{Brest}{}{I developed a webpage designed to help Fortuneo visualize its website's quality of service.\newline{}}
 
 % Detailed achievements:%
 % \begin{itemize}%
@@ -105,19 +115,14 @@ an ecplispe plugin that manipulate metamodels and DSLs. \newline{}}
 % \item Achievement 3.
 % \end{itemize}}
 
-\cventry{Summer 2013}{Receptionist}{Crédit Mutuel de Bretagne}{Melesse}{}{}
+\subsection*{}
+
+\cventry{Summer 2013}{Bank receptionist}{Crédit Mutuel de Bretagne}{Melesse}{}{}
 %\cventry{Été 2013}{Conseiller accueil}{Crédit Mutuel de Bretagne}{Melesse}{}{}
 
 \cventry{2014-2015}{Private teacher}{Mathematics, Physics and Chemistry}{}{}{}
 %\cventry{2014-2015}{Mathématiques et Sciences Physiques}{Professeur particulier}{}{}{}
 
-\section{Compétences}
-%\cvitemwithcomment{Français}{langue maternelle}{}
-%\cvitemwithcomment{Anglais}{C1}{}
-% \cvitemwithcomment{Language 3}{Skill level}{Comment}
-
-\cvdoubleitem{Languages}{Python, C++, Lisp, Java, Scala}{Languages}{French (native), English (TOEIC 965)}
-\cvdoubleitem{OS}{Linux-based (Fedora, debian, \ldots)}{Others}{Vim, Git, Pandoc, \ldots}
 
 %\section{Compétences informatiques}
 %\cvdoubleitem{Programmation}{C/C++, Java, Vala}{Langages de script}{Python, Ruby, Shell}
@@ -128,12 +133,12 @@ an ecplispe plugin that manipulate metamodels and DSLs. \newline{}}
 \section{Hobbies}
 %\cvitem{Musique}{}
 \cvitem{Video Games}{Admin at \href{http://www.insalan.fr}{Insalan}, a student association organizing  an e-sport event each year for over 400 players.}
-\cvitem{Algorithmic}{I participate in coding contests and am solving problems on \href{https://projecteuler.net}{Project Euler}. My progress on Github, \url{https://github.com/Tyzeppelin/Project-Euler}}
+\cvitem{Algorithmic}{I participate in coding contests and am solving problems on \href{https://projecteuler.net}{\color{color1}Project Euler}. My progress on \href{https://github.com/Tyzeppelin/Project-Euler}{\color{color1}Github}.}
 \cvitem{Solex}{Repairing and preparing a Solex moped for the Rock'N Solex race}
 
 
-\section{Miscellaneous}
-\cvlistitem{Driving License}
+%\section{Miscellaneous}
+%\cvlistitem{Driving License}
 %\cvlistitem{Working on solving algorithm problems on \href{https://projecteuler.net}{Project Euler}. My progress on Github, \url{https://github.com/Tyzeppelin/Project-Euler.git}}
 %\cvlistitem{Résolution des problèmes d'algorthmique sur \href{https://projecteuler.net/}{projecteuler.net}. Mon avancement sur Github, \newline{} \url{https://github.com/Tyzeppelin/Project-Euler.git}}
 
