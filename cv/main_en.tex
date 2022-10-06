@@ -19,7 +19,7 @@
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
-\usepackage[scale=0.9]{geometry}
+\usepackage[scale=0.91]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
@@ -76,7 +76,7 @@
 
 \cvdoubleitem{Languages}{Python, C++, Java, Rust, Lisp, \ldots}{Calculus}{Numpy, Scipy, GMP}
 \cvdoubleitem{OS}{Linux-based (Fedora, debian, RHEL, \ldots)}{Database}{Postgresql, MariaDB}
-\cvdoubleitem{Other}{Vim, Git, Pandoc, \ldots}{Languages}{French (native), English (TOEIC 965)}
+\cvdoubleitem{Other}{Docker, Git, Vim, Pandoc, \ldots}{Languages}{French (native), English (TOEIC 965)}
 
 
 %Example --> \cventry{year--year}{Job title}{Employer}{City}{}{Description}
@@ -84,12 +84,18 @@
 \section{Experience}
 %\subsection{Professionnelle}
 
+\cventry{2021}{Developper}{SpaceApplications Services}{Brussels}{}{
+    \begin{itemize}
+        \item Develop and maintain a web platform for planning and managing simulations of solar weather written in \textbf{Java};
+        \item Develop a web platform for mission planning using \textbf{Java Quarkus};
+    \end{itemize}
+}
+
 \cventry{2018 - 2020}{Developper}{Altran Belgium}{Brussels}{}{ I worked as a consulant developper on multiple project such as:
     \begin{itemize}
         \item Project EF PEB: I maintained and kept up to date a modelling software for the Région Wallone. The goal of this software was to generate energetic summary of buildings. I had to maintain and update an old \textbf{python} software that should work on recent and old windows/mac/linux;
         \item Project PLAGE: I was lead developper on a web app for Bruxelles Environnement. The app is a complex suite of forms and equations that compute the energetic consumption of a real estate and then give an objective of energy saving for each building and for the whole real estate. It was made in \textbf{Java/Spring} and \textbf{Angular};
         \item Project PEB: I helped maintaining the PEB sofware for the Belgium government. This a software that gives a buildig an energetic preformance certificate according to the european EPBD directive. It is a big \textbf{Java/Spring} application with a lot of calculus;
-        \item I also worked on some internal POC for demonstration, most of it was done on Java, Python or Kotlin.
     \end{itemize}
 %    \newline{}
 }
